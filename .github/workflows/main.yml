@@ -31,7 +31,11 @@ jobs:
         with:
           hugo-version: 'latest'
           # extended: true
-          
+      
+      # Runs a single command using the runners shell
+      - name: Delete public folder
+        run: rm -rf ./public
+        
       # Build Hugo static pages   
       - name: Build
         run: hugo
