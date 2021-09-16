@@ -10,5 +10,23 @@
 	<atom:link href="https://unixdaddy.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>Introduction</title>
+      <link>https://unixdaddy.github.io/10_introduction/10_introduction.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://unixdaddy.github.io/10_introduction/10_introduction.html</guid>
+      <description>Add page Markdown content here&amp;hellip;&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Our People</title>
+      <link>https://unixdaddy.github.io/10_introduction/20_people.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://unixdaddy.github.io/10_introduction/20_people.html</guid>
+      <description>Add page Markdown content here&amp;hellip;&amp;hellip;</description>
+    </item>
+    
   </channel>
 </rss>
