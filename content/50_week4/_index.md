@@ -1,13 +1,13 @@
 +++
-title = "50_week4"
-date = 2021-09-16T10:50:24Z
-weight = 5
+title = "Week 4"
+weight = 50
 chapter = true
-pre = "<b>X. </b>"
+pre = "<b>5. </b>"
 +++
 
-### Chapter X
+### Kubernetes Workshop
+![Kubernetes](/images/ihor-dvoretskyi1-unsplash.jpg?classes=border)
+Photo by <a href="https://unsplash.com/@ihor_dvoretskyi?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ihor Dvoretskyi</a> on <a href="https://unsplash.com/collections/4540457/kubernetes?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+# Week 4 Contents
 
-# Some Chapter title
-
-Lorem Ipsum.
+Add Week 4 Contents here......
