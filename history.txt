@@ -1,0 +1,143 @@
+    1  touch ~/.aws/config
+    2  cat <<END > ~/.aws/config
+[default]
+region=us-east-1
+END
+
+    3  cd
+    4  wget https://github.com/gohugoio/hugo/releases/download/v0.71.0/hugo_extended_0.71.0_Linux-64bit.tar.gz -O hugo_extended_0.71.0_Linux-64bit.tar.gz
+    5  HUGO_TAR="$(find . -name "*Linux-64bit.tar.gz")"
+    6  tar -xzf $HUGO_TAR
+    7  chmod +x hugo
+    8  mkdir bin
+    9  mv hugo bin/
+   10  cd ~/environment/
+   11  hugo version
+   12  git clone https://github.com/unixdaddy/kubernetes-workshop.git
+   13  pwd
+   14  cd kubernetes-workshop/
+   15  ls
+   16  git status
+   17  ls
+   18  cd ..
+   19  ls
+   20  pwd
+   21  ls
+   22  pwd
+   23  ls
+   24  hugo new site kubernetes-workshop-source
+   25  cd kubernetes-workshop-source/
+   26  find . -exec grep -l source {} \;
+   27  find . --exec grep -l source {} \;
+   28  find . -exec grep source {} \;
+   29  ls
+   30  git init
+   31  cd themes
+   32  cd ..
+   33  cd themes/
+   34  git submodule add  add https://github.com/matcornic/hugo-theme-learn.git
+   35  git submodule add https://github.com/matcornic/hugo-theme-learn.git
+   36  cd ..
+   37  vim config.toml 
+   38  ls content/
+   39  hugo new --kind chapter _index.md
+   40  ls content/
+   41  cat > content/_index.md <<EOF
+---
+title: "Unicorn Inc - Smart Factories Workshop"
+draft: false
+weight: 0
+pre: "<b>0. </b>"
+---
+
+![Unicorn Inc Logo](/images/unicorn-inc.png?classes=border)
+
+Welcome to Unicorn Inc - Smart Factories Workshop.
+Add further content here......
+EOF
+
+   42  vim content/_index.md 
+   43  mkdir -p static/images
+   44  mv ../ihor-dvoretskyi* static/images/
+   45  cat content/_index.md 
+   46  ls public
+   47  hugo
+   48  ls public/
+   49  hugo server --port 8080
+   50  git status
+   51  create GiT repo on Github
+   52  vim info.txt
+   53  git add .
+   54  git status
+   55  git add .
+   56  git commit -m "first commit"
+   57  git branch -M main
+   58  git remote add origin https://github.com/unixdaddy/kubernetes-workshop-source.git
+   59  git push -u origin main
+   60  ls
+   61  pwd
+   62  more config.toml 
+   63  hugo new --kind chapter _index.md
+   64  # Create the Introduction chapter, chapter landing page and content pages
+   65  hugo new --kind chapter 10_introduction/_index.md
+   66  hugo new 10_introduction/10_introduction.md
+   67  hugo new 10_introduction/20_people.md
+   68  # Create the Smart Factories chapter, chapter landing page and content pages
+   69  hugo new --kind chapter 20_week1/_index.md
+   70  hugo new 20_week1/10_lab1.md
+   71  # Create the Deploying Smart Widgets chapter, chapter landing page and content pages
+   72  hugo new --kind chapter 30_week2/_index.md
+   73  hugo new 30_week2/10_lab3.md
+   74  # Create the Conclusion chapter, chapter and landing page
+   75  hugo new --kind chapter 40_week3/_index.md
+   76  hugo new 40_week3/10_lab5.md
+   77  hugo new --kind chapter 50_week4/_index.md
+   78  hugo new 50_week4/10_lab7.md
+   79  hugo new --kind chapter 60_week5/_index.md
+   80  hugo new 60_week5/10_lab9.md
+   81  hugo new --kind chapter 70_week6/_index.md
+   82  hugo new 70_week6/10_lab11.md
+   83  cat content/_index.md 
+   84  vim blah
+   85  ls
+   86  hugo
+   87  hugo server --port 8080
+   88  hugo
+   89  hugo server --port 8080
+   90  git add .
+   91  git commit -m "minor updates"
+   92  git push
+   93  ls
+   94  more info.txt 
+   95  hugo
+   96  hugo server --port 8080
+   97  git add .
+   98  git commit -m "added more"
+   99  git push 
+  100  hugo
+  101  hugo server --port 8080
+  102  git add .
+  103  git commit -m "added more outline"
+  104  git push
+  105  ls
+  106  hugo
+  107  hugo server --port 8080
+  108  git add .
+  109  hugo server --port 8080
+  110  git commit -m "Added more content"
+  111  git push 
+  112  hugo
+  113  git add .
+  114  git commit -m "Added more content"
+  115  git push
+  116  hugo server --port 8080
+  117  mkdir -p layouts/partials
+  118  touch layouts/partials/logo.html
+  119  more content/_index.md 
+  120  hugo
+  121  hugo server --port 8080
+  122  git add .
+  123  git commit -m "alter nav logo"
+  124  git push 
+
+Alter the baseURL before running hugo and copy public directory to the target repo
