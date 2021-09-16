@@ -36,6 +36,11 @@ jobs:
       - name: Delete public folder
         run: rm -rf ./public
         
+      # Runs a single command using the runners shell
+      - name: Add submodules
+        run: git submodule update --init ./themes/hugo-theme-learn/
+        #run: git clone ./themes/hugo-theme-learn
+        
       # Build Hugo static pages   
       - name: Build
         run: hugo
