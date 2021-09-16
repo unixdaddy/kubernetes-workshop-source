@@ -1,0 +1,127 @@
+  
+    6  touch ~/.aws/config
+    7  cat <<END > ~/.aws/config
+[default]
+region=us-east-1
+END
+
+   11  cd 
+   12  wget https://github.com/gohugoio/hugo/releases/download/v0.71.0/hugo_extended_0.71.0_Linux-64bit.tar.gz -O hugo_extended_0.71.0_Linux-64bit.tar.gz
+   13  HUGO_TAR="$(find . -name "*Linux-64bit.tar.gz")"
+   14  tar -xzf $HUGO_TAR
+   15  chmod +x hugo
+   16  mkdir bin
+   17  mv hgo bin
+   18  hugo version
+   19  ls
+   20  cd environment/
+  181  rm -rf kubernetes-workshop/
+  182  ls
+  183  hugo new site kubernetes-workshop
+  184  cd kubernetes-workshop/
+  185  ls
+  186  cd themes/
+  187  cd ..
+  188  ls
+  189  git status
+  190  git init
+  191  cd themes
+  192  git submodule add https://github.com/matcornic/hugo-theme-learn.git
+  193  cd ..
+  194  ls
+  195  vim config.toml 
+baseURL = "https://unixdaddy.github.io/kubernetes-workshop/"
+languageCode = "en-us"
+title = "kubernetes workshop"
+theme = "hugo-theme-learn"
+uglyurls = true
+  199  cd kubernetes-workshop/
+  200  ls
+  201  hugo
+  202  cd public/
+  203  git init
+  204  git branch -M main
+  205  git add .
+  206  git commit -m "first commit"
+create the repo on github and use that name in the next command
+  207  git remote add origin https://github.com/unixdaddy/kubernetes-workshop.git
+  208  git push -u origin main
+  209  cd ..
+edit repo on github and set pages on
+
+added a chapter - with default layout
+ 215  hugo new --kind chapter _index.md
+do nothing - can edit
+  216  vim content/_index.md 
+  217  hugo
+  218  cd public
+  219  ls
+  220  git status
+  221  git add .
+  222  git push
+  223  git status
+  224  git commit -m "added index under content"
+  225  git push
+  226  ls
+  227  cd ..
+  228  more content/_index.md 
+need to change the URL so that it is unixdaddy.github.io and not unixdaddy.github.io/kubernetes-workshop as it won't work in testing
+  230  vim config.toml 
+  231  hugo
+  232  hugo server --port 8080
+  233  history
+
+
+updated index added in pictures
+  243  vim content/_index.md 
+  244  mkdir -p static/images
+  245  mv ihor-dvoretskyi-unsplash.jpg static/images/
+  246  pwd
+  247  hugo
+  248  hugo server --port 8080
+  249  vim config.toml 
+  250  hugo
+  251  cd public/
+  252  git status
+  253  git add .
+  254  git commit -m "tailoring"
+  255  git push
+  256  ls
+  257  cd ..
+changed to local development
+  258  vim config.toml 
+  259  hugo
+  260  hugo server --port 8080
+
+
+Photo by <a href="https://unsplash.com/@ihor_dvoretskyi?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ihor Dvoretskyi</a> on <a href="https://unsplash.com/collections/4540457/kubernetes?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+Photo by <a href="https://unsplash.com/@ihor_dvoretskyi?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ihor Dvoretskyi</a> on <a href="https://unsplash.com/collections/4540457/kubernetes?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+    
+
+hugo new --kind chapter _index.md
+
+# Create the Introduction chapter, chapter landing page and content pages
+hugo new --kind chapter 10_introduction/_index.md
+hugo new 10_introduction/10_introduction.md
+hugo new 10_introduction/20_people.md
+
+# Create the Smart Factories chapter, chapter landing page and content pages
+hugo new --kind chapter 20_week1/_index.md
+hugo new 20_week1/10_lab1.md
+
+# Create the Deploying Smart Widgets chapter, chapter landing page and content pages
+hugo new --kind chapter 30_week2/_index.md
+hugo new 30_week2/10_lab3.md
+
+# Create the Conclusion chapter, chapter and landing page
+hugo new --kind chapter 40_week3/_index.md
+hugo new 40_week3/10_lab5.md
+
+hugo new --kind chapter 50_week4/_index.md
+hugo new 50_week4/10_lab7.md
+
+hugo new --kind chapter 60_week5/_index.md
+hugo new 60_week5/10_lab9.md
+
+hugo new --kind chapter 70_week6/_index.md
+hugo new 70_week6/10_lab11.md

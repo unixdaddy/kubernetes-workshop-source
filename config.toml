@@ -1,0 +1,5 @@
+baseURL = "https://unixdaddy.github.io/"
+languageCode = "en-us"
+title = "kubernetes workshop"
+theme = "hugo-theme-learn"
+uglyurls = true
