@@ -6,7 +6,7 @@ pre: "<b>0. </b>"
 ---
 
 ### Kubernetes Workshop
-![Kubernetes](/images/ihor-dvoretskyi1-unsplash.jpg?classes=border)
+![Kubernetes](images/ihor-dvoretskyi1-unsplash.jpg?classes=border)
 # Home
 
 Welcome Kubernetes Workshop.
