@@ -2,7 +2,7 @@ baseURL = "https://unixdaddy.github.io/kubernetes-workshop/"
 languageCode = "en-us"
 title = "kubernetes workshop"
 theme = "hugo-theme-learn"
-uglyurls = true
+#uglyurls = true
 canonifyURLs= true
 
 [outputs]
