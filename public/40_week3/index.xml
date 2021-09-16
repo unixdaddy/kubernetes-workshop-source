@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Kubernetes Workshop on kubernetes workshop</title>
-    <link>https://unixdaddy.github.io/</link>
-    <description>Recent content in Kubernetes Workshop on kubernetes workshop</description>
+    <title>40_week3 on kubernetes workshop</title>
+    <link>https://unixdaddy.github.io/40_week3.html</link>
+    <description>Recent content in 40_week3 on kubernetes workshop</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 16 Sep 2021 10:50:24 +0000</lastBuildDate>
     
-	<atom:link href="https://unixdaddy.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://unixdaddy.github.io/40_week3/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
