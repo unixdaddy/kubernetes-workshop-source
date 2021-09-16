@@ -1,5 +1,14 @@
-baseURL = "https://unixdaddy.github.io/"
+baseURL = "https://unixdaddy.github.io/kubernetes-workshop/"
 languageCode = "en-us"
 title = "kubernetes workshop"
 theme = "hugo-theme-learn"
 uglyurls = true
+
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+
+[params]
+showVisitedLinks = true
+disableBreadcrumb = false
+disableNextPrev = false
+themeVariant = "blue"
