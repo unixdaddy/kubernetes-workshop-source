@@ -3,6 +3,7 @@ languageCode = "en-us"
 title = "kubernetes workshop"
 theme = "hugo-theme-learn"
 uglyurls = true
+canonifyURLs= true
 
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
