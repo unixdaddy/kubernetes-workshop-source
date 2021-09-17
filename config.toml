@@ -2,7 +2,7 @@ baseURL = "https://unixdaddy.github.io/kubernetes-workshop/"
 languageCode = "en-us"
 title = "kubernetes workshop"
 theme = "hugo-theme-learn"
-uglyurls = false
+uglyurls = true
 relativeURLs = true
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
