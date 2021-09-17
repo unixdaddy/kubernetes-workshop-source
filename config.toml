@@ -3,7 +3,7 @@ languageCode = "en-us"
 title = "kubernetes workshop"
 theme = "hugo-theme-learn"
 uglyurls = true
-relativeURLs = true
+relativeURLs = false
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
 
