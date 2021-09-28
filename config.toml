@@ -1,4 +1,4 @@
-baseURL = "https://unixdaddy.github.io/kubernetes-workshop/"
+baseURL = "https://unixdaddy.github.io/kubernetes-workshop-source/"
 languageCode = "en-us"
 title = "kubernetes workshop"
 theme = "hugo-theme-learn"
