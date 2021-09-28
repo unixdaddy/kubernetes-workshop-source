@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.88.1" />
+    <meta name="description" content="">
+
+
+    <link rel="icon" href="/kubernetes-workshop/images/favicon.png" type="image/png">
+
+    <title>Lab 3 :: kubernetes workshop</title>
+
+    
+    <link href="/kubernetes-workshop/css/nucleus.css?1632831259" rel="stylesheet">
+    <link href="/kubernetes-workshop/css/fontawesome-all.min.css?1632831259" rel="stylesheet">
+    <link href="/kubernetes-workshop/css/hybrid.css?1632831259" rel="stylesheet">
+    <link href="/kubernetes-workshop/css/featherlight.min.css?1632831259" rel="stylesheet">
+    <link href="/kubernetes-workshop/css/perfect-scrollbar.min.css?1632831259" rel="stylesheet">
+    <link href="/kubernetes-workshop/css/auto-complete.css?1632831259" rel="stylesheet">
+    <link href="/kubernetes-workshop/css/atom-one-dark-reasonable.css?1632831259" rel="stylesheet">
+    <link href="/kubernetes-workshop/css/theme.css?1632831259" rel="stylesheet">
+    <link href="/kubernetes-workshop/css/tabs.css?1632831259" rel="stylesheet">
+    <link href="/kubernetes-workshop/css/hugo-theme.css?1632831259" rel="stylesheet">
+    
+    <link href="/kubernetes-workshop/css/theme-blue.css?1632831259" rel="stylesheet">
+    
+    
+
+    <script src="/kubernetes-workshop/js/jquery-3.3.1.min.js?1632831259"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/kubernetes-workshop/30_week2/10_lab3.html">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a href=".."><img src="https://github.com/unixdaddy/kubernetes-workshop/blob/main/images/ihor-dvoretskyi2-unsplash.jpg?raw=false" alt=""></a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/kubernetes-workshop/js/lunr.min.js?1632831259"></script>
+<script type="text/javascript" src="/kubernetes-workshop/js/auto-complete.js?1632831259"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/unixdaddy.github.io\/kubernetes-workshop\/";
+    
+</script>
+<script type="text/javascript" src="/kubernetes-workshop/js/search.js?1632831259"></script>
+
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <a class="padding" href='/'><i class='fas fa-home'></i> Home</a>
+        </li>
+      </ul>
+    </section>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kubernetes-workshop/10_introduction.html" title="Introduction" class="dd-item
+        
+        
+        
+        ">
+      <a href="/kubernetes-workshop/10_introduction.html">
+          <b>1. </b>Introduction
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kubernetes-workshop/10_introduction/10_introduction.html" title="Introduction" class="dd-item ">
+        <a href="/kubernetes-workshop/10_introduction/10_introduction.html">
+        <b>A. </b>Introduction
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kubernetes-workshop/10_introduction/20_people.html" title="Our People" class="dd-item ">
+        <a href="/kubernetes-workshop/10_introduction/20_people.html">
+        <b>B. </b>Our People
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kubernetes-workshop/20_week1.html" title="Week 1" class="dd-item
+        
+        
+        
+        ">
+      <a href="/kubernetes-workshop/20_week1.html">
+          <b>2. </b>Week 1
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kubernetes-workshop/20_week1/10_lab1.html" title="Lab 1" class="dd-item ">
+        <a href="/kubernetes-workshop/20_week1/10_lab1.html">
+        <b>A. </b>Lab 1
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kubernetes-workshop/30_week2.html" title="Week 2" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="/kubernetes-workshop/30_week2.html">
+          <b>3. </b>Week 2
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kubernetes-workshop/30_week2/10_lab3.html" title="Lab 3" class="dd-item active">
+        <a href="/kubernetes-workshop/30_week2/10_lab3.html">
+        <b>A. </b>Lab 3
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kubernetes-workshop/40_week3.html" title="Week 3" class="dd-item
+        
+        
+        
+        ">
+      <a href="/kubernetes-workshop/40_week3.html">
+          <b>4. </b>Week 3
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kubernetes-workshop/40_week3/10_lab5.html" title="Lab 5" class="dd-item ">
+        <a href="/kubernetes-workshop/40_week3/10_lab5.html">
+        <b>A. </b>Lab 5
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kubernetes-workshop/50_week4.html" title="Week 4" class="dd-item
+        
+        
+        
+        ">
+      <a href="/kubernetes-workshop/50_week4.html">
+          <b>5. </b>Week 4
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kubernetes-workshop/50_week4/10_lab7.html" title="Lab 7" class="dd-item ">
+        <a href="/kubernetes-workshop/50_week4/10_lab7.html">
+        <b>A. </b>Lab 7
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kubernetes-workshop/60_week5.html" title="Week 5" class="dd-item
+        
+        
+        
+        ">
+      <a href="/kubernetes-workshop/60_week5.html">
+          <b>6. </b>Week 5
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kubernetes-workshop/60_week5/10_lab9.html" title="Lab 9" class="dd-item ">
+        <a href="/kubernetes-workshop/60_week5/10_lab9.html">
+        <b>A. </b>Lab 9
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kubernetes-workshop/70_week6.html" title="Week 6" class="dd-item
+        
+        
+        
+        ">
+      <a href="/kubernetes-workshop/70_week6.html">
+          <b>7. </b>Week 6
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kubernetes-workshop/70_week6/10_lab11.html" title="Lab 11" class="dd-item ">
+        <a href="/kubernetes-workshop/70_week6/10_lab11.html">
+        <b>A. </b>Lab 11
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+
+      
+        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> Clear History</a></li>
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/kubernetes-workshop/'>Kubernetes Workshop</a> > <a href='/kubernetes-workshop/30_week2.html'>Week 2</a> > Lab 3
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents"></nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Lab 3
+            </h1>
+          
+
+        
+
+
+<p>Add page Markdown content here&hellip;&hellip;</p>
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/kubernetes-workshop/30_week2.html" title="Week 2"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/kubernetes-workshop/40_week3.html" title="Week 3" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/kubernetes-workshop/js/clipboard.min.js?1632831259"></script>
+    <script src="/kubernetes-workshop/js/perfect-scrollbar.min.js?1632831259"></script>
+    <script src="/kubernetes-workshop/js/perfect-scrollbar.jquery.min.js?1632831259"></script>
+    <script src="/kubernetes-workshop/js/jquery.sticky.js?1632831259"></script>
+    <script src="/kubernetes-workshop/js/featherlight.min.js?1632831259"></script>
+    <script src="/kubernetes-workshop/js/highlight.pack.js?1632831259"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/kubernetes-workshop/js/modernizr.custom-3.6.0.js?1632831259"></script>
+    <script src="/kubernetes-workshop/js/learn.js?1632831259"></script>
+    <script src="/kubernetes-workshop/js/hugo-learn.js?1632831259"></script>
+    
+        
+            <script src="/kubernetes-workshop/mermaid/mermaid.js?1632831259"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+  </body>
+</html>
+

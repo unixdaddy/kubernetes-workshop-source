@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kubernetes Workshop on kubernetes workshop</title>
+    <link>https://unixdaddy.github.io/kubernetes-workshop/</link>
+    <description>Recent content in Kubernetes Workshop on kubernetes workshop</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://unixdaddy.github.io/kubernetes-workshop/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introduction</title>
+      <link>https://unixdaddy.github.io/kubernetes-workshop/10_introduction/10_introduction.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://unixdaddy.github.io/kubernetes-workshop/10_introduction/10_introduction.html</guid>
+      <description>Add page Markdown content here&amp;hellip;&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Lab 1</title>
+      <link>https://unixdaddy.github.io/kubernetes-workshop/20_week1/10_lab1.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://unixdaddy.github.io/kubernetes-workshop/20_week1/10_lab1.html</guid>
+      <description>Add page Markdown content here&amp;hellip;&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Lab 11</title>
+      <link>https://unixdaddy.github.io/kubernetes-workshop/70_week6/10_lab11.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://unixdaddy.github.io/kubernetes-workshop/70_week6/10_lab11.html</guid>
+      <description>Add page Markdown content here&amp;hellip;&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Lab 3</title>
+      <link>https://unixdaddy.github.io/kubernetes-workshop/30_week2/10_lab3.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://unixdaddy.github.io/kubernetes-workshop/30_week2/10_lab3.html</guid>
+      <description>Add page Markdown content here&amp;hellip;&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Lab 5</title>
+      <link>https://unixdaddy.github.io/kubernetes-workshop/40_week3/10_lab5.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://unixdaddy.github.io/kubernetes-workshop/40_week3/10_lab5.html</guid>
+      <description>Add page Markdown content here&amp;hellip;&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Lab 7</title>
+      <link>https://unixdaddy.github.io/kubernetes-workshop/50_week4/10_lab7.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://unixdaddy.github.io/kubernetes-workshop/50_week4/10_lab7.html</guid>
+      <description>Add page Markdown content here&amp;hellip;&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Lab 9</title>
+      <link>https://unixdaddy.github.io/kubernetes-workshop/60_week5/10_lab9.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://unixdaddy.github.io/kubernetes-workshop/60_week5/10_lab9.html</guid>
+      <description>Add page Markdown content here&amp;hellip;&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Our People</title>
+      <link>https://unixdaddy.github.io/kubernetes-workshop/10_introduction/20_people.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://unixdaddy.github.io/kubernetes-workshop/10_introduction/20_people.html</guid>
+      <description>Add page Markdown content here&amp;hellip;&amp;hellip;</description>
+    </item>
+    
+  </channel>
+</rss>
