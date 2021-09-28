@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Week 3 on kubernetes workshop</title>
-    <link>https://unixdaddy.github.io/kubernetes-workshop/40_week3.html</link>
+    <link>https://unixdaddy.github.io/kubernetes-workshop-source/40_week3.html</link>
     <description>Recent content in Week 3 on kubernetes workshop</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://unixdaddy.github.io/kubernetes-workshop/40_week3/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://unixdaddy.github.io/kubernetes-workshop-source/40_week3/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Lab 5</title>
-      <link>https://unixdaddy.github.io/kubernetes-workshop/40_week3/10_lab5.html</link>
+      <link>https://unixdaddy.github.io/kubernetes-workshop-source/40_week3/10_lab5.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://unixdaddy.github.io/kubernetes-workshop/40_week3/10_lab5.html</guid>
+      <guid>https://unixdaddy.github.io/kubernetes-workshop-source/40_week3/10_lab5.html</guid>
       <description>Add page Markdown content here&amp;hellip;&amp;hellip;</description>
     </item>
     
