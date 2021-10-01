@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://unixdaddy.github.io/kubernetes-workshop-source/20_week1/10_lab1.html</loc>
+  </url><url>
     <loc>https://unixdaddy.github.io/kubernetes-workshop-source/10_introduction/10_introduction.html</loc>
   </url><url>
     <loc>https://unixdaddy.github.io/kubernetes-workshop-source/10_introduction.html</loc>
-  </url><url>
-    <loc>https://unixdaddy.github.io/kubernetes-workshop-source/20_week1/10_lab1.html</loc>
   </url><url>
     <loc>https://unixdaddy.github.io/kubernetes-workshop-source/70_week6/10_lab11.html</loc>
   </url><url>
