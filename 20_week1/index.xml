@@ -12,9 +12,10 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://unixdaddy.github.io/kubernetes-workshop-source/20_week1/10_lab1.html</guid>
-      <description>marp: true paginate: true header: &amp;lsquo;CIS Platform Engineering Kubernetes Core Concepts&amp;rsquo; footer: &amp;lsquo;Capgemini Platform Engineering Training Material - 2021&amp;rsquo; CIS Platform Engineering Kubernetes Learning Path Weekly Challenge Labs
+      <description>CIS Platform Engineering Kubernetes Learning Path Weekly Challenge Labs
  Lab 1 - Challenge Use kubectl to
- Create a pod using image &amp;lsquo;sirfragalot/docker-demo:dcus&amp;rsquo; Describe the pod Get pod events Access the webpage running on port 8080 in the container  using the internal IP using port forwarding   Use a filter command to show only this pod   Which node is this pod running on?</description>
+ Create a pod using image &amp;lsquo;sirfragalot/docker-demo:dcus&amp;rsquo; Describe the pod Get pod events Access the webpage running on port 8080 in the container  using the internal IP using port forwarding   Use a filter command to show only this pod   Which node is this pod running on?
+  Lab 1 - A Solution  doc reference</description>
     </item>
     
   </channel>
