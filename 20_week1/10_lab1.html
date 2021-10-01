@@ -12,22 +12,22 @@
     <title>Lab 1 :: kubernetes workshop</title>
 
     
-    <link href="/kubernetes-workshop-source/css/nucleus.css?1632832232" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/fontawesome-all.min.css?1632832232" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/hybrid.css?1632832232" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/featherlight.min.css?1632832232" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/perfect-scrollbar.min.css?1632832232" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/auto-complete.css?1632832232" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/atom-one-dark-reasonable.css?1632832232" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/theme.css?1632832232" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/tabs.css?1632832232" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/hugo-theme.css?1632832232" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/nucleus.css?1633115109" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/fontawesome-all.min.css?1633115109" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/hybrid.css?1633115109" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/featherlight.min.css?1633115109" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/perfect-scrollbar.min.css?1633115109" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/auto-complete.css?1633115109" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/atom-one-dark-reasonable.css?1633115109" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/theme.css?1633115109" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/tabs.css?1633115109" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/hugo-theme.css?1633115109" rel="stylesheet">
     
-    <link href="/kubernetes-workshop-source/css/theme-blue.css?1632832232" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/theme-blue.css?1633115109" rel="stylesheet">
     
     
 
-    <script src="/kubernetes-workshop-source/js/jquery-3.3.1.min.js?1632832232"></script>
+    <script src="/kubernetes-workshop-source/js/jquery-3.3.1.min.js?1633115109"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/kubernetes-workshop-source/js/lunr.min.js?1632832232"></script>
-<script type="text/javascript" src="/kubernetes-workshop-source/js/auto-complete.js?1632832232"></script>
+<script type="text/javascript" src="/kubernetes-workshop-source/js/lunr.min.js?1633115109"></script>
+<script type="text/javascript" src="/kubernetes-workshop-source/js/auto-complete.js?1633115109"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/unixdaddy.github.io\/kubernetes-workshop-source\/";
     
 </script>
-<script type="text/javascript" src="/kubernetes-workshop-source/js/search.js?1632832232"></script>
+<script type="text/javascript" src="/kubernetes-workshop-source/js/search.js?1633115109"></script>
 
     
   </div>
@@ -572,7 +572,19 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#footer-capgemini-platform-engineering-training-material---2021">marp: true
+paginate: true
+header: &lsquo;CIS Platform Engineering Kubernetes Core Concepts&rsquo;
+footer: &lsquo;Capgemini Platform Engineering Training Material - 2021&rsquo;</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#lab-1---challenge">Lab 1 - Challenge</a></li>
+    <li><a href="#lab-1---a-solution">Lab 1 - A Solution</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -595,8 +607,49 @@
         
 
 
-<p>Add page Markdown content here&hellip;&hellip;</p>
+<h2 id="footer-capgemini-platform-engineering-training-material---2021">marp: true
+paginate: true
+header: &lsquo;CIS Platform Engineering Kubernetes Core Concepts&rsquo;
+footer: &lsquo;Capgemini Platform Engineering Training Material - 2021&rsquo;</h2>
+<h1 id="cis-platform-engineering-kubernetes-learning-path"><strong>CIS Platform Engineering Kubernetes Learning Path</strong></h1>
+<p>Weekly Challenge Labs</p>
+<hr>
+<h2 id="lab-1---challenge">Lab 1 - Challenge</h2>
+<p>Use <code>kubectl</code> to</p>
+<ul>
+<li>Create a <code>pod</code> using image &lsquo;sirfragalot/docker-demo:dcus&rsquo;</li>
+<li>Describe the <code>pod</code></li>
+<li>Get pod events</li>
+<li>Access the webpage running on port 8080 in the container
+<ul>
+<li>using the internal IP</li>
+<li>using port forwarding</li>
+</ul>
+</li>
+<li>Use a filter command to show only this pod</li>
+</ul>
+<blockquote>
+<p>Which node is this pod running on?</p>
+</blockquote>
+<hr>
+<h2 id="lab-1---a-solution">Lab 1 - A Solution</h2>
+<blockquote>
+<p><a href="https://kubernetes.io/docs/home/">doc reference</a></p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl run lab1 --image<span style="color:#f92672">=</span>sirfragalot/docker-demo:dcus
 
+kubectl describe pod lab1
+
+kubectl get event | grep lab1
+kubectl get event --field-selector involvedObject.name<span style="color:#f92672">=</span>lab1
+
+curl 192.168.43.1:8080 <span style="color:#f92672">(</span>get the IP from the describe above<span style="color:#f92672">)</span>
+
+kubectl port-forward lab1 8989:8080
+  <span style="color:#f92672">(</span><span style="color:#66d9ef">then</span>: curl localhost:8989<span style="color:#f92672">)</span>
+
+kubectl get pod --field-selector<span style="color:#f92672">=</span>metadata.name<span style="color:#f92672">=</span>lab1 -o wide
+</code></pre></div>
 
 <footer class="footline">
 	
@@ -897,19 +950,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/kubernetes-workshop-source/js/clipboard.min.js?1632832232"></script>
-    <script src="/kubernetes-workshop-source/js/perfect-scrollbar.min.js?1632832232"></script>
-    <script src="/kubernetes-workshop-source/js/perfect-scrollbar.jquery.min.js?1632832232"></script>
-    <script src="/kubernetes-workshop-source/js/jquery.sticky.js?1632832232"></script>
-    <script src="/kubernetes-workshop-source/js/featherlight.min.js?1632832232"></script>
-    <script src="/kubernetes-workshop-source/js/highlight.pack.js?1632832232"></script>
+    <script src="/kubernetes-workshop-source/js/clipboard.min.js?1633115109"></script>
+    <script src="/kubernetes-workshop-source/js/perfect-scrollbar.min.js?1633115109"></script>
+    <script src="/kubernetes-workshop-source/js/perfect-scrollbar.jquery.min.js?1633115109"></script>
+    <script src="/kubernetes-workshop-source/js/jquery.sticky.js?1633115109"></script>
+    <script src="/kubernetes-workshop-source/js/featherlight.min.js?1633115109"></script>
+    <script src="/kubernetes-workshop-source/js/highlight.pack.js?1633115109"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/kubernetes-workshop-source/js/modernizr.custom-3.6.0.js?1632832232"></script>
-    <script src="/kubernetes-workshop-source/js/learn.js?1632832232"></script>
-    <script src="/kubernetes-workshop-source/js/hugo-learn.js?1632832232"></script>
+    <script src="/kubernetes-workshop-source/js/modernizr.custom-3.6.0.js?1633115109"></script>
+    <script src="/kubernetes-workshop-source/js/learn.js?1633115109"></script>
+    <script src="/kubernetes-workshop-source/js/hugo-learn.js?1633115109"></script>
     
         
-            <script src="/kubernetes-workshop-source/mermaid/mermaid.js?1632832232"></script>
+            <script src="/kubernetes-workshop-source/mermaid/mermaid.js?1633115109"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
