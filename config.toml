@@ -12,3 +12,4 @@ showVisitedLinks = true
 disableBreadcrumb = false
 disableNextPrev = false
 themeVariant = "blue"
+disableLandingPageButton = true
