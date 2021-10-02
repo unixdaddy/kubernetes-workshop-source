@@ -12,4 +12,5 @@ showVisitedLinks = true
 disableBreadcrumb = false
 disableNextPrev = false
 themeVariant = "blue"
-disableLandingPageButton = true
+landingPageURL = "/kubernetes-workshop-source/en"
+landingPageName = "<i class='fas fa-home'></i> Home"
