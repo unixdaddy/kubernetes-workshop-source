@@ -13,3 +13,26 @@ disableBreadcrumb = false
 disableNextPrev = false
 themeVariant = "blue"
 disableLandingPageButton = true
+
+[[menu.shortcuts]] 
+name = "<i class='fab fa-github'></i> Github repo"
+identifier = "ds"
+url = "https://github.com/unixdaddy/kubernetes-workshop-source"
+weight = 10
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-camera'></i> Showcases"
+url = "/showcase"
+weight = 11
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-bookmark'></i> Hugo Documentation"
+identifier = "hugodoc"
+url = "https://gohugo.io/"
+weight = 20
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-bullhorn'></i> Credits"
+url = "/credits"
+weight = 30
+
