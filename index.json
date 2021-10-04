@@ -7,6 +7,13 @@
 	"content": "Weekly Challenge Labs\n Lab 1 - Challenge Use kubectl to\n Create a pod using image \u0026lsquo;sirfragalot/docker-demo:dcus\u0026rsquo; Describe the pod Get pod events Access the webpage running on port 8080 in the container  using the internal IP using port forwarding   Use a filter command to show only this pod   Which node is this pod running on?\n    Expand here to see the solution   Lab 1 - A Solution  doc reference\n kubectl run lab1 --image=sirfragalot/docker-demo:dcus kubectl describe pod lab1 kubectl get event | grep lab1 kubectl get event --field-selector involvedObject.name=lab1 curl 192.168.43.1:8080 (get the IP from the describe above) kubectl port-forward lab1 8989:8080 (then: curl localhost:8989) kubectl get pod --field-selector=metadata.name=lab1 -o wide    "
 },
 {
+	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/30_week2/10_lab3.html",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": "Weekly Challenge Labs\n Lab 3 - Challenge Use kubectl to\n Create a service to expose your deployment from Lab 2 Access the service internally from the cluster Access the service externally from the cluster Describe services     Expand here to see the solution   Lab 3 - A Solution  doc reference\n kubectl expose deployment lab2 --name=lab2-svc --port=80 --target-port=8080 kubectl run -it --image=busybox bash / # wget lab2-svc kubectl expose deployment lab2 --name=lab2-np --type=NodePort --port=8080 kubectl get svc lab2-np curl ifconfig.me curl http://34.82.35.166:30595 (or use your web browser) kubectl describe svc    "
+},
+{
 	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/10_introduction/10_introduction.html",
 	"title": "Introduction",
 	"tags": [],
@@ -23,13 +30,6 @@
 {
 	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/70_week6/10_lab11.html",
 	"title": "Lab 11",
-	"tags": [],
-	"description": "",
-	"content": "Add page Markdown content here\u0026hellip;\u0026hellip;\n"
-},
-{
-	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/30_week2/10_lab3.html",
-	"title": "Lab 3",
 	"tags": [],
 	"description": "",
 	"content": "Add page Markdown content here\u0026hellip;\u0026hellip;\n"
