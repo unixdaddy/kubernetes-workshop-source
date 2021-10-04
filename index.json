@@ -21,6 +21,13 @@
 	"content": "Weekly Challenge Labs\n Lab 3 - Challenge Use kubectl to\n Create a service to expose your deployment from Lab 2 Access the service internally from the cluster Access the service externally from the cluster Describe services     Expand here to see the solution   Lab 3 - A Solution  doc reference\n kubectl expose deployment lab2 --name=lab2-svc --port=80 --target-port=8080 kubectl run -it --image=busybox bash / # wget lab2-svc kubectl expose deployment lab2 --name=lab2-np --type=NodePort --port=8080 kubectl get svc lab2-np curl ifconfig.me curl http://34.82.35.166:30595 (or use your web browser) kubectl describe svc    "
 },
 {
+	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/30_week2/20_lab4.html",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": "Weekly Challenge Labs\n Lab 4 - Challenge Use kubectl to create a namespace {yourname} and deploy the below into that namespace:\n Deployment  Image = sirfragalot/docker-demo:dcus (listens on port 8080) Replicas = 3 Service Type = NodePort       Expand here to see the solution   Lab 4 - A Solution  doc reference\n kubectl create namespace yourname kubectl -n yourname create deployment lab4 --image=sirfragalot/docker-demo:dcus --replicas=3 --port=8080 kubectl -n yourname expose deployment lab4 --type=NodePort kubectl -n yourname get svc curl localhost:31xxx  when you specify the \u0026lsquo;\u0026ndash;port\u0026rsquo; in create deployment this is only metadata - a hint that is used for the service to understand which target port to map to.\n   "
+},
+{
 	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/40_week3/10_lab5.html",
 	"title": "",
 	"tags": [],

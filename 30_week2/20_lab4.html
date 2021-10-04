@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/kubernetes-workshop-source/30_week2/10_lab3.html">
+  <body class="" data-url="/kubernetes-workshop-source/30_week2/20_lab4.html">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -265,7 +265,7 @@
  
   
     
-      <li data-nav-id="/kubernetes-workshop-source/30_week2/10_lab3.html" title="" class="dd-item active">
+      <li data-nav-id="/kubernetes-workshop-source/30_week2/10_lab3.html" title="" class="dd-item ">
         <a href="/kubernetes-workshop-source/30_week2/10_lab3.html">
         <b>A. Lab 3</b>
         <i class="fas fa-check read-icon"></i>
@@ -286,7 +286,7 @@
  
   
     
-      <li data-nav-id="/kubernetes-workshop-source/30_week2/20_lab4.html" title="" class="dd-item ">
+      <li data-nav-id="/kubernetes-workshop-source/30_week2/20_lab4.html" title="" class="dd-item active">
         <a href="/kubernetes-workshop-source/30_week2/20_lab4.html">
         <b>A. Lab 4</b>
         <i class="fas fa-check read-icon"></i>
@@ -623,7 +623,7 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#lab-3---challenge">Lab 3 - Challenge</a></li>
+    <li><a href="#lab-4---challenge">Lab 4 - Challenge</a></li>
   </ul>
 </nav>
     </div>
@@ -650,13 +650,16 @@
 
 <p>Weekly Challenge Labs</p>
 <hr>
-<h2 id="lab-3---challenge">Lab 3 - Challenge</h2>
-<p>Use <code>kubectl</code> to</p>
+<h2 id="lab-4---challenge">Lab 4 - Challenge</h2>
+<p>Use <code>kubectl</code> to create a namespace {yourname} and deploy the below into that namespace:</p>
 <ul>
-<li>Create a service to expose your deployment from Lab 2</li>
-<li>Access the service internally from the cluster</li>
-<li>Access the service externally from the cluster</li>
-<li>Describe services</li>
+<li>Deployment
+<ul>
+<li>Image = sirfragalot/docker-demo:dcus (listens on port 8080)</li>
+<li>Replicas = 3</li>
+<li>Service Type = NodePort</li>
+</ul>
+</li>
 </ul>
 <hr>
 
@@ -671,21 +674,19 @@
     	</span>
     </div>
     <div class="expand-content" style="display: none;">
-        <h2 id="lab-3---a-solution">Lab 3 - A Solution</h2>
+        <h2 id="lab-4---a-solution">Lab 4 - A Solution</h2>
 <blockquote>
-<p><a href="https://kubernetes.io/docs/concepts/services-networking/connect-applications-service/">doc reference</a></p>
+<p><a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/">doc reference</a></p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl expose deployment lab2 --name<span style="color:#f92672">=</span>lab2-svc --port<span style="color:#f92672">=</span><span style="color:#ae81ff">80</span> --target-port<span style="color:#f92672">=</span><span style="color:#ae81ff">8080</span>
-kubectl run -it --image<span style="color:#f92672">=</span>busybox bash
-  / <span style="color:#75715e"># wget lab2-svc</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl create namespace yourname
+kubectl -n yourname create deployment lab4 --image<span style="color:#f92672">=</span>sirfragalot/docker-demo:dcus --replicas<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span> --port<span style="color:#f92672">=</span><span style="color:#ae81ff">8080</span>
+kubectl -n yourname expose deployment lab4 --type<span style="color:#f92672">=</span>NodePort
+kubectl -n yourname get svc
+curl localhost:31xxx
+</code></pre></div><blockquote>
+<p>when you specify the &lsquo;&ndash;port&rsquo; in <em>create deployment</em> this is only metadata - a hint that is used for the service to understand which target port to map to.</p>
+</blockquote>
 
-kubectl expose deployment lab2 --name<span style="color:#f92672">=</span>lab2-np --type<span style="color:#f92672">=</span>NodePort --port<span style="color:#f92672">=</span><span style="color:#ae81ff">8080</span>
-kubectl get svc lab2-np
-curl ifconfig.me
-curl http://34.82.35.166:30595 <span style="color:#f92672">(</span>or use your web browser<span style="color:#f92672">)</span>
-
-kubectl describe svc
-</code></pre></div>
     </div>
 </div>
 
@@ -837,7 +838,6 @@ kubectl describe svc
             
                 
                     
-                    
                 
                 
 
@@ -854,8 +854,6 @@ kubectl describe svc
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -875,6 +873,9 @@ kubectl describe svc
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1008,10 +1009,10 @@ kubectl describe svc
 	 
 	 
 		
-			<a class="nav nav-prev" href="/kubernetes-workshop-source/30_week2.html" title="Week 2"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/kubernetes-workshop-source/30_week2/10_lab3.html" title=""> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/kubernetes-workshop-source/30_week2/20_lab4.html" title="" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/kubernetes-workshop-source/40_week3.html" title="Week 3" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
