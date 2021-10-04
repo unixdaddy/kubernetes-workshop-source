@@ -35,6 +35,13 @@
 	"content": "Weekly Challenge Labs\n Lab 5 - Challenge Deploy a pod named web in the namespace cka1 using the image nginx:1.16.0\n   Expand here to see the solution   Lab 5 - A Solution  doc reference\n kubectl create namespace cka1 kubectl run web --image=nginx:1.16.0    "
 },
 {
+	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/40_week3/20_lab6.html",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": "Weekly Challenge Labs\n Lab 6 - Challenge Deploy a deployment named cache using the image memcached with 3 replicas\n Expose the deployment on a port on the host that sends to port 11211 of the pod. Output the endpoints in json format to q3.json Tracking changes, scale the deployment to 5 replicas Output the history of this deployment to a file called q3.txt     Expand here to see the solution   Lab 6 - A Solution  doc reference\n tbc    "
+},
+{
 	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/10_introduction/10_introduction.html",
 	"title": "Introduction",
 	"tags": [],

@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/kubernetes-workshop-source/images/favicon.png" type="image/png">
 
-    <title>Lab 11 :: kubernetes workshop</title>
+    <title> :: kubernetes workshop</title>
 
     
     <link href="/kubernetes-workshop-source/css/nucleus.css?1633351018" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/kubernetes-workshop-source/70_week6/10_lab11.html">
+  <body class="" data-url="/kubernetes-workshop-source/40_week3/20_lab6.html">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -315,7 +315,7 @@
   
     
     <li data-nav-id="/kubernetes-workshop-source/40_week3.html" title="Week 3" class="dd-item
-        
+        parent
         
         
         ">
@@ -364,7 +364,7 @@
  
   
     
-      <li data-nav-id="/kubernetes-workshop-source/40_week3/20_lab6.html" title="" class="dd-item ">
+      <li data-nav-id="/kubernetes-workshop-source/40_week3/20_lab6.html" title="" class="dd-item active">
         <a href="/kubernetes-workshop-source/40_week3/20_lab6.html">
         <b>A. Lab 6</b>
         <i class="fas fa-check read-icon"></i>
@@ -507,7 +507,7 @@
   
     
     <li data-nav-id="/kubernetes-workshop-source/70_week6.html" title="Week 6" class="dd-item
-        parent
+        
         
         
         ">
@@ -535,7 +535,7 @@
  
   
     
-      <li data-nav-id="/kubernetes-workshop-source/70_week6/10_lab11.html" title="Lab 11" class="dd-item active">
+      <li data-nav-id="/kubernetes-workshop-source/70_week6/10_lab11.html" title="Lab 11" class="dd-item ">
         <a href="/kubernetes-workshop-source/70_week6/10_lab11.html">
         <b>A. </b>Lab 11
         <i class="fas fa-check read-icon"></i>
@@ -629,7 +629,7 @@
             
           
           
-            <a href='/kubernetes-workshop-source/'>Kubernetes Workshop</a> > <a href='/kubernetes-workshop-source/70_week6.html'>Week 6</a> > Lab 11
+            <a href='/kubernetes-workshop-source/'>Kubernetes Workshop</a> > <a href='/kubernetes-workshop-source/40_week3.html'>Week 3</a> > 
           
         
           
@@ -642,7 +642,11 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#lab-6---challenge">Lab 6 - Challenge</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -658,14 +662,46 @@
           
             <h1>
               
-              Lab 11
+              
             </h1>
           
 
         
 
 
-<p>Add page Markdown content here&hellip;&hellip;</p>
+<p>Weekly Challenge Labs</p>
+<hr>
+<h2 id="lab-6---challenge">Lab 6 - Challenge</h2>
+<p>Deploy a <code>deployment</code> named <strong>cache</strong> using the <code>image</code> <strong>memcached</strong> with <strong>3</strong> <code>replicas</code></p>
+<ul>
+<li>Expose the deployment on a port on the host that sends to port 11211 of the pod.</li>
+<li>Output the endpoints in json format to q3.json</li>
+<li>Tracking changes, scale the deployment to 5 replicas</li>
+<li>Output the history of this deployment to a file called q3.txt</li>
+</ul>
+<hr>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Expand here to see the solution
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <h2 id="lab-6---a-solution">Lab 6 - A Solution</h2>
+<blockquote>
+<p><a href="https://kubernetes.io/docs/concepts/workloads/controllers/deployment/">doc reference</a></p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
+tbc
+
+</code></pre></div>
+    </div>
+</div>
 
 
 <footer class="footline">
@@ -879,37 +915,6 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -929,6 +934,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -975,6 +983,37 @@
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -999,10 +1038,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/kubernetes-workshop-source/70_week6.html" title="Week 6"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/kubernetes-workshop-source/40_week3/10_lab5.html" title=""> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/kubernetes-workshop-source/10_introduction.html" title="Introduction" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/kubernetes-workshop-source/50_week4.html" title="Week 4" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
