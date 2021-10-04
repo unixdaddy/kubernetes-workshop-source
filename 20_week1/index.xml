@@ -18,5 +18,16 @@
     Expand here to see the solution   Lab 1 - A Solution  doc reference</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://unixdaddy.github.io/kubernetes-workshop-source/20_week1/20_lab2.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://unixdaddy.github.io/kubernetes-workshop-source/20_week1/20_lab2.html</guid>
+      <description>Weekly Challenge Labs
+ Lab 2 - Challenge Use kubectl to
+ Create a deployment  image &amp;lsquo;sirfragalot/docker-demo:dcus&amp;rsquo; one pod   Scale up to 5 pods Scale back down to 1 pod Rolling update to use image nginx instead (tracking changes) View the revision history Roll back to the previous image View the deployment image     Expand here to see the solution   Lab 2 - A Solution  doc reference</description>
+    </item>
+    
   </channel>
 </rss>

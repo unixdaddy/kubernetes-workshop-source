@@ -7,6 +7,13 @@
 	"content": "Weekly Challenge Labs\n Lab 1 - Challenge Use kubectl to\n Create a pod using image \u0026lsquo;sirfragalot/docker-demo:dcus\u0026rsquo; Describe the pod Get pod events Access the webpage running on port 8080 in the container  using the internal IP using port forwarding   Use a filter command to show only this pod   Which node is this pod running on?\n    Expand here to see the solution   Lab 1 - A Solution  doc reference\n kubectl run lab1 --image=sirfragalot/docker-demo:dcus kubectl describe pod lab1 kubectl get event | grep lab1 kubectl get event --field-selector involvedObject.name=lab1 curl 192.168.43.1:8080 (get the IP from the describe above) kubectl port-forward lab1 8989:8080 (then: curl localhost:8989) kubectl get pod --field-selector=metadata.name=lab1 -o wide    "
 },
 {
+	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/20_week1/20_lab2.html",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": "Weekly Challenge Labs\n Lab 2 - Challenge Use kubectl to\n Create a deployment  image \u0026lsquo;sirfragalot/docker-demo:dcus\u0026rsquo; one pod   Scale up to 5 pods Scale back down to 1 pod Rolling update to use image nginx instead (tracking changes) View the revision history Roll back to the previous image View the deployment image     Expand here to see the solution   Lab 2 - A Solution  doc reference\n kubectl create deployment lab2 --image=sirfragalot/docker-demo:dcus \\  --dry-run=client -o yaml | tee lab2.yaml kubectl apply -f lab2.yaml kubectl scale deployment lab2 --replicas=5 kubectl scale deployment lab2 --replicas=1 kubectl set image deployment/lab2 docker-demo=nginx:latest --record kubectl rollout history deployment/lab2 kubectl rollout undo deployment/lab2 kubectl get deployments \\  --output=custom-columns=NAME:.metadata.name,IMAGE:.spec.template.spec.containers.*.image    "
+},
+{
 	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/30_week2/10_lab3.html",
 	"title": "",
 	"tags": [],
