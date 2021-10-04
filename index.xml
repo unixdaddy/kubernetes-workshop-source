@@ -31,6 +31,18 @@
     </item>
     
     <item>
+      <title></title>
+      <link>https://unixdaddy.github.io/kubernetes-workshop-source/40_week3/10_lab5.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://unixdaddy.github.io/kubernetes-workshop-source/40_week3/10_lab5.html</guid>
+      <description>Weekly Challenge Labs
+ Lab 5 - Challenge Deploy a pod named web in the namespace cka1 using the image nginx:1.16.0
+   Expand here to see the solution   Lab 5 - A Solution  doc reference
+ kubectl create namespace cka1 kubectl run web --image=nginx:1.16.0    </description>
+    </item>
+    
+    <item>
       <title>Introduction</title>
       <link>https://unixdaddy.github.io/kubernetes-workshop-source/10_introduction/10_introduction.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -45,15 +57,6 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://unixdaddy.github.io/kubernetes-workshop-source/70_week6/10_lab11.html</guid>
-      <description>Add page Markdown content here&amp;hellip;&amp;hellip;</description>
-    </item>
-    
-    <item>
-      <title>Lab 5</title>
-      <link>https://unixdaddy.github.io/kubernetes-workshop-source/40_week3/10_lab5.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://unixdaddy.github.io/kubernetes-workshop-source/40_week3/10_lab5.html</guid>
       <description>Add page Markdown content here&amp;hellip;&amp;hellip;</description>
     </item>
     

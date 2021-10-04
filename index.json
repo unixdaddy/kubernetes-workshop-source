@@ -14,6 +14,13 @@
 	"content": "Weekly Challenge Labs\n Lab 3 - Challenge Use kubectl to\n Create a service to expose your deployment from Lab 2 Access the service internally from the cluster Access the service externally from the cluster Describe services     Expand here to see the solution   Lab 3 - A Solution  doc reference\n kubectl expose deployment lab2 --name=lab2-svc --port=80 --target-port=8080 kubectl run -it --image=busybox bash / # wget lab2-svc kubectl expose deployment lab2 --name=lab2-np --type=NodePort --port=8080 kubectl get svc lab2-np curl ifconfig.me curl http://34.82.35.166:30595 (or use your web browser) kubectl describe svc    "
 },
 {
+	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/40_week3/10_lab5.html",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": "Weekly Challenge Labs\n Lab 5 - Challenge Deploy a pod named web in the namespace cka1 using the image nginx:1.16.0\n   Expand here to see the solution   Lab 5 - A Solution  doc reference\n kubectl create namespace cka1 kubectl run web --image=nginx:1.16.0    "
+},
+{
 	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/10_introduction/10_introduction.html",
 	"title": "Introduction",
 	"tags": [],
@@ -30,13 +37,6 @@
 {
 	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/70_week6/10_lab11.html",
 	"title": "Lab 11",
-	"tags": [],
-	"description": "",
-	"content": "Add page Markdown content here\u0026hellip;\u0026hellip;\n"
-},
-{
-	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/40_week3/10_lab5.html",
-	"title": "Lab 5",
 	"tags": [],
 	"description": "",
 	"content": "Add page Markdown content here\u0026hellip;\u0026hellip;\n"
