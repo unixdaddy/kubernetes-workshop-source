@@ -14,6 +14,11 @@ disableNextPrev = false
 themeVariant = "blue"
 disableLandingPageButton = true
 
+[[menu.shortcuts]]
+name = "<i class='fas fa-tags'></i> Tags"
+url = "/tags"
+weight = 30
+
 [[menu.shortcuts]] 
 name = "<i class='fab fa-github'></i> Github repo"
 identifier = "ds"
