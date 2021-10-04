@@ -6,5 +6,23 @@
     <description>Recent content in Tags on kubernetes workshop</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://unixdaddy.github.io/kubernetes-workshop-source/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>deployments</title>
+      <link>https://unixdaddy.github.io/kubernetes-workshop-source/tags/deployments.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://unixdaddy.github.io/kubernetes-workshop-source/tags/deployments.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>services</title>
+      <link>https://unixdaddy.github.io/kubernetes-workshop-source/tags/services.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://unixdaddy.github.io/kubernetes-workshop-source/tags/services.html</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

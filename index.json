@@ -37,7 +37,7 @@
 {
 	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/40_week3/20_lab6.html",
 	"title": "",
-	"tags": [],
+	"tags": ["deployments", "services"],
 	"description": "",
 	"content": "Weekly Challenge Labs\n Lab 6 - Challenge Deploy a deployment named cache using the image memcached with 3 replicas\n Expose the deployment on a port on the host that sends to port 11211 of the pod. Output the endpoints in json format to q3.json Tracking changes, scale the deployment to 5 replicas Output the history of this deployment to a file called q3.txt     Expand here to see the solution   Lab 6 - A Solution  doc reference\n tbc    "
 },
@@ -133,11 +133,25 @@
 	"content": ""
 },
 {
+	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/tags/deployments.html",
+	"title": "deployments",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/",
 	"title": "Kubernetes Workshop",
 	"tags": [],
 	"description": "",
 	"content": "Kubernetes Workshop Home Welcome Kubernetes Workshop. Add further content here\u0026hellip;\u0026hellip;\n"
+},
+{
+	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/tags/services.html",
+	"title": "services",
+	"tags": [],
+	"description": "",
+	"content": ""
 },
 {
 	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/tags.html",

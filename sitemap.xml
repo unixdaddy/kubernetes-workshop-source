@@ -40,7 +40,11 @@
   </url><url>
     <loc>https://unixdaddy.github.io/kubernetes-workshop-source/categories.html</loc>
   </url><url>
+    <loc>https://unixdaddy.github.io/kubernetes-workshop-source/tags/deployments.html</loc>
+  </url><url>
     <loc>https://unixdaddy.github.io/kubernetes-workshop-source/</loc>
+  </url><url>
+    <loc>https://unixdaddy.github.io/kubernetes-workshop-source/tags/services.html</loc>
   </url><url>
     <loc>https://unixdaddy.github.io/kubernetes-workshop-source/tags.html</loc>
   </url>

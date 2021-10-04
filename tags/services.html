@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/kubernetes-workshop-source/images/favicon.png" type="image/png">
 
-    <title> :: kubernetes workshop</title>
+    <title>services :: kubernetes workshop</title>
 
     
     <link href="/kubernetes-workshop-source/css/nucleus.css?1633351228" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/kubernetes-workshop-source/30_week2/20_lab4.html">
+  <body class="" data-url="/kubernetes-workshop-source/tags/services.html">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -237,7 +237,7 @@
   
     
     <li data-nav-id="/kubernetes-workshop-source/30_week2.html" title="Week 2" class="dd-item
-        parent
+        
         
         
         ">
@@ -286,7 +286,7 @@
  
   
     
-      <li data-nav-id="/kubernetes-workshop-source/30_week2/20_lab4.html" title="" class="dd-item active">
+      <li data-nav-id="/kubernetes-workshop-source/30_week2/20_lab4.html" title="" class="dd-item ">
         <a href="/kubernetes-workshop-source/30_week2/20_lab4.html">
         <b>A. Lab 4</b>
         <i class="fas fa-check read-icon"></i>
@@ -629,7 +629,7 @@
             
           
           
-            <a href='/kubernetes-workshop-source/'>Kubernetes Workshop</a> > <a href='/kubernetes-workshop-source/30_week2.html'>Week 2</a> > 
+            <a href='/kubernetes-workshop-source/'>Kubernetes Workshop</a> > <a href='/kubernetes-workshop-source/tags.html'>Tags</a> > services
           
         
           
@@ -642,11 +642,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#lab-4---challenge">Lab 4 - Challenge</a></li>
-  </ul>
-</nav>
+
     </div>
 </div>
 
@@ -662,57 +658,26 @@
           
             <h1>
               
+                tag ::
               
+              services
             </h1>
           
 
         
 
 
-<p>Weekly Challenge Labs</p>
-<hr>
-<h2 id="lab-4---challenge">Lab 4 - Challenge</h2>
-<p>Use <code>kubectl</code> to create a namespace {yourname} and deploy the below into that namespace:</p>
+
+
+
 <ul>
-<li>Deployment
-<ul>
-<li>Image = sirfragalot/docker-demo:dcus (listens on port 8080)</li>
-<li>Replicas = 3</li>
-<li>Service Type = NodePort</li>
+	
+		<li><a href="/kubernetes-workshop-source/40_week3/20_lab6.html"></a></li>
+	
 </ul>
-</li>
-</ul>
-<hr>
-
-<div class="expand">
-    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
-        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
-        <span>
-        
-    	
-    	Expand here to see the solution
-    	
-    	</span>
-    </div>
-    <div class="expand-content" style="display: none;">
-        <h2 id="lab-4---a-solution">Lab 4 - A Solution</h2>
-<blockquote>
-<p><a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/">doc reference</a></p>
-</blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl create namespace yourname
-kubectl -n yourname create deployment lab4 --image<span style="color:#f92672">=</span>sirfragalot/docker-demo:dcus --replicas<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span> --port<span style="color:#f92672">=</span><span style="color:#ae81ff">8080</span>
-kubectl -n yourname expose deployment lab4 --type<span style="color:#f92672">=</span>NodePort
-kubectl -n yourname get svc
-curl localhost:31xxx
-</code></pre></div><blockquote>
-<p>when you specify the &lsquo;&ndash;port&rsquo; in <em>create deployment</em> this is only metadata - a hint that is used for the service to understand which target port to map to.</p>
-</blockquote>
-
-    </div>
-</div>
 
 
-<footer class="footline">
+<footer class=" footline" >
 	
 </footer>
 
@@ -875,7 +840,6 @@ curl localhost:31xxx
             
                 
                     
-                    
                 
                 
 
@@ -894,9 +858,6 @@ curl localhost:31xxx
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1046,10 +1007,8 @@ curl localhost:31xxx
 	 
 	 
 		
-			<a class="nav nav-prev" href="/kubernetes-workshop-source/30_week2/10_lab3.html" title=""> <i class="fa fa-chevron-left"></i></a>
 		
-		
-			<a class="nav nav-next" href="/kubernetes-workshop-source/40_week3.html" title="Week 3" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/kubernetes-workshop-source/10_introduction.html" title="Introduction" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1081,4 +1040,3 @@ curl localhost:31xxx
 
   </body>
 </html>
-
