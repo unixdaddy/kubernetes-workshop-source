@@ -2,9 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://unixdaddy.github.io/kubernetes-workshop-source/20_week1/10_lab1.html</loc>
-  </url><url>
     <loc>https://unixdaddy.github.io/kubernetes-workshop-source/20_week1/20_lab2.html</loc>
+  </url><url>
+    <loc>https://unixdaddy.github.io/kubernetes-workshop-source/20_week1/30_lab3.html</loc>
   </url><url>
     <loc>https://unixdaddy.github.io/kubernetes-workshop-source/30_week2/10_lab3.html</loc>
   </url><url>
@@ -23,6 +23,8 @@
     <loc>https://unixdaddy.github.io/kubernetes-workshop-source/50_week4/10_lab7.html</loc>
   </url><url>
     <loc>https://unixdaddy.github.io/kubernetes-workshop-source/60_week5/10_lab9.html</loc>
+  </url><url>
+    <loc>https://unixdaddy.github.io/kubernetes-workshop-source/20_week1/10_lab1.html</loc>
   </url><url>
     <loc>https://unixdaddy.github.io/kubernetes-workshop-source/10_introduction/20_people.html</loc>
   </url><url>

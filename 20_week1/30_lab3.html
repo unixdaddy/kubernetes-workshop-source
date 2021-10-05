@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/kubernetes-workshop-source/40_week3/10_lab5.html">
+  <body class="" data-url="/kubernetes-workshop-source/20_week1/30_lab3.html">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -159,7 +159,7 @@
   
     
     <li data-nav-id="/kubernetes-workshop-source/20_week1.html" title="Week 1" class="dd-item
-        
+        parent
         
         
         ">
@@ -208,7 +208,7 @@
  
   
     
-      <li data-nav-id="/kubernetes-workshop-source/20_week1/30_lab3.html" title="" class="dd-item ">
+      <li data-nav-id="/kubernetes-workshop-source/20_week1/30_lab3.html" title="" class="dd-item active">
         <a href="/kubernetes-workshop-source/20_week1/30_lab3.html">
         <b>A. Lab - pods and deployments</b>
         <i class="fas fa-check read-icon"></i>
@@ -336,7 +336,7 @@
   
     
     <li data-nav-id="/kubernetes-workshop-source/40_week3.html" title="Week 3" class="dd-item
-        parent
+        
         
         
         ">
@@ -364,7 +364,7 @@
  
   
     
-      <li data-nav-id="/kubernetes-workshop-source/40_week3/10_lab5.html" title="" class="dd-item active">
+      <li data-nav-id="/kubernetes-workshop-source/40_week3/10_lab5.html" title="" class="dd-item ">
         <a href="/kubernetes-workshop-source/40_week3/10_lab5.html">
         <b>A. Lab 5</b>
         <i class="fas fa-check read-icon"></i>
@@ -654,7 +654,7 @@
             
           
           
-            <a href='/kubernetes-workshop-source/'>Kubernetes Workshop</a> > <a href='/kubernetes-workshop-source/40_week3.html'>Week 3</a> > 
+            <a href='/kubernetes-workshop-source/'>Kubernetes Workshop</a> > <a href='/kubernetes-workshop-source/20_week1.html'>Week 1</a> > 
           
         
           
@@ -669,7 +669,7 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#lab-5---challenge">Lab 5 - Challenge</a></li>
+    <li><a href="#lab---pods-and-deployments">Lab - PODS and DEPLOYMENTS</a></li>
   </ul>
 </nav>
     </div>
@@ -694,10 +694,36 @@
         
 
 
-<p>Weekly Challenge Labs</p>
+<p>Challenge Labs</p>
 <hr>
-<h2 id="lab-5---challenge">Lab 5 - Challenge</h2>
-<p>Deploy a <code>pod</code> named <strong>web</strong> in the <code>namespace</code> <strong>cka1</strong> using the <code>image</code> <strong>nginx:1.16.0</strong></p>
+<h2 id="lab---pods-and-deployments">Lab - PODS and DEPLOYMENTS</h2>
+<p>Use <code>kubectl</code> to</p>
+<ul>
+<li>Create a <code>pod</code> called <code>pod-1</code>
+<ul>
+<li>image &lsquo;nginx&rsquo;</li>
+</ul>
+</li>
+<li>Create a <code>pod</code> called <code>redis</code>
+<ul>
+<li>image &lsquo;redis:1.99&rsquo;</li>
+<li>identify the problem with the pod</li>
+<li>rectify the problem with the pod</li>
+</ul>
+</li>
+<li>Create a <code>deployment</code> called <code>busybox-1</code>
+<ul>
+<li>image &lsquo;busybox&rsquo;</li>
+<li>with 3 replicas</li>
+<li>and commmand <code>sleep 3600</code></li>
+</ul>
+</li>
+<li>Update the <code>deployment</code> called <code>busybox-1</code>
+<ul>
+<li>image <code>ubuntu</code></li>
+</ul>
+</li>
+</ul>
 <hr>
 
 <div class="expand">
@@ -711,12 +737,28 @@
     	</span>
     </div>
     <div class="expand-content" style="display: none;">
-        <h2 id="lab-5---a-solution">Lab 5 - A Solution</h2>
+        <h2 id="lab---pods-and-deployments">Lab - PODS and DEPLOYMENTS</h2>
 <blockquote>
-<p><a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/">doc reference</a></p>
+<p><a href="https://kubernetes.io/docs/concepts/workloads/controllers/deployment/">doc reference</a></p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl create namespace cka1
-kubectl run web --image<span style="color:#f92672">=</span>nginx:1.16.0
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># create pod-1 pod</span>
+kubectl run pod-1 --image<span style="color:#f92672">=</span>nginx
+<span style="color:#75715e"># create redis pod</span>
+kubectl run redis --image<span style="color:#f92672">=</span>redis:1.99
+<span style="color:#75715e"># see error see error = ErrImagePull</span>
+kubectl get pod redis
+<span style="color:#75715e"># see errors in Events section = ImagePullBackOff</span>
+kubectl describe pod redis 
+<span style="color:#75715e"># fix redis pod using redis image (lastest image - bad in prodution) </span>
+kubectl set image pod redis redis<span style="color:#f92672">=</span>redis
+<span style="color:#75715e"># create deployment called busybox-1 declarative</span>
+kubectl create deployment busybox-1 --image<span style="color:#f92672">=</span>busybox --replicas<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span> --dry-run<span style="color:#f92672">=</span>client -o yaml -- sleep <span style="color:#ae81ff">360</span> &gt; busybox-1.yaml
+kubectl apply -f busybox-1.yaml
+<span style="color:#75715e"># OR (imperative)  </span>
+kubectl create deployment busybox-1 --image<span style="color:#f92672">=</span>busybox --replicas<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span> -- sleep <span style="color:#ae81ff">360</span>
+<span style="color:#75715e"># alter the image of deployment busybox-1</span>
+kubectl set image deployment busybox-1 busybox<span style="color:#f92672">=</span>ubuntu
+
 </code></pre></div>
     </div>
 </div>
@@ -837,6 +879,58 @@ kubectl run web --image<span style="color:#f92672">=</span>nginx:1.16.0
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
                 
                 
 
@@ -900,58 +994,6 @@ kubectl run web --image<span style="color:#f92672">=</span>nginx:1.16.0
             
             
                 
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -1072,10 +1114,10 @@ kubectl run web --image<span style="color:#f92672">=</span>nginx:1.16.0
 	 
 	 
 		
-			<a class="nav nav-prev" href="/kubernetes-workshop-source/40_week3.html" title="Week 3"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/kubernetes-workshop-source/20_week1/20_lab2.html" title=""> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/kubernetes-workshop-source/40_week3/20_lab6.html" title="" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/kubernetes-workshop-source/20_week1/10_lab1.html" title="Lab Pods and Deployments" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
