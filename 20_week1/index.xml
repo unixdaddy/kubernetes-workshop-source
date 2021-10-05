@@ -12,7 +12,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://unixdaddy.github.io/kubernetes-workshop-source/20_week1/10_lab1.html</guid>
-      <description>Challenge Labs PODS Use kubectl to
+      <description>Challenge Use kubectl to
  Create a pod using image &amp;lsquo;sirfragalot/docker-demo:dcus&amp;rsquo; called lab1 Describe the pod Get pod events Access the webpage running on port 8080 in the container  using the internal IP using port forwarding   Use a filter command to show only this pod   Which node is this pod running on?
     Expand here to see the solution   Solution  doc reference</description>
     </item>
@@ -23,9 +23,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://unixdaddy.github.io/kubernetes-workshop-source/20_week1/20_lab2.html</guid>
-      <description>Challenge Labs
- Deployments Use kubectl to
- Create a deployment called lab2  image &amp;lsquo;sirfragalot/docker-demo:dcus&amp;rsquo; one pod   Scale up to 5 pods Scale back down to 1 pod Rolling update to use image nginx instead (tracking changes) View the revision history Roll back to the previous image View the deployment image     Expand here to see the solution   Solution  doc reference</description>
+      <description>Challenge Use kubectl to
+ Create a deployment called lab2  image &amp;lsquo;sirfragalot/docker-demo:dcus&amp;rsquo; one pod   Scale up to 5 pods Scale back down to 1 pod Rolling update to use image nginx instead (tracking changes) View the revision history Roll back to the previous image View the deployment image     Expand here to see the solution   Solution  doc reference
+ kubectl create deployment lab2 --image=sirfragalot/docker-demo:dcus \  --dry-run=client -o yaml | tee lab2.</description>
     </item>
     
     <item>
@@ -34,8 +34,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://unixdaddy.github.io/kubernetes-workshop-source/20_week1/30_lab3.html</guid>
-      <description>Challenge Labs
- Lab - PODS and DEPLOYMENTS Use kubectl to
+      <description>Challenge Use kubectl to
  Create a pod called pod-1  image &amp;lsquo;nginx&amp;rsquo;   Create a pod called redis  image &amp;lsquo;redis:1.99&amp;rsquo; identify the problem with the pod rectify the problem with the pod   Create a deployment called busybox-1  image &amp;lsquo;busybox&amp;rsquo; with 3 replicas and commmand sleep 3600   Update the deployment called busybox-1  image ubuntu       Expand here to see the solution   Solution  doc reference</description>
     </item>
     
