@@ -125,7 +125,7 @@
       
       <guid>https://unixdaddy.github.io/kubernetes-workshop-source/20_week1/30_lab3.html</guid>
       <description>Challenge Use kubectl to
- Create a pod called pod-1  image &amp;lsquo;nginx&amp;rsquo;   Create a pod called redis  image &amp;lsquo;redis:1.99&amp;rsquo; identify the problem with the pod rectify the problem with the pod   Create a deployment called busybox-1  image &amp;lsquo;busybox&amp;rsquo; with 3 replicas and commmand sleep 3600   Update the deployment called busybox-1  image ubuntu       Expand here to see the solution   Solution  doc reference</description>
+ Create a pod called pod-1  image &amp;lsquo;nginx&amp;rsquo;   Create a pod called redis  image &amp;lsquo;redis:1.99&amp;rsquo; identify the problem with the pod rectify the problem with the pod   Create a deployment called busybox-1  image &amp;lsquo;busybox&amp;rsquo; with 3 replicas and commmand sleep 3600   Update the deployment called busybox-1  image ubuntu     It is Bad practice not to specify the image tag as it will default to &amp;lsquo;latest&amp;rsquo;, best practice is to specify the image tag</description>
     </item>
     
   </channel>
