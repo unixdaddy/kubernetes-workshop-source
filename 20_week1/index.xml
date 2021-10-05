@@ -7,17 +7,6 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://unixdaddy.github.io/kubernetes-workshop-source/20_week1/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Managing Deployments</title>
-      <link>https://unixdaddy.github.io/kubernetes-workshop-source/20_week1/20_lab2.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://unixdaddy.github.io/kubernetes-workshop-source/20_week1/20_lab2.html</guid>
-      <description>Challenge Labs
- Deployments Use kubectl to
- Create a deployment  image &amp;lsquo;sirfragalot/docker-demo:dcus&amp;rsquo; one pod   Scale up to 5 pods Scale back down to 1 pod Rolling update to use image nginx instead (tracking changes) View the revision history Roll back to the previous image View the deployment image     Expand here to see the solution   Lab 2 - A Solution  doc reference</description>
-    </item>
-    
-    <item>
       <title>Pods</title>
       <link>https://unixdaddy.github.io/kubernetes-workshop-source/20_week1/10_lab1.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -26,6 +15,17 @@
       <description>Challenge Labs PODS Use kubectl to
  Create a pod using image &amp;lsquo;sirfragalot/docker-demo:dcus&amp;rsquo; Describe the pod Get pod events Access the webpage running on port 8080 in the container  using the internal IP using port forwarding   Use a filter command to show only this pod   Which node is this pod running on?
     Expand here to see the solution   Lab 1 - A Solution  doc reference</description>
+    </item>
+    
+    <item>
+      <title>Managing Deployments</title>
+      <link>https://unixdaddy.github.io/kubernetes-workshop-source/20_week1/20_lab2.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://unixdaddy.github.io/kubernetes-workshop-source/20_week1/20_lab2.html</guid>
+      <description>Challenge Labs
+ Deployments Use kubectl to
+ Create a deployment  image &amp;lsquo;sirfragalot/docker-demo:dcus&amp;rsquo; one pod   Scale up to 5 pods Scale back down to 1 pod Rolling update to use image nginx instead (tracking changes) View the revision history Roll back to the previous image View the deployment image     Expand here to see the solution   Lab 2 - A Solution  doc reference</description>
     </item>
     
     <item>

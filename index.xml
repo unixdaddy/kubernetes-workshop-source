@@ -90,17 +90,6 @@
     </item>
     
     <item>
-      <title>Managing Deployments</title>
-      <link>https://unixdaddy.github.io/kubernetes-workshop-source/20_week1/20_lab2.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://unixdaddy.github.io/kubernetes-workshop-source/20_week1/20_lab2.html</guid>
-      <description>Challenge Labs
- Deployments Use kubectl to
- Create a deployment  image &amp;lsquo;sirfragalot/docker-demo:dcus&amp;rsquo; one pod   Scale up to 5 pods Scale back down to 1 pod Rolling update to use image nginx instead (tracking changes) View the revision history Roll back to the previous image View the deployment image     Expand here to see the solution   Lab 2 - A Solution  doc reference</description>
-    </item>
-    
-    <item>
       <title>Pods</title>
       <link>https://unixdaddy.github.io/kubernetes-workshop-source/20_week1/10_lab1.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -112,14 +101,14 @@
     </item>
     
     <item>
-      <title>Pods and Deployments (Continued)</title>
-      <link>https://unixdaddy.github.io/kubernetes-workshop-source/20_week1/30_lab3.html</link>
+      <title>Managing Deployments</title>
+      <link>https://unixdaddy.github.io/kubernetes-workshop-source/20_week1/20_lab2.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://unixdaddy.github.io/kubernetes-workshop-source/20_week1/30_lab3.html</guid>
+      <guid>https://unixdaddy.github.io/kubernetes-workshop-source/20_week1/20_lab2.html</guid>
       <description>Challenge Labs
- Lab - PODS and DEPLOYMENTS Use kubectl to
- Create a pod called pod-1  image &amp;lsquo;nginx&amp;rsquo;   Create a pod called redis  image &amp;lsquo;redis:1.99&amp;rsquo; identify the problem with the pod rectify the problem with the pod   Create a deployment called busybox-1  image &amp;lsquo;busybox&amp;rsquo; with 3 replicas and commmand sleep 3600   Update the deployment called busybox-1  image ubuntu     It is Bad to use latest image, best practice is to specify the image tag</description>
+ Deployments Use kubectl to
+ Create a deployment  image &amp;lsquo;sirfragalot/docker-demo:dcus&amp;rsquo; one pod   Scale up to 5 pods Scale back down to 1 pod Rolling update to use image nginx instead (tracking changes) View the revision history Roll back to the previous image View the deployment image     Expand here to see the solution   Lab 2 - A Solution  doc reference</description>
     </item>
     
     <item>
@@ -129,6 +118,17 @@
       
       <guid>https://unixdaddy.github.io/kubernetes-workshop-source/10_introduction/20_people.html</guid>
       <description>Add page Markdown content here&amp;hellip;&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Pods and Deployments (Continued)</title>
+      <link>https://unixdaddy.github.io/kubernetes-workshop-source/20_week1/30_lab3.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://unixdaddy.github.io/kubernetes-workshop-source/20_week1/30_lab3.html</guid>
+      <description>Challenge Labs
+ Lab - PODS and DEPLOYMENTS Use kubectl to
+ Create a pod called pod-1  image &amp;lsquo;nginx&amp;rsquo;   Create a pod called redis  image &amp;lsquo;redis:1.99&amp;rsquo; identify the problem with the pod rectify the problem with the pod   Create a deployment called busybox-1  image &amp;lsquo;busybox&amp;rsquo; with 3 replicas and commmand sleep 3600   Update the deployment called busybox-1  image ubuntu     It is Bad to use latest image, best practice is to specify the image tag</description>
     </item>
     
   </channel>
