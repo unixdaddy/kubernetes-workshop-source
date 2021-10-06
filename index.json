@@ -128,9 +128,9 @@
 {
 	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/20_pods_deployments/60_lab6.html",
 	"title": "Labels",
-	"tags": ["deployments", "services"],
+	"tags": ["deployments", "labels"],
 	"description": "",
-	"content": "Challenge Create a namespace called accounts all the following steps need to be done in this namespace\nDeploy a deployment named redis-app using the image redis with 2 replicas\n with labels tier=prod and loc=north  Deploy a deployment named redis-db using the image redis:alpine with 2 replicas\n with labels tier=prod and loc=south Expose the redis-db deployment on a port 6379.  Use labels to query the pods\n list pod with label tier=prod list pods with label loc=south  Alter deployment redis-app\n add label region=emea change label tier=prod to tier=dev     Expand here to see the solution   Solution  doc reference\n # create the namespace kubectl create ns accounts # create the deployments + add the labels (imperative for speed) kubectl create deployment redis-app --image=redis --replicas=2 -n accounts kubectl create deployment redis-db --image=redis:alpine --replicas=2 -n accounts # expose redis-db kubectl expose deployment redis-db --port=6379 -n accounts # chnage the labels on the deployment kubectl label deployment redis-app tier=prod loc=north -n accounts kubectl label deployment redis-db tier=prod loc=south -n accounts  Are the deployment and the pods labelled the same? (ignore the pod-template-hash ) why?\n Because the label changes were made on the deployment after the pods were created with the original labels You would need to label the pods as well or restart the deployment to have matching labels\n  # list pods with tier=prod kubectl get pods -n accounts -l tier=prod # list pods with loc=south kubectl get pods -n accounts -l tier=south # Add and Modify labels on deployment  kubectl label deployment redis-app region=emea-n accounts # as the label exists need the overwrite option kubectl label deployment redis-app tier=dev --overwrite -n accounts    "
+	"content": "Challenge Create a namespace called accounts all the following steps need to be done in this namespace\nDeploy a deployment named redis-app using the image redis with 2 replicas\n with labels tier=prod and loc=north  Deploy a deployment named redis-db using the image redis:alpine with 2 replicas\n with labels tier=prod and loc=south Expose the redis-db deployment on a port 6379.  Use labels to query the pods\n list pod with label tier=prod list pods with label loc=south  Alter deployment redis-app\n add label region=emea change label tier=prod to tier=dev     Expand here to see the solution   Solution  doc reference\n # create the namespace kubectl create ns accounts # create the deployments (imperative for speed) kubectl create deployment redis-app --image=redis --replicas=2 -n accounts kubectl create deployment redis-db --image=redis:alpine --replicas=2 -n accounts # expose redis-db kubectl expose deployment redis-db --port=6379 -n accounts # change the labels on the deployment kubectl label deployment redis-app tier=prod loc=north -n accounts kubectl label deployment redis-db tier=prod loc=south -n accounts  Are the deployments and there pods labelled the same? (ignore the pod-template-hash ) why?\n Because the label changes were made on the deployments after the pods were created (with the original labels). You would need to label the pods as well to match or restart the deployments to have matching labels\n  # list pods with tier=prod kubectl get pods -n accounts -l tier=prod # list pods with loc=south kubectl get pods -n accounts -l tier=south # Add labels on deployment  kubectl label deployment redis-app region=emea-n accounts # Modify labels. As the label exists we need the overwrite option kubectl label deployment redis-app tier=dev --overwrite -n accounts    "
 },
 {
 	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/60_networking.html",
@@ -173,6 +173,13 @@
 	"tags": [],
 	"description": "",
 	"content": "Kubernetes Workshop Home Welcome Kubernetes Workshop. Add further content here\u0026hellip;\u0026hellip;\n"
+},
+{
+	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/tags/labels.html",
+	"title": "labels",
+	"tags": [],
+	"description": "",
+	"content": ""
 },
 {
 	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/tags/services.html",
