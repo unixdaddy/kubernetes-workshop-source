@@ -1,12 +1,5 @@
 [
 {
-	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/40_week3/20_lab6.html",
-	"title": "",
-	"tags": ["deployments", "services"],
-	"description": "",
-	"content": "Weekly Challenge Labs\n Lab 6 - Challenge Deploy a deployment named cache using the image memcached with 3 replicas\n Expose the deployment on a port on the host that sends to port 11211 of the pod. Output the endpoints in json format to q3.json Tracking changes, scale the deployment to 5 replicas Output the history of this deployment to a file called q3.txt     Expand here to see the solution   Lab 6 - A Solution  doc reference\n tbc    "
-},
-{
 	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/10_introduction/10_introduction.html",
 	"title": "Introduction",
 	"tags": [],
@@ -110,6 +103,13 @@
 	"tags": [],
 	"description": "",
 	"content": "Kubernetes Workshop Photo by Ihor Dvoretskyion UnsplashWeek 3 Contents Add Week 3 Contents here\u0026hellip;\u0026hellip;\n"
+},
+{
+	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/20_pods_deployments/50_lab.html",
+	"title": "Querying Resources",
+	"tags": ["deployments", "services"],
+	"description": "",
+	"content": "Challenge Deploy a deployment named cache using the image memcached with 3 replicas\n Expose the deployment on a port on the host (NodePort) that sends to port 11211 of the pod. Output the endpoints in json format to q3.json Tracking changes, scale the deployment to 5 replicas Output the history of this deployment to a file called q3.txt     Expand here to see the solution   Solution  doc reference\n # create the deployment kubectl create deployment cache --image=memcached --replicas=3 # expose the deployment using NodePort type kubectl expose deployment cache --type=NodePort --port=11211 # output the endpoints in json format kubectl get ep cache -o json \u0026gt; q3.json # record switch on scale command is deprecated kubectl scale deployment cache --replicas=5 --record # record rollout history kubectl rollout history deployment cache \u0026gt; q3.txt # BONUS detailed history kubectl rollout history deployment cache --revision=1    "
 },
 {
 	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/50_week4.html",
