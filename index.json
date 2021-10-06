@@ -91,7 +91,7 @@
 	"content": "Kubernetes Workshop Photo by Ihor Dvoretskyion UnsplashContents Add Contents here\u0026hellip;\u0026hellip;\n"
 },
 {
-	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/20_pods_deployments/40_lab.html",
+	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/20_pods_deployments/40_lab4.html",
 	"title": "Deploying to a Namespace",
 	"tags": [],
 	"description": "",
@@ -105,7 +105,7 @@
 	"content": "Kubernetes Workshop Photo by Ihor Dvoretskyion UnsplashWeek 3 Contents Add Week 3 Contents here\u0026hellip;\u0026hellip;\n"
 },
 {
-	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/20_pods_deployments/50_lab.html",
+	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/20_pods_deployments/50_lab5.html",
 	"title": "Querying Resources",
 	"tags": ["deployments", "services"],
 	"description": "",
