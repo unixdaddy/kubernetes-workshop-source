@@ -65,8 +65,10 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://unixdaddy.github.io/kubernetes-workshop-source/20_pods_deployments/60_lab6.html</guid>
-      <description>Challenge Create a namespace called accounts Deploy a deployment named redis-app using the image redis with 2 replicas
- with labels tier=prod and loc=north in accounts namespace Deploy a deployment named redis-db using the image redis:alpine with 2 replicas with labels tier=prod and loc=south in accounts namespace Expose the redis-db deployment on a port 6379.  Use labels to query the pods
+      <description>Challenge Create a namespace called accounts all the following steps need to be done in this namespace
+Deploy a deployment named redis-app using the image redis with 2 replicas
+ with labels tier=prod and loc=north  Deploy a deployment named redis-db using the image redis:alpine with 2 replicas
+ with labels tier=prod and loc=south Expose the redis-db deployment on a port 6379.  Use labels to query the pods
  list pod with label tier=prod list pods with label loc=south  Alter deployment redis-app</description>
     </item>
     

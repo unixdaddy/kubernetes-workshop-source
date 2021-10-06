@@ -12,22 +12,22 @@
     <title>Labels :: kubernetes workshop</title>
 
     
-    <link href="/kubernetes-workshop-source/css/nucleus.css?1633537275" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/fontawesome-all.min.css?1633537275" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/hybrid.css?1633537275" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/featherlight.min.css?1633537275" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/perfect-scrollbar.min.css?1633537275" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/auto-complete.css?1633537275" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/atom-one-dark-reasonable.css?1633537275" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/theme.css?1633537275" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/tabs.css?1633537275" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/hugo-theme.css?1633537275" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/nucleus.css?1633541240" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/fontawesome-all.min.css?1633541240" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/hybrid.css?1633541240" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/featherlight.min.css?1633541240" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/perfect-scrollbar.min.css?1633541240" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/auto-complete.css?1633541240" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/atom-one-dark-reasonable.css?1633541240" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/theme.css?1633541240" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/tabs.css?1633541240" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/hugo-theme.css?1633541240" rel="stylesheet">
     
-    <link href="/kubernetes-workshop-source/css/theme-blue.css?1633537275" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/theme-blue.css?1633541240" rel="stylesheet">
     
     
 
-    <script src="/kubernetes-workshop-source/js/jquery-3.3.1.min.js?1633537275"></script>
+    <script src="/kubernetes-workshop-source/js/jquery-3.3.1.min.js?1633541240"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/kubernetes-workshop-source/js/lunr.min.js?1633537275"></script>
-<script type="text/javascript" src="/kubernetes-workshop-source/js/auto-complete.js?1633537275"></script>
+<script type="text/javascript" src="/kubernetes-workshop-source/js/lunr.min.js?1633541240"></script>
+<script type="text/javascript" src="/kubernetes-workshop-source/js/auto-complete.js?1633541240"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/unixdaddy.github.io\/kubernetes-workshop-source\/";
     
 </script>
-<script type="text/javascript" src="/kubernetes-workshop-source/js/search.js?1633537275"></script>
+<script type="text/javascript" src="/kubernetes-workshop-source/js/search.js?1633541240"></script>
 
     
   </div>
@@ -771,12 +771,14 @@
 
 
 <h2 id="challenge">Challenge</h2>
-<p>Create a namespace called <code>accounts</code>
-Deploy a deployment named <code>redis-app</code> using the image <code>redis</code> with 2 replicas</p>
+<p>Create a namespace called <code>accounts</code> all the following steps need to be done in this namespace</p>
+<p>Deploy a deployment named <code>redis-app</code> using the image <code>redis</code> with 2 replicas</p>
 <ul>
-<li>with labels <code>tier=prod</code> and <code>loc=north</code> in <code>accounts</code> namespace
-Deploy a deployment named <code>redis-db</code> using the image <code>redis:alpine</code> with 2 replicas</li>
-<li>with labels <code>tier=prod</code> and <code>loc=south</code> in <code>accounts</code> namespace</li>
+<li>with labels <code>tier=prod</code> and <code>loc=north</code></li>
+</ul>
+<p>Deploy a deployment named <code>redis-db</code> using the image <code>redis:alpine</code> with 2 replicas</p>
+<ul>
+<li>with labels <code>tier=prod</code> and <code>loc=south</code></li>
 <li>Expose the redis-db deployment on a port 6379.</li>
 </ul>
 <p>Use labels to query the pods</p>
@@ -810,19 +812,31 @@ Deploy a deployment named <code>redis-db</code> using the image <code>redis:alpi
 kubectl create ns accounts
 <span style="color:#75715e"># create the deployments + add the labels (imperative for speed)</span>
 kubectl create deployment redis-app --image<span style="color:#f92672">=</span>redis --replicas<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span> -n accounts
-kubectl label deployment redis-app tier<span style="color:#f92672">=</span>prod loc<span style="color:#f92672">=</span>north -n accounts
 kubectl create deployment redis-db --image<span style="color:#f92672">=</span>redis:alpine --replicas<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span> -n accounts 
-kubectl label deployment redis-db tier<span style="color:#f92672">=</span>prod loc<span style="color:#f92672">=</span>south -n accounts
 <span style="color:#75715e"># expose redis-db</span>
 kubectl expose deployment redis-db --port<span style="color:#f92672">=</span><span style="color:#ae81ff">6379</span> -n accounts
+<span style="color:#75715e"># chnage the labels on the deployment</span>
+kubectl label deployment redis-app tier<span style="color:#f92672">=</span>prod loc<span style="color:#f92672">=</span>north -n accounts
+kubectl label deployment redis-db tier<span style="color:#f92672">=</span>prod loc<span style="color:#f92672">=</span>south -n accounts
 </code></pre></div><blockquote>
-<p>Is the deployment and the pods labelled the same? (ignore the pod-template-hash )
+<p>Are the deployment and the pods labelled the same? (ignore the pod-template-hash )
 why?</p>
 <blockquote>
-<p>because the replicaset is manages the pod and the label changes take place at the deployment level</p>
+<p>Because the label changes were made on the deployment after the pods were created with the original labels
+You would need to label the pods as well or restart the deployment to have matching labels</p>
 </blockquote>
 </blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># list pods with tier=prod</span>
+kubectl get pods -n accounts -l tier<span style="color:#f92672">=</span>prod
+<span style="color:#75715e"># list pods with loc=south</span>
+kubectl get pods -n accounts -l tier<span style="color:#f92672">=</span>south
 
+<span style="color:#75715e"># Add and Modify labels on deployment </span>
+kubectl label deployment redis-app region<span style="color:#f92672">=</span>emea-n accounts
+<span style="color:#75715e"># as the label exists need the overwrite option</span>
+kubectl label deployment redis-app tier<span style="color:#f92672">=</span>dev --overwrite -n accounts
+
+</code></pre></div>
     </div>
 </div>
 
@@ -1238,19 +1252,19 @@ why?</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/kubernetes-workshop-source/js/clipboard.min.js?1633537275"></script>
-    <script src="/kubernetes-workshop-source/js/perfect-scrollbar.min.js?1633537275"></script>
-    <script src="/kubernetes-workshop-source/js/perfect-scrollbar.jquery.min.js?1633537275"></script>
-    <script src="/kubernetes-workshop-source/js/jquery.sticky.js?1633537275"></script>
-    <script src="/kubernetes-workshop-source/js/featherlight.min.js?1633537275"></script>
-    <script src="/kubernetes-workshop-source/js/highlight.pack.js?1633537275"></script>
+    <script src="/kubernetes-workshop-source/js/clipboard.min.js?1633541240"></script>
+    <script src="/kubernetes-workshop-source/js/perfect-scrollbar.min.js?1633541240"></script>
+    <script src="/kubernetes-workshop-source/js/perfect-scrollbar.jquery.min.js?1633541240"></script>
+    <script src="/kubernetes-workshop-source/js/jquery.sticky.js?1633541240"></script>
+    <script src="/kubernetes-workshop-source/js/featherlight.min.js?1633541240"></script>
+    <script src="/kubernetes-workshop-source/js/highlight.pack.js?1633541240"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/kubernetes-workshop-source/js/modernizr.custom-3.6.0.js?1633537275"></script>
-    <script src="/kubernetes-workshop-source/js/learn.js?1633537275"></script>
-    <script src="/kubernetes-workshop-source/js/hugo-learn.js?1633537275"></script>
+    <script src="/kubernetes-workshop-source/js/modernizr.custom-3.6.0.js?1633541240"></script>
+    <script src="/kubernetes-workshop-source/js/learn.js?1633541240"></script>
+    <script src="/kubernetes-workshop-source/js/hugo-learn.js?1633541240"></script>
     
         
-            <script src="/kubernetes-workshop-source/mermaid/mermaid.js?1633537275"></script>
+            <script src="/kubernetes-workshop-source/mermaid/mermaid.js?1633541240"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
