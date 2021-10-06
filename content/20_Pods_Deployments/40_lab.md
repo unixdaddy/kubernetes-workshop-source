@@ -2,7 +2,7 @@
 title: "Deploying to a Namespace"
 weight: 40
 draft : false
-pre: "<b>d. </b>"
+pre: "<b>D. </b>"
 ---
 
 ## Challenge
