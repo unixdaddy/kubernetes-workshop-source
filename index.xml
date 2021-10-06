@@ -8,18 +8,6 @@
     <language>en-us</language><atom:link href="https://unixdaddy.github.io/kubernetes-workshop-source/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>https://unixdaddy.github.io/kubernetes-workshop-source/40_week3/10_lab5.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://unixdaddy.github.io/kubernetes-workshop-source/40_week3/10_lab5.html</guid>
-      <description>Weekly Challenge Labs
- Lab 5 - Challenge Deploy a pod named web in the namespace cka1 using the image nginx:1.16.0
-   Expand here to see the solution   Lab 5 - A Solution  doc reference
- kubectl create namespace cka1 kubectl run web --image=nginx:1.16.0    </description>
-    </item>
-    
-    <item>
-      <title></title>
       <link>https://unixdaddy.github.io/kubernetes-workshop-source/40_week3/20_lab6.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -78,10 +66,10 @@
     
     <item>
       <title>Using Services</title>
-      <link>https://unixdaddy.github.io/kubernetes-workshop-source/30_week2/10_lab3.html</link>
+      <link>https://unixdaddy.github.io/kubernetes-workshop-source/30_services/10_lab3.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://unixdaddy.github.io/kubernetes-workshop-source/30_week2/10_lab3.html</guid>
+      <guid>https://unixdaddy.github.io/kubernetes-workshop-source/30_services/10_lab3.html</guid>
       <description>Challenge Use kubectl to
  Create a service to expose your deployment from the previous challenge Access the service internally from the cluster Access the service externally from the cluster Describe services     Expand here to see the solution   Solution  doc reference
  kubectl expose deployment lab2 --name=lab2-svc --port=80 --target-port=8080 kubectl run -it --image=busybox bash / # wget lab2-svc kubectl expose deployment lab2 --name=lab2-np --type=NodePort --port=8080 kubectl get svc lab2-np curl ifconfig.</description>
@@ -100,10 +88,10 @@
     
     <item>
       <title>NodePort Service</title>
-      <link>https://unixdaddy.github.io/kubernetes-workshop-source/30_week2/20_lab4.html</link>
+      <link>https://unixdaddy.github.io/kubernetes-workshop-source/30_services/20_lab4.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://unixdaddy.github.io/kubernetes-workshop-source/30_week2/20_lab4.html</guid>
+      <guid>https://unixdaddy.github.io/kubernetes-workshop-source/30_services/20_lab4.html</guid>
       <description>Challenge Use kubectl to create a namespace {yourname} and deploy the below into that namespace:
  Deployment  Image = sirfragalot/docker-demo:dcus (listens on port 8080) Replicas = 3 Service Type = NodePort       Expand here to see the solution   Solution  doc reference
  kubectl create namespace yourname kubectl -n yourname create deployment lab4 --image=sirfragalot/docker-demo:dcus --replicas=3 --port=8080 kubectl -n yourname expose deployment lab4 --type=NodePort kubectl -n yourname get svc curl localhost:31xxx  when you specify the &amp;lsquo;&amp;ndash;port&amp;rsquo; in create deployment this is only metadata - a hint that is used for the service to understand which target port to map to.</description>
@@ -126,6 +114,17 @@
       <guid>https://unixdaddy.github.io/kubernetes-workshop-source/20_pods_deployments/30_lab3.html</guid>
       <description>Challenge Use kubectl to
  Create a pod called pod-1  image &amp;lsquo;nginx&amp;rsquo;   Create a pod called redis  image &amp;lsquo;redis:1.99&amp;rsquo; identify the problem with the pod rectify the problem with the pod   Create a deployment called busybox-1  image &amp;lsquo;busybox&amp;rsquo; with 3 replicas and commmand sleep 3600   Update the deployment called busybox-1  image ubuntu     It is bad practice not to specify the image tag (as it will default to &amp;lsquo;latest&amp;rsquo;).</description>
+    </item>
+    
+    <item>
+      <title>Deploying to a Namespace</title>
+      <link>https://unixdaddy.github.io/kubernetes-workshop-source/20_pods_deployments/40_lab.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://unixdaddy.github.io/kubernetes-workshop-source/20_pods_deployments/40_lab.html</guid>
+      <description>Challenge Deploy a pod named web in the namespace cka1 using the image nginx:1.16.0
+   Expand here to see the solution   Solution  doc reference
+ kubectl create namespace cka1 kubectl run web --image=nginx:1.16.0    </description>
     </item>
     
   </channel>

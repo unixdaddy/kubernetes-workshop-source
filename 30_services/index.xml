@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Services on kubernetes workshop</title>
-    <link>https://unixdaddy.github.io/kubernetes-workshop-source/30_week2.html</link>
+    <link>https://unixdaddy.github.io/kubernetes-workshop-source/30_services.html</link>
     <description>Recent content in Services on kubernetes workshop</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://unixdaddy.github.io/kubernetes-workshop-source/30_week2/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://unixdaddy.github.io/kubernetes-workshop-source/30_services/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Using Services</title>
-      <link>https://unixdaddy.github.io/kubernetes-workshop-source/30_week2/10_lab3.html</link>
+      <link>https://unixdaddy.github.io/kubernetes-workshop-source/30_services/10_lab3.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://unixdaddy.github.io/kubernetes-workshop-source/30_week2/10_lab3.html</guid>
+      <guid>https://unixdaddy.github.io/kubernetes-workshop-source/30_services/10_lab3.html</guid>
       <description>Challenge Use kubectl to
  Create a service to expose your deployment from the previous challenge Access the service internally from the cluster Access the service externally from the cluster Describe services     Expand here to see the solution   Solution  doc reference
  kubectl expose deployment lab2 --name=lab2-svc --port=80 --target-port=8080 kubectl run -it --image=busybox bash / # wget lab2-svc kubectl expose deployment lab2 --name=lab2-np --type=NodePort --port=8080 kubectl get svc lab2-np curl ifconfig.</description>
@@ -19,10 +19,10 @@
     
     <item>
       <title>NodePort Service</title>
-      <link>https://unixdaddy.github.io/kubernetes-workshop-source/30_week2/20_lab4.html</link>
+      <link>https://unixdaddy.github.io/kubernetes-workshop-source/30_services/20_lab4.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://unixdaddy.github.io/kubernetes-workshop-source/30_week2/20_lab4.html</guid>
+      <guid>https://unixdaddy.github.io/kubernetes-workshop-source/30_services/20_lab4.html</guid>
       <description>Challenge Use kubectl to create a namespace {yourname} and deploy the below into that namespace:
  Deployment  Image = sirfragalot/docker-demo:dcus (listens on port 8080) Replicas = 3 Service Type = NodePort       Expand here to see the solution   Solution  doc reference
  kubectl create namespace yourname kubectl -n yourname create deployment lab4 --image=sirfragalot/docker-demo:dcus --replicas=3 --port=8080 kubectl -n yourname expose deployment lab4 --type=NodePort kubectl -n yourname get svc curl localhost:31xxx  when you specify the &amp;lsquo;&amp;ndash;port&amp;rsquo; in create deployment this is only metadata - a hint that is used for the service to understand which target port to map to.</description>

@@ -9,25 +9,25 @@
 
     <link rel="icon" href="/kubernetes-workshop-source/images/favicon.png" type="image/png">
 
-    <title>Using Services :: kubernetes workshop</title>
+    <title>Deploying to a Namespace :: kubernetes workshop</title>
 
     
-    <link href="/kubernetes-workshop-source/css/nucleus.css?1633520613" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/fontawesome-all.min.css?1633520613" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/hybrid.css?1633520613" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/featherlight.min.css?1633520613" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/perfect-scrollbar.min.css?1633520613" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/auto-complete.css?1633520613" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/atom-one-dark-reasonable.css?1633520613" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/theme.css?1633520613" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/tabs.css?1633520613" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/hugo-theme.css?1633520613" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/nucleus.css?1633521149" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/fontawesome-all.min.css?1633521149" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/hybrid.css?1633521149" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/featherlight.min.css?1633521149" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/perfect-scrollbar.min.css?1633521149" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/auto-complete.css?1633521149" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/atom-one-dark-reasonable.css?1633521149" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/theme.css?1633521149" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/tabs.css?1633521149" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/hugo-theme.css?1633521149" rel="stylesheet">
     
-    <link href="/kubernetes-workshop-source/css/theme-blue.css?1633520613" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/theme-blue.css?1633521149" rel="stylesheet">
     
     
 
-    <script src="/kubernetes-workshop-source/js/jquery-3.3.1.min.js?1633520613"></script>
+    <script src="/kubernetes-workshop-source/js/jquery-3.3.1.min.js?1633521149"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/kubernetes-workshop-source/30_week2/10_lab3.html">
+  <body class="" data-url="/kubernetes-workshop-source/20_pods_deployments/40_lab.html">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/kubernetes-workshop-source/js/lunr.min.js?1633520613"></script>
-<script type="text/javascript" src="/kubernetes-workshop-source/js/auto-complete.js?1633520613"></script>
+<script type="text/javascript" src="/kubernetes-workshop-source/js/lunr.min.js?1633521149"></script>
+<script type="text/javascript" src="/kubernetes-workshop-source/js/auto-complete.js?1633521149"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/unixdaddy.github.io\/kubernetes-workshop-source\/";
     
 </script>
-<script type="text/javascript" src="/kubernetes-workshop-source/js/search.js?1633520613"></script>
+<script type="text/javascript" src="/kubernetes-workshop-source/js/search.js?1633521149"></script>
 
     
   </div>
@@ -159,7 +159,7 @@
   
     
     <li data-nav-id="/kubernetes-workshop-source/20_pods_deployments.html" title="Pods and Deployments" class="dd-item
-        
+        parent
         
         
         ">
@@ -241,6 +241,27 @@
 
             
           
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kubernetes-workshop-source/20_pods_deployments/40_lab.html" title="Deploying to a Namespace" class="dd-item active">
+        <a href="/kubernetes-workshop-source/20_pods_deployments/40_lab.html">
+        <b>d. </b>Deploying to a Namespace
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
         
         </ul>
       
@@ -257,12 +278,12 @@
  
   
     
-    <li data-nav-id="/kubernetes-workshop-source/30_week2.html" title="Services" class="dd-item
-        parent
+    <li data-nav-id="/kubernetes-workshop-source/30_services.html" title="Services" class="dd-item
+        
         
         
         ">
-      <a href="/kubernetes-workshop-source/30_week2.html">
+      <a href="/kubernetes-workshop-source/30_services.html">
           <b>3. </b>Services
           
             <i class="fas fa-check read-icon"></i>
@@ -286,8 +307,8 @@
  
   
     
-      <li data-nav-id="/kubernetes-workshop-source/30_week2/10_lab3.html" title="Using Services" class="dd-item active">
-        <a href="/kubernetes-workshop-source/30_week2/10_lab3.html">
+      <li data-nav-id="/kubernetes-workshop-source/30_services/10_lab3.html" title="Using Services" class="dd-item ">
+        <a href="/kubernetes-workshop-source/30_services/10_lab3.html">
         <b>A. </b>Using Services
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -307,8 +328,8 @@
  
   
     
-      <li data-nav-id="/kubernetes-workshop-source/30_week2/20_lab4.html" title="NodePort Service" class="dd-item ">
-        <a href="/kubernetes-workshop-source/30_week2/20_lab4.html">
+      <li data-nav-id="/kubernetes-workshop-source/30_services/20_lab4.html" title="NodePort Service" class="dd-item ">
+        <a href="/kubernetes-workshop-source/30_services/20_lab4.html">
         <b>B. </b>NodePort Service
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -354,27 +375,6 @@
           
 
         
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/kubernetes-workshop-source/40_week3/10_lab5.html" title="" class="dd-item ">
-        <a href="/kubernetes-workshop-source/40_week3/10_lab5.html">
-        <b>A. Lab 5</b>
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
           
             
             
@@ -654,7 +654,7 @@
             
           
           
-            <a href='/kubernetes-workshop-source/'>Kubernetes Workshop</a> > <a href='/kubernetes-workshop-source/30_week2.html'>Services</a> > Using Services
+            <a href='/kubernetes-workshop-source/'>Kubernetes Workshop</a> > <a href='/kubernetes-workshop-source/20_pods_deployments.html'>Pods and Deployments</a> > Deploying to a Namespace
           
         
           
@@ -687,7 +687,7 @@
           
             <h1>
               
-              Using Services
+              Deploying to a Namespace
             </h1>
           
 
@@ -695,13 +695,7 @@
 
 
 <h2 id="challenge">Challenge</h2>
-<p>Use <code>kubectl</code> to</p>
-<ul>
-<li>Create a service to expose your deployment from the previous challenge</li>
-<li>Access the service internally from the cluster</li>
-<li>Access the service externally from the cluster</li>
-<li>Describe services</li>
-</ul>
+<p>Deploy a <code>pod</code> named <strong>web</strong> in the <code>namespace</code> <strong>cka1</strong> using the <code>image</code> <strong>nginx:1.16.0</strong></p>
 <hr>
 
 <div class="expand">
@@ -717,18 +711,10 @@
     <div class="expand-content" style="display: none;">
         <h2 id="solution">Solution</h2>
 <blockquote>
-<p><a href="https://kubernetes.io/docs/concepts/services-networking/connect-applications-service/">doc reference</a></p>
+<p><a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/">doc reference</a></p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl expose deployment lab2 --name<span style="color:#f92672">=</span>lab2-svc --port<span style="color:#f92672">=</span><span style="color:#ae81ff">80</span> --target-port<span style="color:#f92672">=</span><span style="color:#ae81ff">8080</span>
-kubectl run -it --image<span style="color:#f92672">=</span>busybox bash
-  / <span style="color:#75715e"># wget lab2-svc</span>
-
-kubectl expose deployment lab2 --name<span style="color:#f92672">=</span>lab2-np --type<span style="color:#f92672">=</span>NodePort --port<span style="color:#f92672">=</span><span style="color:#ae81ff">8080</span>
-kubectl get svc lab2-np
-curl ifconfig.me
-curl http://34.82.35.166:30595 <span style="color:#f92672">(</span>or use your web browser<span style="color:#f92672">)</span>
-
-kubectl describe svc
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl create namespace cka1
+kubectl run web --image<span style="color:#f92672">=</span>nginx:1.16.0
 </code></pre></div>
     </div>
 </div>
@@ -876,46 +862,11 @@ kubectl describe svc
             
         
                     
-            
-        
-                    
                         
             
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -935,6 +886,9 @@ kubectl describe svc
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -959,6 +913,38 @@ kubectl describe svc
                     
             
         
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
                     
                         
             
@@ -1084,10 +1070,10 @@ kubectl describe svc
 	 
 	 
 		
-			<a class="nav nav-prev" href="/kubernetes-workshop-source/30_week2.html" title="Services"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/kubernetes-workshop-source/20_pods_deployments/30_lab3.html" title="Pods and Deployments"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/kubernetes-workshop-source/30_week2/20_lab4.html" title="NodePort Service" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/kubernetes-workshop-source/30_services.html" title="Services" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1097,19 +1083,19 @@ kubectl describe svc
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/kubernetes-workshop-source/js/clipboard.min.js?1633520613"></script>
-    <script src="/kubernetes-workshop-source/js/perfect-scrollbar.min.js?1633520613"></script>
-    <script src="/kubernetes-workshop-source/js/perfect-scrollbar.jquery.min.js?1633520613"></script>
-    <script src="/kubernetes-workshop-source/js/jquery.sticky.js?1633520613"></script>
-    <script src="/kubernetes-workshop-source/js/featherlight.min.js?1633520613"></script>
-    <script src="/kubernetes-workshop-source/js/highlight.pack.js?1633520613"></script>
+    <script src="/kubernetes-workshop-source/js/clipboard.min.js?1633521149"></script>
+    <script src="/kubernetes-workshop-source/js/perfect-scrollbar.min.js?1633521149"></script>
+    <script src="/kubernetes-workshop-source/js/perfect-scrollbar.jquery.min.js?1633521149"></script>
+    <script src="/kubernetes-workshop-source/js/jquery.sticky.js?1633521149"></script>
+    <script src="/kubernetes-workshop-source/js/featherlight.min.js?1633521149"></script>
+    <script src="/kubernetes-workshop-source/js/highlight.pack.js?1633521149"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/kubernetes-workshop-source/js/modernizr.custom-3.6.0.js?1633520613"></script>
-    <script src="/kubernetes-workshop-source/js/learn.js?1633520613"></script>
-    <script src="/kubernetes-workshop-source/js/hugo-learn.js?1633520613"></script>
+    <script src="/kubernetes-workshop-source/js/modernizr.custom-3.6.0.js?1633521149"></script>
+    <script src="/kubernetes-workshop-source/js/learn.js?1633521149"></script>
+    <script src="/kubernetes-workshop-source/js/hugo-learn.js?1633521149"></script>
     
         
-            <script src="/kubernetes-workshop-source/mermaid/mermaid.js?1633520613"></script>
+            <script src="/kubernetes-workshop-source/mermaid/mermaid.js?1633521149"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
