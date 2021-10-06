@@ -9,25 +9,25 @@
 
     <link rel="icon" href="/kubernetes-workshop-source/images/favicon.png" type="image/png">
 
-    <title>Querying Resources :: kubernetes workshop</title>
+    <title>Labels :: kubernetes workshop</title>
 
     
-    <link href="/kubernetes-workshop-source/css/nucleus.css?1633533243" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/fontawesome-all.min.css?1633533243" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/hybrid.css?1633533243" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/featherlight.min.css?1633533243" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/perfect-scrollbar.min.css?1633533243" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/auto-complete.css?1633533243" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/atom-one-dark-reasonable.css?1633533243" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/theme.css?1633533243" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/tabs.css?1633533243" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/hugo-theme.css?1633533243" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/nucleus.css?1633537275" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/fontawesome-all.min.css?1633537275" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/hybrid.css?1633537275" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/featherlight.min.css?1633537275" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/perfect-scrollbar.min.css?1633537275" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/auto-complete.css?1633537275" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/atom-one-dark-reasonable.css?1633537275" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/theme.css?1633537275" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/tabs.css?1633537275" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/hugo-theme.css?1633537275" rel="stylesheet">
     
-    <link href="/kubernetes-workshop-source/css/theme-blue.css?1633533243" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/theme-blue.css?1633537275" rel="stylesheet">
     
     
 
-    <script src="/kubernetes-workshop-source/js/jquery-3.3.1.min.js?1633533243"></script>
+    <script src="/kubernetes-workshop-source/js/jquery-3.3.1.min.js?1633537275"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/kubernetes-workshop-source/js/lunr.min.js?1633533243"></script>
-<script type="text/javascript" src="/kubernetes-workshop-source/js/auto-complete.js?1633533243"></script>
+<script type="text/javascript" src="/kubernetes-workshop-source/js/lunr.min.js?1633537275"></script>
+<script type="text/javascript" src="/kubernetes-workshop-source/js/auto-complete.js?1633537275"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/unixdaddy.github.io\/kubernetes-workshop-source\/";
     
 </script>
-<script type="text/javascript" src="/kubernetes-workshop-source/js/search.js?1633533243"></script>
+<script type="text/javascript" src="/kubernetes-workshop-source/js/search.js?1633537275"></script>
 
     
   </div>
@@ -292,9 +292,9 @@
  
   
     
-      <li data-nav-id="/kubernetes-workshop-source/20_pods_deployments/60_lab6.html" title="Querying Resources" class="dd-item active">
+      <li data-nav-id="/kubernetes-workshop-source/20_pods_deployments/60_lab6.html" title="Labels" class="dd-item active">
         <a href="/kubernetes-workshop-source/20_pods_deployments/60_lab6.html">
-        <b>F. </b>Querying Resources
+        <b>F. </b>Labels
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -722,7 +722,7 @@
             
           
           
-            <a href='/kubernetes-workshop-source/'>Kubernetes Workshop</a> > <a href='/kubernetes-workshop-source/20_pods_deployments.html'>Pods and Deployments</a> > Querying Resources
+            <a href='/kubernetes-workshop-source/'>Kubernetes Workshop</a> > <a href='/kubernetes-workshop-source/20_pods_deployments.html'>Pods and Deployments</a> > Labels
           
         
           
@@ -763,7 +763,7 @@
           
             <h1>
               
-              Querying Resources
+              Labels
             </h1>
           
 
@@ -771,12 +771,23 @@
 
 
 <h2 id="challenge">Challenge</h2>
-<p>Deploy a deployment named <code>cache</code> using the image <code>memcached</code> with <strong>3</strong> replicas</p>
+<p>Create a namespace called <code>accounts</code>
+Deploy a deployment named <code>redis-app</code> using the image <code>redis</code> with 2 replicas</p>
 <ul>
-<li>Expose the deployment on a port on the host (NodePort) that sends to port 11211 of the pod.</li>
-<li>Output the endpoints in json format to q3.json</li>
-<li>Tracking changes, scale the deployment to 5 replicas</li>
-<li>Output the history of this deployment to a file called q3.txt</li>
+<li>with labels <code>tier=prod</code> and <code>loc=north</code> in <code>accounts</code> namespace
+Deploy a deployment named <code>redis-db</code> using the image <code>redis:alpine</code> with 2 replicas</li>
+<li>with labels <code>tier=prod</code> and <code>loc=south</code> in <code>accounts</code> namespace</li>
+<li>Expose the redis-db deployment on a port 6379.</li>
+</ul>
+<p>Use labels to query the pods</p>
+<ul>
+<li>list pod with label <code>tier=prod</code></li>
+<li>list pods with label <code>loc=south</code></li>
+</ul>
+<p>Alter deployment <code>redis-app</code></p>
+<ul>
+<li>add label <code>region=emea</code></li>
+<li>change label <code>tier=prod</code> to <code>tier=dev</code></li>
 </ul>
 <hr>
 
@@ -795,19 +806,23 @@
 <blockquote>
 <p><a href="https://kubernetes.io/docs/concepts/workloads/controllers/deployment/">doc reference</a></p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># create the deployment</span>
-kubectl create deployment cache --image<span style="color:#f92672">=</span>memcached --replicas<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>
-<span style="color:#75715e"># expose the deployment using NodePort type</span>
-kubectl expose deployment cache --type<span style="color:#f92672">=</span>NodePort --port<span style="color:#f92672">=</span><span style="color:#ae81ff">11211</span>
-<span style="color:#75715e"># output the endpoints in json format</span>
-kubectl get ep cache -o json &gt; q3.json
-<span style="color:#75715e"># record switch on scale command is deprecated</span>
-kubectl scale deployment cache --replicas<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span> --record
-<span style="color:#75715e"># record rollout history</span>
-kubectl rollout history deployment cache &gt; q3.txt
-<span style="color:#75715e"># BONUS detailed history</span>
-kubectl rollout history deployment cache --revision<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># create the namespace</span>
+kubectl create ns accounts
+<span style="color:#75715e"># create the deployments + add the labels (imperative for speed)</span>
+kubectl create deployment redis-app --image<span style="color:#f92672">=</span>redis --replicas<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span> -n accounts
+kubectl label deployment redis-app tier<span style="color:#f92672">=</span>prod loc<span style="color:#f92672">=</span>north -n accounts
+kubectl create deployment redis-db --image<span style="color:#f92672">=</span>redis:alpine --replicas<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span> -n accounts 
+kubectl label deployment redis-db tier<span style="color:#f92672">=</span>prod loc<span style="color:#f92672">=</span>south -n accounts
+<span style="color:#75715e"># expose redis-db</span>
+kubectl expose deployment redis-db --port<span style="color:#f92672">=</span><span style="color:#ae81ff">6379</span> -n accounts
+</code></pre></div><blockquote>
+<p>Is the deployment and the pods labelled the same? (ignore the pod-template-hash )
+why?</p>
+<blockquote>
+<p>because the replicaset is manages the pod and the label changes take place at the deployment level</p>
+</blockquote>
+</blockquote>
+
     </div>
 </div>
 
@@ -1223,19 +1238,19 @@ kubectl rollout history deployment cache --revision<span style="color:#f92672">=
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/kubernetes-workshop-source/js/clipboard.min.js?1633533243"></script>
-    <script src="/kubernetes-workshop-source/js/perfect-scrollbar.min.js?1633533243"></script>
-    <script src="/kubernetes-workshop-source/js/perfect-scrollbar.jquery.min.js?1633533243"></script>
-    <script src="/kubernetes-workshop-source/js/jquery.sticky.js?1633533243"></script>
-    <script src="/kubernetes-workshop-source/js/featherlight.min.js?1633533243"></script>
-    <script src="/kubernetes-workshop-source/js/highlight.pack.js?1633533243"></script>
+    <script src="/kubernetes-workshop-source/js/clipboard.min.js?1633537275"></script>
+    <script src="/kubernetes-workshop-source/js/perfect-scrollbar.min.js?1633537275"></script>
+    <script src="/kubernetes-workshop-source/js/perfect-scrollbar.jquery.min.js?1633537275"></script>
+    <script src="/kubernetes-workshop-source/js/jquery.sticky.js?1633537275"></script>
+    <script src="/kubernetes-workshop-source/js/featherlight.min.js?1633537275"></script>
+    <script src="/kubernetes-workshop-source/js/highlight.pack.js?1633537275"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/kubernetes-workshop-source/js/modernizr.custom-3.6.0.js?1633533243"></script>
-    <script src="/kubernetes-workshop-source/js/learn.js?1633533243"></script>
-    <script src="/kubernetes-workshop-source/js/hugo-learn.js?1633533243"></script>
+    <script src="/kubernetes-workshop-source/js/modernizr.custom-3.6.0.js?1633537275"></script>
+    <script src="/kubernetes-workshop-source/js/learn.js?1633537275"></script>
+    <script src="/kubernetes-workshop-source/js/hugo-learn.js?1633537275"></script>
     
         
-            <script src="/kubernetes-workshop-source/mermaid/mermaid.js?1633533243"></script>
+            <script src="/kubernetes-workshop-source/mermaid/mermaid.js?1633537275"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
