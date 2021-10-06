@@ -49,7 +49,7 @@
 	"content": "Add page Markdown content here\u0026hellip;\u0026hellip;\n"
 },
 {
-	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/20_week1/10_lab1.html",
+	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/20_pods_deployments/10_lab1.html",
 	"title": "Pods",
 	"tags": [],
 	"description": "",
@@ -63,7 +63,7 @@
 	"content": "Challenge Use kubectl to\n Create a service to expose your deployment from the previous challenge Access the service internally from the cluster Access the service externally from the cluster Describe services     Expand here to see the solution   Solution  doc reference\n kubectl expose deployment lab2 --name=lab2-svc --port=80 --target-port=8080 kubectl run -it --image=busybox bash / # wget lab2-svc kubectl expose deployment lab2 --name=lab2-np --type=NodePort --port=8080 kubectl get svc lab2-np curl ifconfig.me curl http://34.82.35.166:30595 (or use your web browser) kubectl describe svc    "
 },
 {
-	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/20_week1/20_lab2.html",
+	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/20_pods_deployments/20_lab2.html",
 	"title": "Managing Deployments",
 	"tags": [],
 	"description": "",
@@ -84,14 +84,14 @@
 	"content": "Add page Markdown content here\u0026hellip;\u0026hellip;\n"
 },
 {
-	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/20_week1.html",
+	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/20_pods_deployments.html",
 	"title": "Pods and Deployments",
 	"tags": [],
 	"description": "",
 	"content": "Kubernetes Workshop Photo by Ihor Dvoretskyion UnsplashContents Add Contents here\u0026hellip;\u0026hellip;\n"
 },
 {
-	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/20_week1/30_lab3.html",
+	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/20_pods_deployments/30_lab3.html",
 	"title": "Pods and Deployments",
 	"tags": [],
 	"description": "",

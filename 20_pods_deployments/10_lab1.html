@@ -9,25 +9,25 @@
 
     <link rel="icon" href="/kubernetes-workshop-source/images/favicon.png" type="image/png">
 
-    <title>Pods and Deployments :: kubernetes workshop</title>
+    <title>Pods :: kubernetes workshop</title>
 
     
-    <link href="/kubernetes-workshop-source/css/nucleus.css?1633438021" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/fontawesome-all.min.css?1633438021" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/hybrid.css?1633438021" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/featherlight.min.css?1633438021" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/perfect-scrollbar.min.css?1633438021" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/auto-complete.css?1633438021" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/atom-one-dark-reasonable.css?1633438021" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/theme.css?1633438021" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/tabs.css?1633438021" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/hugo-theme.css?1633438021" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/nucleus.css?1633520613" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/fontawesome-all.min.css?1633520613" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/hybrid.css?1633520613" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/featherlight.min.css?1633520613" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/perfect-scrollbar.min.css?1633520613" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/auto-complete.css?1633520613" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/atom-one-dark-reasonable.css?1633520613" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/theme.css?1633520613" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/tabs.css?1633520613" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/hugo-theme.css?1633520613" rel="stylesheet">
     
-    <link href="/kubernetes-workshop-source/css/theme-blue.css?1633438021" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/theme-blue.css?1633520613" rel="stylesheet">
     
     
 
-    <script src="/kubernetes-workshop-source/js/jquery-3.3.1.min.js?1633438021"></script>
+    <script src="/kubernetes-workshop-source/js/jquery-3.3.1.min.js?1633520613"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/kubernetes-workshop-source/20_week1.html">
+  <body class="" data-url="/kubernetes-workshop-source/20_pods_deployments/10_lab1.html">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/kubernetes-workshop-source/js/lunr.min.js?1633438021"></script>
-<script type="text/javascript" src="/kubernetes-workshop-source/js/auto-complete.js?1633438021"></script>
+<script type="text/javascript" src="/kubernetes-workshop-source/js/lunr.min.js?1633520613"></script>
+<script type="text/javascript" src="/kubernetes-workshop-source/js/auto-complete.js?1633520613"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/unixdaddy.github.io\/kubernetes-workshop-source\/";
     
 </script>
-<script type="text/javascript" src="/kubernetes-workshop-source/js/search.js?1633438021"></script>
+<script type="text/javascript" src="/kubernetes-workshop-source/js/search.js?1633520613"></script>
 
     
   </div>
@@ -158,12 +158,12 @@
  
   
     
-    <li data-nav-id="/kubernetes-workshop-source/20_week1.html" title="Pods and Deployments" class="dd-item
+    <li data-nav-id="/kubernetes-workshop-source/20_pods_deployments.html" title="Pods and Deployments" class="dd-item
         parent
-        active
+        
         
         ">
-      <a href="/kubernetes-workshop-source/20_week1.html">
+      <a href="/kubernetes-workshop-source/20_pods_deployments.html">
           <b>2. </b>Pods and Deployments
           
             <i class="fas fa-check read-icon"></i>
@@ -187,8 +187,8 @@
  
   
     
-      <li data-nav-id="/kubernetes-workshop-source/20_week1/10_lab1.html" title="Pods" class="dd-item ">
-        <a href="/kubernetes-workshop-source/20_week1/10_lab1.html">
+      <li data-nav-id="/kubernetes-workshop-source/20_pods_deployments/10_lab1.html" title="Pods" class="dd-item active">
+        <a href="/kubernetes-workshop-source/20_pods_deployments/10_lab1.html">
         <b>A. </b>Pods
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -208,8 +208,8 @@
  
   
     
-      <li data-nav-id="/kubernetes-workshop-source/20_week1/20_lab2.html" title="Managing Deployments" class="dd-item ">
-        <a href="/kubernetes-workshop-source/20_week1/20_lab2.html">
+      <li data-nav-id="/kubernetes-workshop-source/20_pods_deployments/20_lab2.html" title="Managing Deployments" class="dd-item ">
+        <a href="/kubernetes-workshop-source/20_pods_deployments/20_lab2.html">
         <b>B. </b>Managing Deployments
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -229,8 +229,8 @@
  
   
     
-      <li data-nav-id="/kubernetes-workshop-source/20_week1/30_lab3.html" title="Pods and Deployments" class="dd-item ">
-        <a href="/kubernetes-workshop-source/20_week1/30_lab3.html">
+      <li data-nav-id="/kubernetes-workshop-source/20_pods_deployments/30_lab3.html" title="Pods and Deployments" class="dd-item ">
+        <a href="/kubernetes-workshop-source/20_pods_deployments/30_lab3.html">
         <b>C. </b>Pods and Deployments
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -638,6 +638,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
                   <span class="links">
                  
                  
@@ -648,7 +650,13 @@
             
           
           
-            <a href='/kubernetes-workshop-source/'>Kubernetes Workshop</a> > Pods and Deployments
+            
+            
+          
+          
+            <a href='/kubernetes-workshop-source/'>Kubernetes Workshop</a> > <a href='/kubernetes-workshop-source/20_pods_deployments.html'>Pods and Deployments</a> > Pods
+          
+        
           
         
           
@@ -657,6 +665,17 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#challenge">Challenge</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
               </div>
             </div>
             
@@ -664,31 +683,73 @@
         
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>
+              
+              Pods
+            </h1>
           
 
         
 
 
+<h2 id="challenge">Challenge</h2>
+<p>Use <code>kubectl</code> to</p>
+<ul>
+<li>Create a <code>pod</code> using image &lsquo;sirfragalot/docker-demo:dcus&rsquo; called <code>lab1</code></li>
+<li>Describe the <code>pod</code></li>
+<li>Get pod events</li>
+<li>Access the webpage running on port 8080 in the container
+<ul>
+<li>using the internal IP</li>
+<li>using port forwarding</li>
+</ul>
+</li>
+<li>Use a filter command to show only this pod</li>
+</ul>
+<blockquote>
+<p>Which node is this pod running on?</p>
+</blockquote>
+<hr>
 
-	<h3 id="kubernetes-workshop">Kubernetes Workshop</h3>
-<p><img src="images/ihor-dvoretskyi1-unsplash.jpg?classes=border" alt="Kubernetes">
-Photo by <!-- raw HTML omitted -->Ihor Dvoretskyi<!-- raw HTML omitted --> on <!-- raw HTML omitted -->Unsplash<!-- raw HTML omitted --></p>
-<h1 id="contents">Contents</h1>
-<p>Add Contents here&hellip;&hellip;</p>
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Expand here to see the solution
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <h2 id="solution">Solution</h2>
+<blockquote>
+<p><a href="https://kubernetes.io/docs/home/">doc reference</a></p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl run lab1 --image<span style="color:#f92672">=</span>sirfragalot/docker-demo:dcus
+
+kubectl describe pod lab1
+
+kubectl get event | grep lab1
+kubectl get event --field-selector involvedObject.name<span style="color:#f92672">=</span>lab1
+
+curl 192.168.43.1:8080 <span style="color:#f92672">(</span>get the IP from the describe above<span style="color:#f92672">)</span>
+
+kubectl port-forward lab1 8989:8080
+  <span style="color:#f92672">(</span><span style="color:#66d9ef">then</span>: curl localhost:8989<span style="color:#f92672">)</span>
+
+kubectl get pod --field-selector<span style="color:#f92672">=</span>metadata.name<span style="color:#f92672">=</span>lab1 -o wide
+</code></pre></div>
+    </div>
+</div>
 
 
-
-
-
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
-        
-            </div> 
         
         </div>
         
@@ -771,7 +832,6 @@ Photo by <!-- raw HTML omitted -->Ihor Dvoretskyi<!-- raw HTML omitted --> on <!
             
                 
                     
-                    
                 
                 
 
@@ -785,8 +845,6 @@ Photo by <!-- raw HTML omitted -->Ihor Dvoretskyi<!-- raw HTML omitted --> on <!
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -803,6 +861,9 @@ Photo by <!-- raw HTML omitted -->Ihor Dvoretskyi<!-- raw HTML omitted --> on <!
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1035,10 +1096,10 @@ Photo by <!-- raw HTML omitted -->Ihor Dvoretskyi<!-- raw HTML omitted --> on <!
 	 
 	 
 		
-			<a class="nav nav-prev" href="/kubernetes-workshop-source/10_introduction/20_people.html" title="Our People"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/kubernetes-workshop-source/20_pods_deployments.html" title="Pods and Deployments"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/kubernetes-workshop-source/20_week1/10_lab1.html" title="Pods" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/kubernetes-workshop-source/20_pods_deployments/20_lab2.html" title="Managing Deployments" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1048,19 +1109,19 @@ Photo by <!-- raw HTML omitted -->Ihor Dvoretskyi<!-- raw HTML omitted --> on <!
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/kubernetes-workshop-source/js/clipboard.min.js?1633438021"></script>
-    <script src="/kubernetes-workshop-source/js/perfect-scrollbar.min.js?1633438021"></script>
-    <script src="/kubernetes-workshop-source/js/perfect-scrollbar.jquery.min.js?1633438021"></script>
-    <script src="/kubernetes-workshop-source/js/jquery.sticky.js?1633438021"></script>
-    <script src="/kubernetes-workshop-source/js/featherlight.min.js?1633438021"></script>
-    <script src="/kubernetes-workshop-source/js/highlight.pack.js?1633438021"></script>
+    <script src="/kubernetes-workshop-source/js/clipboard.min.js?1633520613"></script>
+    <script src="/kubernetes-workshop-source/js/perfect-scrollbar.min.js?1633520613"></script>
+    <script src="/kubernetes-workshop-source/js/perfect-scrollbar.jquery.min.js?1633520613"></script>
+    <script src="/kubernetes-workshop-source/js/jquery.sticky.js?1633520613"></script>
+    <script src="/kubernetes-workshop-source/js/featherlight.min.js?1633520613"></script>
+    <script src="/kubernetes-workshop-source/js/highlight.pack.js?1633520613"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/kubernetes-workshop-source/js/modernizr.custom-3.6.0.js?1633438021"></script>
-    <script src="/kubernetes-workshop-source/js/learn.js?1633438021"></script>
-    <script src="/kubernetes-workshop-source/js/hugo-learn.js?1633438021"></script>
+    <script src="/kubernetes-workshop-source/js/modernizr.custom-3.6.0.js?1633520613"></script>
+    <script src="/kubernetes-workshop-source/js/learn.js?1633520613"></script>
+    <script src="/kubernetes-workshop-source/js/hugo-learn.js?1633520613"></script>
     
         
-            <script src="/kubernetes-workshop-source/mermaid/mermaid.js?1633438021"></script>
+            <script src="/kubernetes-workshop-source/mermaid/mermaid.js?1633520613"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
@@ -1070,3 +1131,4 @@ Photo by <!-- raw HTML omitted -->Ihor Dvoretskyi<!-- raw HTML omitted --> on <!
 
   </body>
 </html>
+
