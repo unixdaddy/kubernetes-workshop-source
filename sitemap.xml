@@ -6,13 +6,15 @@
   </url><url>
     <loc>https://unixdaddy.github.io/kubernetes-workshop-source/10_introduction.html</loc>
   </url><url>
-    <loc>https://unixdaddy.github.io/kubernetes-workshop-source/70_week6/10_lab11.html</loc>
-  </url><url>
-    <loc>https://unixdaddy.github.io/kubernetes-workshop-source/50_week4/10_lab7.html</loc>
-  </url><url>
-    <loc>https://unixdaddy.github.io/kubernetes-workshop-source/60_week5/10_lab9.html</loc>
-  </url><url>
     <loc>https://unixdaddy.github.io/kubernetes-workshop-source/20_pods_deployments/10_lab1.html</loc>
+  </url><url>
+    <loc>https://unixdaddy.github.io/kubernetes-workshop-source/50_cluster/10_lab7.html</loc>
+  </url><url>
+    <loc>https://unixdaddy.github.io/kubernetes-workshop-source/60_networking/10_lab9.html</loc>
+  </url><url>
+    <loc>https://unixdaddy.github.io/kubernetes-workshop-source/70_storage/10_lab11.html</loc>
+  </url><url>
+    <loc>https://unixdaddy.github.io/kubernetes-workshop-source/80_trouble/10_lab11.html</loc>
   </url><url>
     <loc>https://unixdaddy.github.io/kubernetes-workshop-source/30_services/10_lab3.html</loc>
   </url><url>
@@ -30,15 +32,19 @@
   </url><url>
     <loc>https://unixdaddy.github.io/kubernetes-workshop-source/20_pods_deployments/40_lab4.html</loc>
   </url><url>
-    <loc>https://unixdaddy.github.io/kubernetes-workshop-source/40_week3.html</loc>
+    <loc>https://unixdaddy.github.io/kubernetes-workshop-source/40_rbac.html</loc>
+  </url><url>
+    <loc>https://unixdaddy.github.io/kubernetes-workshop-source/50_cluster.html</loc>
   </url><url>
     <loc>https://unixdaddy.github.io/kubernetes-workshop-source/20_pods_deployments/50_lab5.html</loc>
   </url><url>
-    <loc>https://unixdaddy.github.io/kubernetes-workshop-source/50_week4.html</loc>
+    <loc>https://unixdaddy.github.io/kubernetes-workshop-source/60_networking.html</loc>
   </url><url>
-    <loc>https://unixdaddy.github.io/kubernetes-workshop-source/60_week5.html</loc>
+    <loc>https://unixdaddy.github.io/kubernetes-workshop-source/20_pods_deployments/60_lab6.html</loc>
   </url><url>
-    <loc>https://unixdaddy.github.io/kubernetes-workshop-source/70_week6.html</loc>
+    <loc>https://unixdaddy.github.io/kubernetes-workshop-source/70_storage.html</loc>
+  </url><url>
+    <loc>https://unixdaddy.github.io/kubernetes-workshop-source/80_trouble.html</loc>
   </url><url>
     <loc>https://unixdaddy.github.io/kubernetes-workshop-source/categories.html</loc>
   </url><url>

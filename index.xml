@@ -16,33 +16,6 @@
     </item>
     
     <item>
-      <title>Lab 11</title>
-      <link>https://unixdaddy.github.io/kubernetes-workshop-source/70_week6/10_lab11.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://unixdaddy.github.io/kubernetes-workshop-source/70_week6/10_lab11.html</guid>
-      <description>Add page Markdown content here&amp;hellip;&amp;hellip;</description>
-    </item>
-    
-    <item>
-      <title>Lab 7</title>
-      <link>https://unixdaddy.github.io/kubernetes-workshop-source/50_week4/10_lab7.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://unixdaddy.github.io/kubernetes-workshop-source/50_week4/10_lab7.html</guid>
-      <description>Add page Markdown content here&amp;hellip;&amp;hellip;</description>
-    </item>
-    
-    <item>
-      <title>Lab 9</title>
-      <link>https://unixdaddy.github.io/kubernetes-workshop-source/60_week5/10_lab9.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://unixdaddy.github.io/kubernetes-workshop-source/60_week5/10_lab9.html</guid>
-      <description>Add page Markdown content here&amp;hellip;&amp;hellip;</description>
-    </item>
-    
-    <item>
       <title>Pods</title>
       <link>https://unixdaddy.github.io/kubernetes-workshop-source/20_pods_deployments/10_lab1.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -51,6 +24,46 @@
       <description>Challenge Use kubectl to
  Create a pod using image &amp;lsquo;sirfragalot/docker-demo:dcus&amp;rsquo; called lab1 Describe the pod Get pod events Access the webpage running on port 8080 in the container  using the internal IP using port forwarding   Use a filter command to show only this pod   Which node is this pod running on?
     Expand here to see the solution   Solution  doc reference</description>
+    </item>
+    
+    <item>
+      <title>TBC</title>
+      <link>https://unixdaddy.github.io/kubernetes-workshop-source/50_cluster/10_lab7.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://unixdaddy.github.io/kubernetes-workshop-source/50_cluster/10_lab7.html</guid>
+      <description>Challenge TBC   Expand here to see the solution   Solution  doc reference
+ TBC    </description>
+    </item>
+    
+    <item>
+      <title>TBC</title>
+      <link>https://unixdaddy.github.io/kubernetes-workshop-source/60_networking/10_lab9.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://unixdaddy.github.io/kubernetes-workshop-source/60_networking/10_lab9.html</guid>
+      <description>Challenge TBC   Expand here to see the solution   Solution  doc reference
+ TBC    </description>
+    </item>
+    
+    <item>
+      <title>TBC</title>
+      <link>https://unixdaddy.github.io/kubernetes-workshop-source/70_storage/10_lab11.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://unixdaddy.github.io/kubernetes-workshop-source/70_storage/10_lab11.html</guid>
+      <description>Challenge TBC   Expand here to see the solution   Solution  doc reference
+ TBC    </description>
+    </item>
+    
+    <item>
+      <title>TBC</title>
+      <link>https://unixdaddy.github.io/kubernetes-workshop-source/80_trouble/10_lab11.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://unixdaddy.github.io/kubernetes-workshop-source/80_trouble/10_lab11.html</guid>
+      <description>Challenge TBC   Expand here to see the solution   Solution  doc reference
+ TBC    </description>
     </item>
     
     <item>
@@ -122,6 +135,16 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://unixdaddy.github.io/kubernetes-workshop-source/20_pods_deployments/50_lab5.html</guid>
+      <description>Challenge Deploy a deployment named cache using the image memcached with 3 replicas
+ Expose the deployment on a port on the host (NodePort) that sends to port 11211 of the pod. Output the endpoints in json format to q3.json Tracking changes, scale the deployment to 5 replicas Output the history of this deployment to a file called q3.txt     Expand here to see the solution   Solution  doc reference</description>
+    </item>
+    
+    <item>
+      <title>Querying Resources</title>
+      <link>https://unixdaddy.github.io/kubernetes-workshop-source/20_pods_deployments/60_lab6.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://unixdaddy.github.io/kubernetes-workshop-source/20_pods_deployments/60_lab6.html</guid>
       <description>Challenge Deploy a deployment named cache using the image memcached with 3 replicas
  Expose the deployment on a port on the host (NodePort) that sends to port 11211 of the pod. Output the endpoints in json format to q3.json Tracking changes, scale the deployment to 5 replicas Output the history of this deployment to a file called q3.txt     Expand here to see the solution   Solution  doc reference</description>
     </item>
