@@ -26,3 +26,7 @@ You will be tested on (in no particular order).....
 7. Cluster Management
 8. Troubleshooting
 10. etc.... 
+
+Lets briefly examine the infrastructure
+
+{{< youtube VQUZF6k6g88 >}}
