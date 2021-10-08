@@ -12,7 +12,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://unixdaddy.github.io/kubernetes-workshop-source/10_introduction/10_introduction.html</guid>
-      <description>What you need to know Some of the components that you will be working on are shown in this diagram The CKA exam will test your knowledge of these components and their relationships - it is hands-on
+      <description>What you need to know Some of the components that you will be working on are shown in this diagram
+The CKA exam will test your knowledge of these components and their relationships - it is hands-on
 It is all about being fast and accurate
 You will be tested on (in no particular order)&amp;hellip;..
  Nodes Pods Containers RBAC Services (Networking) Persistent volumes and claims Cluster Management Troubleshooting etc&amp;hellip;.  </description>
