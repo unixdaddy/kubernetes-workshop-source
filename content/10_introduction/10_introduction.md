@@ -7,6 +7,7 @@ pre: "<b>A. </b>"
 ### What you need to know
 
 Some of the components that you will be working on are shown in this diagram
+
 ![Kubernetes Components](images/components-of-kubernetes.svg?classes=border)
 
 The CKA exam will test your knowledge of these components and their relationships - **it is hands-on**
