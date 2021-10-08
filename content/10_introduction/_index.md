@@ -15,7 +15,8 @@ High level overview of what kubernetes is
 
 The idea of this workshop is to prepare for the CKA exam by **doing**.
 
-There are a few videos intersperse within the workshop, but the intent is not to replace the excellent documenation that is already available.
+There are a few videos intersperse within the workshop, but the intent is not to replace the excellent documenation that
+is already available. Rather the goal is to test your knowledge using questions to see if you are ready for the exam.
 
 {{% notice info %}}
 The expectation is that you have a Kubernetes cluster ready to be used - minikube, K3s, microk8s, EKS, GKE etc...
