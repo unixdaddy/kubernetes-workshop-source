@@ -11,7 +11,7 @@ Photo by <a href="https://unsplash.com/@ihor_dvoretskyi?utm_source=unsplash&utm_
 # Introduction
 
 This workshop
-{{<https://youtu.be/cC46cg5FFAM>}}
+{{< youtube cC46cg5FFAM >}}
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/cC46cg5FFAM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 The following are useful links 
