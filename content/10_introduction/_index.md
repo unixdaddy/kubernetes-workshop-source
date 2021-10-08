@@ -10,4 +10,10 @@ pre = "<b>1. </b>"
 Photo by <a href="https://unsplash.com/@ihor_dvoretskyi?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ihor Dvoretskyi</a> on <a href="https://unsplash.com/collections/4540457/kubernetes?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 # Introduction
 
-Add introduction content here......
+This workshop
+{{< youtube -zmUxsrYw2I >}}
+
+The following are useful links 
+
+
+[CKA Study and Exam Tips](https://docs.google.com/presentation/d/1QmOwflPsWHww1xFyqGIea0-9TdNNkpxL6z20ifXsOHk/edit?usp=sharing)
