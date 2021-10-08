@@ -11,6 +11,5 @@ pre: "<b>0. </b>"
 
 Welcome Kubernetes Workshop.
 
-[CKA Study and Exam Tips](https://docs.google.com/presentation/d/1QmOwflPsWHww1xFyqGIea0-9TdNNkpxL6z20ifXsOHk/edit?usp=sharing)
-
-Add further content here......
+This site is built to act as workshop that can be done either as part of conference or bootcamp or spread over a number of smaller
+sessions.
