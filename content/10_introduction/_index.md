@@ -25,8 +25,16 @@ The expectation is that you have a Kubernetes cluster ready to be used - minikub
 
 #### The following are useful links 
 
+[CKA Overview](https://www.cncf.io/certification/cka/)
+
+[CKA Important Tips](https://docs.linuxfoundation.org/tc-docs/certification/tips-cka-and-ckad)
+
 [CKA curriculum](https://github.com/cncf/curriculum/blob/master/CKA_Curriculum_v1.21.pdf)
+
+[Candidate Handbook](https://docs.linuxfoundation.org/tc-docs/certification/lf-candidate-handbook)
 
 [Kubernetes documentation](https://kubernetes.io/docs/home/)
 
 [CKA Study and Exam Tips](https://docs.google.com/presentation/d/1QmOwflPsWHww1xFyqGIea0-9TdNNkpxL6z20ifXsOHk/edit?usp=sharing)
+
+
