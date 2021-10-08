@@ -11,7 +11,7 @@
 	"title": "Introduction",
 	"tags": [],
 	"description": "",
-	"content": "Kubernetes Workshop Photo by Ihor Dvoretskyion UnsplashIntroduction To Kubernetes High level overview of what kubernetes is   The idea of this workshop is to prepare for the CKA exam by doing.\nThere are a few videos intersperse within the workshop, but the intent is not to replace the excellent documenation that is already available.\nThe expectation is that you have a Kubernetes cluster ready to be used - minikube, K3s, microk8s, EKS, GKE etc\u0026hellip;\n The following are useful links CKA curriculum Kubernetes documentation CKA Study and Exam Tips\n"
+	"content": "Kubernetes Workshop Photo by Ihor Dvoretskyion UnsplashIntroduction To Kubernetes High level overview of what kubernetes is   The idea of this workshop is to prepare for the CKA exam by doing.\nThere are a few videos intersperse within the workshop, but the intent is not to replace the excellent documenation that is already available.\nThe expectation is that you have a Kubernetes cluster ready to be used - minikube, K3s, microk8s, EKS, GKE etc\u0026hellip;\n The following are useful links CKA curriculum\nKubernetes documentation\nCKA Study and Exam Tips\n"
 },
 {
 	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/20_pods_deployments/10_lab1.html",
