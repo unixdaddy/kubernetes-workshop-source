@@ -8,7 +8,7 @@ pre: "<b>A. </b>"
 
 Some of the components that you will be working on are shown in this diagram
 
-![Kubernetes Components](/images/DilbertKubernetes.png?height=300px&width=300px)
+![Kubernetes Components](../images/DilbertKubernetes.png?height=300px&width=300px)
 
 
 The CKA exam will test your knowledge of these components and their relationships - **it is hands-on**
