@@ -11,5 +11,7 @@ pre: "<b>0. </b>"
 
 Welcome Kubernetes Workshop.
 
-This site is built to act as workshop that can be done either as part of conference or bootcamp or spread over a number of smaller
+This site is built to act as a workshop that can be done either as part of conference or bootcamp or spread over a number of smaller
 sessions.
+
+![Funny but true](images/DilbertKubernetes.png?classes=border)
