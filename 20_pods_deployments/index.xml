@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Pods and Deployments on kubernetes workshop</title>
+    <title>Workload Objects on kubernetes workshop</title>
     <link>https://unixdaddy.github.io/kubernetes-workshop-source/20_pods_deployments.html</link>
-    <description>Recent content in Pods and Deployments on kubernetes workshop</description>
+    <description>Recent content in Workload Objects on kubernetes workshop</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://unixdaddy.github.io/kubernetes-workshop-source/20_pods_deployments/index.xml" rel="self" type="application/rss+xml" />
     <item>

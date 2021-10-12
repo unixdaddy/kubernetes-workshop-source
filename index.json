@@ -78,7 +78,7 @@
 },
 {
 	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/20_pods_deployments.html",
-	"title": "Pods and Deployments",
+	"title": "Workload Objects",
 	"tags": [],
 	"description": "",
 	"content": "Kubernetes Workshop Photo by Ihor Dvoretskyion UnsplashContents Add Contents here\u0026hellip;\u0026hellip;\n"
