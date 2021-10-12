@@ -14,7 +14,7 @@
 	"content": "Kubernetes Workshop Photo by Ihor Dvoretskyion UnsplashIntroduction To Kubernetes High level overview of what kubernetes is   The idea of this workshop is to prepare for the CKA exam by doing.\nThere are a few videos intersperse within the workshop, but the intent is not to replace the excellent documenation that is already available. Rather the goal is to test your knowledge using questions to see if you are ready for the exam.\nThe expectation is that you have a Kubernetes cluster ready to be used - minikube, K3s, microk8s, EKS, GKE etc\u0026hellip;\n The following are useful links CKA Overview\nCKA Important Tips\nCKA curriculum\nCandidate Handbook\nKubernetes documentation\nCKA Study and Exam Tips\n"
 },
 {
-	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/20_pods_deployments/10_lab1.html",
+	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/20_workload/10_lab1.html",
 	"title": "Pods",
 	"tags": [],
 	"description": "",
@@ -28,42 +28,35 @@
 	"content": "Challenge TBC   Expand here to see the solution   Solution  doc reference\n TBC    "
 },
 {
-	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/60_networking/10_lab9.html",
+	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/60_storage/10_lab11.html",
 	"title": "TBC",
 	"tags": [],
 	"description": "",
 	"content": "Challenge TBC   Expand here to see the solution   Solution  doc reference\n TBC    "
 },
 {
-	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/70_storage/10_lab11.html",
+	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/70_trouble/10_lab11.html",
 	"title": "TBC",
 	"tags": [],
 	"description": "",
 	"content": "Challenge TBC   Expand here to see the solution   Solution  doc reference\n TBC    "
 },
 {
-	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/80_trouble/10_lab11.html",
-	"title": "TBC",
-	"tags": [],
-	"description": "",
-	"content": "Challenge TBC   Expand here to see the solution   Solution  doc reference\n TBC    "
-},
-{
-	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/30_services/10_lab3.html",
+	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/30_networking/10_lab3.html",
 	"title": "Using Services",
 	"tags": [],
 	"description": "",
 	"content": "Challenge Use kubectl to\n Create a service to expose your deployment from the previous challenge Access the service internally from the cluster Access the service externally from the cluster Describe services     Expand here to see the solution   Solution  doc reference\n kubectl expose deployment lab2 --name=lab2-svc --port=80 --target-port=8080 kubectl run -it --image=busybox bash / # wget lab2-svc kubectl expose deployment lab2 --name=lab2-np --type=NodePort --port=8080 kubectl get svc lab2-np curl ifconfig.me curl http://34.82.35.166:30595 (or use your web browser) kubectl describe svc    "
 },
 {
-	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/20_pods_deployments/20_lab2.html",
+	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/20_workload/20_lab2.html",
 	"title": "Managing Deployments",
 	"tags": [],
 	"description": "",
 	"content": "Challenge Use kubectl to\n Create a deployment called lab2  image \u0026lsquo;sirfragalot/docker-demo:dcus\u0026rsquo; one pod   Scale up to 5 pods Scale back down to 1 pod Rolling update to use image nginx instead (tracking changes) View the revision history Roll back to the previous image View the deployment image     Expand here to see the solution   Solution  doc reference\n kubectl create deployment lab2 --image=sirfragalot/docker-demo:dcus \\  --dry-run=client -o yaml | tee lab2.yaml kubectl apply -f lab2.yaml kubectl scale deployment lab2 --replicas=5 kubectl scale deployment lab2 --replicas=1 kubectl set image deployment/lab2 docker-demo=nginx:latest --record kubectl rollout history deployment/lab2 kubectl rollout undo deployment/lab2 kubectl get deployments \\  --output=custom-columns=NAME:.metadata.name,IMAGE:.spec.template.spec.containers.*.image    "
 },
 {
-	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/30_services/20_lab4.html",
+	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/30_networking/20_lab4.html",
 	"title": "NodePort Service",
 	"tags": [],
 	"description": "",
@@ -77,28 +70,28 @@
 	"content": "DazMac - 20+ years Linux/Unix, CKA/CKAD\n"
 },
 {
-	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/20_pods_deployments.html",
+	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/20_workload.html",
 	"title": "Workload Objects",
 	"tags": [],
 	"description": "",
 	"content": "Kubernetes Workshop Photo by Ihor Dvoretskyion UnsplashWorkload Objects Workload objects can be a simple POD with 1 or many containers. Alternatively other workload objects can be used to manage the lifetime of the POD - deployments, replicasets (don\u0026rsquo;t use them directly), statefulset, daemonset etc\u0026hellip;\nThis image shows the workload objects - only some are required for CKA\nImage by Max BrennerIn this section we are going to focus on PODs and Deployments (and to a lesser extent Services) in order test those areas for CKA.\nIn the diagram below we see the relationship between the 3 workload objects (deployment, replicaset, 3 pods) and 1 Networking Object (the service) "
 },
 {
-	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/20_pods_deployments/30_lab3.html",
+	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/30_networking.html",
+	"title": "Networking Objects",
+	"tags": [],
+	"description": "",
+	"content": "Kubernetes Workshop Photo by Ihor Dvoretskyion UnsplashNetworking Objects Image by Max Brenner\u0026lt;/ a\u0026gt;\n"
+},
+{
+	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/20_workload/30_lab3.html",
 	"title": "Pods and Deployments",
 	"tags": [],
 	"description": "",
 	"content": "Challenge Use kubectl to\n Create a pod called pod-1  image \u0026lsquo;nginx\u0026rsquo;   Create a pod called redis  image \u0026lsquo;redis:1.99\u0026rsquo; identify the problem with the pod rectify the problem with the pod   Create a deployment called busybox-1  image \u0026lsquo;busybox\u0026rsquo; with 3 replicas and commmand sleep 3600   Update the deployment called busybox-1  image ubuntu     It is bad practice not to specify the image tag (as it will default to \u0026lsquo;latest\u0026rsquo;). It is best practice is to specify the image tag\n   Expand here to see the solution   Solution  doc reference\n # create pod-1 pod kubectl run pod-1 --image=nginx # create redis pod kubectl run redis --image=redis:1.99 # see error see error = ErrImagePull kubectl get pod redis # see errors in Events section = ImagePullBackOff kubectl describe pod redis # fix redis pod using redis image (lastest image - bad in prodution)  kubectl set image pod redis redis=redis # create deployment called busybox-1 declarative kubectl create deployment busybox-1 --image=busybox --replicas=3 --dry-run=client -o yaml -- sleep 3600 \u0026gt; busybox-1.yaml kubectl apply -f busybox-1.yaml # OR (imperative)  kubectl create deployment busybox-1 --image=busybox --replicas=3 -- sleep 3600 # alter the image of deployment busybox-1 kubectl set image deployment busybox-1 busybox=ubuntu    "
 },
 {
-	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/30_services.html",
-	"title": "Services",
-	"tags": [],
-	"description": "",
-	"content": "Kubernetes Workshop Photo by Ihor Dvoretskyion UnsplashContents Add Contents here\u0026hellip;\u0026hellip;\n"
-},
-{
-	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/20_pods_deployments/40_lab4.html",
+	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/20_workload/40_lab4.html",
 	"title": "Deploying to a Namespace",
 	"tags": [],
 	"description": "",
@@ -109,49 +102,42 @@
 	"title": "RBAC",
 	"tags": [],
 	"description": "",
-	"content": "Kubernetes Workshop Photo by Ihor Dvoretskyion UnsplashContents Add Contents here\u0026hellip;\u0026hellip;\n"
+	"content": "Kubernetes Workshop Photo by Ihor Dvoretskyion UnsplashRBAC Image by Max Brenner\u0026lt;/ a\u0026gt;\n"
 },
 {
 	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/50_cluster.html",
 	"title": "Cluster Management",
 	"tags": [],
 	"description": "",
-	"content": "Kubernetes Workshop Photo by Ihor Dvoretskyion UnsplashContents Add Contents here\u0026hellip;\u0026hellip;\n"
+	"content": "Kubernetes Workshop Photo by Ihor Dvoretskyion UnsplashCluster Management Image by Max Brenner\u0026lt;/ a\u0026gt;\n"
 },
 {
-	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/20_pods_deployments/50_lab5.html",
+	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/20_workload/50_lab5.html",
 	"title": "Querying Resources",
 	"tags": ["deployments", "services"],
 	"description": "",
 	"content": "Challenge Deploy a deployment named cache using the image memcached with 3 replicas\n Expose the deployment on a port on the host (NodePort) that sends to port 11211 of the pod. Output the endpoints in json format to q3.json Tracking changes, scale the deployment to 5 replicas Output the history of this deployment to a file called q3.txt     Expand here to see the solution   Solution  doc reference\n # create the deployment kubectl create deployment cache --image=memcached --replicas=3 # expose the deployment using NodePort type kubectl expose deployment cache --type=NodePort --port=11211 # output the endpoints in json format kubectl get ep cache -o json \u0026gt; q3.json # record switch on scale command is deprecated kubectl scale deployment cache --replicas=5 --record # record rollout history kubectl rollout history deployment cache \u0026gt; q3.txt # BONUS detailed history kubectl rollout history deployment cache --revision=1    "
 },
 {
-	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/20_pods_deployments/60_lab6.html",
+	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/20_workload/60_lab6.html",
 	"title": "Labels",
 	"tags": ["deployments", "labels"],
 	"description": "",
 	"content": "Challenge Create a namespace called accounts all the following steps need to be done in this namespace\nDeploy a deployment named redis-app using the image redis with 2 replicas\n with labels tier=prod and loc=north  Deploy a deployment named redis-db using the image redis:alpine with 2 replicas\n with labels tier=prod and loc=south Expose the redis-db deployment on a port 6379.  Use labels to query the pods\n list pod with label tier=prod list pods with label loc=south  Alter deployment redis-app\n add label region=emea change label tier=prod to tier=dev     Expand here to see the solution   Solution  doc reference\n # create the namespace kubectl create ns accounts # create the deployments (imperative for speed) kubectl create deployment redis-app --image=redis --replicas=2 -n accounts kubectl create deployment redis-db --image=redis:alpine --replicas=2 -n accounts # expose redis-db kubectl expose deployment redis-db --port=6379 -n accounts # change the labels on the deployment kubectl label deployment redis-app tier=prod loc=north -n accounts kubectl label deployment redis-db tier=prod loc=south -n accounts  Are the deployments and there pods labelled the same? (ignore the pod-template-hash ) why?\n Because the label changes were made on the deployments after the pods were created (with the original labels). You would need to label the pods as well to match or restart the deployments to have matching labels\n  # list pods with tier=prod kubectl get pods -n accounts -l tier=prod # list pods with loc=south kubectl get pods -n accounts -l loc=south # Add labels on deployment  kubectl label deployment redis-app region=emea-n accounts # Modify labels. As the label exists we need the overwrite option kubectl label deployment redis-app tier=dev --overwrite -n accounts    "
 },
 {
-	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/60_networking.html",
-	"title": "Networking",
+	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/60_storage.html",
+	"title": "Storage Objects",
 	"tags": [],
 	"description": "",
-	"content": "Kubernetes Workshop Photo by Ihor Dvoretskyion UnsplashContents Add Contents here\u0026hellip;\u0026hellip;\n"
+	"content": "Kubernetes Workshop Photo by Ihor Dvoretskyion UnsplashStorage Objects Image by Max Brenner\u0026lt;/ a\u0026gt;\n"
 },
 {
-	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/70_storage.html",
-	"title": "Storage",
-	"tags": [],
-	"description": "",
-	"content": "Kubernetes Workshop Photo by Ihor Dvoretskyion UnsplashContents Add Contents here\u0026hellip;\u0026hellip;\n"
-},
-{
-	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/80_trouble.html",
+	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/70_trouble.html",
 	"title": "Troubleshooting",
 	"tags": [],
 	"description": "",
-	"content": "Kubernetes Workshop Photo by Ihor Dvoretskyion UnsplashTroubleshooting Contents here\u0026hellip;\u0026hellip;\n"
+	"content": "Kubernetes Workshop Photo by Ihor Dvoretskyion UnsplashTroubleshooting Image by Max Brenner\u0026lt;/ a\u0026gt;\n"
 },
 {
 	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/categories.html",

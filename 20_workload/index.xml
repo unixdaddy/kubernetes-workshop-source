@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Workload Objects on kubernetes workshop</title>
-    <link>https://unixdaddy.github.io/kubernetes-workshop-source/20_pods_deployments.html</link>
+    <link>https://unixdaddy.github.io/kubernetes-workshop-source/20_workload.html</link>
     <description>Recent content in Workload Objects on kubernetes workshop</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://unixdaddy.github.io/kubernetes-workshop-source/20_pods_deployments/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://unixdaddy.github.io/kubernetes-workshop-source/20_workload/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Pods</title>
-      <link>https://unixdaddy.github.io/kubernetes-workshop-source/20_pods_deployments/10_lab1.html</link>
+      <link>https://unixdaddy.github.io/kubernetes-workshop-source/20_workload/10_lab1.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://unixdaddy.github.io/kubernetes-workshop-source/20_pods_deployments/10_lab1.html</guid>
+      <guid>https://unixdaddy.github.io/kubernetes-workshop-source/20_workload/10_lab1.html</guid>
       <description>Challenge Use kubectl to
  Create a pod using image &amp;lsquo;sirfragalot/docker-demo:dcus&amp;rsquo; called lab1 Describe the pod Get pod events Access the webpage running on port 8080 in the container  using the internal IP using port forwarding   Use a filter command to show only this pod   Which node is this pod running on?
     Expand here to see the solution   Solution  doc reference</description>
@@ -19,10 +19,10 @@
     
     <item>
       <title>Managing Deployments</title>
-      <link>https://unixdaddy.github.io/kubernetes-workshop-source/20_pods_deployments/20_lab2.html</link>
+      <link>https://unixdaddy.github.io/kubernetes-workshop-source/20_workload/20_lab2.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://unixdaddy.github.io/kubernetes-workshop-source/20_pods_deployments/20_lab2.html</guid>
+      <guid>https://unixdaddy.github.io/kubernetes-workshop-source/20_workload/20_lab2.html</guid>
       <description>Challenge Use kubectl to
  Create a deployment called lab2  image &amp;lsquo;sirfragalot/docker-demo:dcus&amp;rsquo; one pod   Scale up to 5 pods Scale back down to 1 pod Rolling update to use image nginx instead (tracking changes) View the revision history Roll back to the previous image View the deployment image     Expand here to see the solution   Solution  doc reference
  kubectl create deployment lab2 --image=sirfragalot/docker-demo:dcus \  --dry-run=client -o yaml | tee lab2.</description>
@@ -30,20 +30,20 @@
     
     <item>
       <title>Pods and Deployments</title>
-      <link>https://unixdaddy.github.io/kubernetes-workshop-source/20_pods_deployments/30_lab3.html</link>
+      <link>https://unixdaddy.github.io/kubernetes-workshop-source/20_workload/30_lab3.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://unixdaddy.github.io/kubernetes-workshop-source/20_pods_deployments/30_lab3.html</guid>
+      <guid>https://unixdaddy.github.io/kubernetes-workshop-source/20_workload/30_lab3.html</guid>
       <description>Challenge Use kubectl to
  Create a pod called pod-1  image &amp;lsquo;nginx&amp;rsquo;   Create a pod called redis  image &amp;lsquo;redis:1.99&amp;rsquo; identify the problem with the pod rectify the problem with the pod   Create a deployment called busybox-1  image &amp;lsquo;busybox&amp;rsquo; with 3 replicas and commmand sleep 3600   Update the deployment called busybox-1  image ubuntu     It is bad practice not to specify the image tag (as it will default to &amp;lsquo;latest&amp;rsquo;).</description>
     </item>
     
     <item>
       <title>Deploying to a Namespace</title>
-      <link>https://unixdaddy.github.io/kubernetes-workshop-source/20_pods_deployments/40_lab4.html</link>
+      <link>https://unixdaddy.github.io/kubernetes-workshop-source/20_workload/40_lab4.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://unixdaddy.github.io/kubernetes-workshop-source/20_pods_deployments/40_lab4.html</guid>
+      <guid>https://unixdaddy.github.io/kubernetes-workshop-source/20_workload/40_lab4.html</guid>
       <description>Challenge Deploy a pod named web in the namespace cka1 using the image nginx:1.16.0
    Expand here to see the solution   Solution  doc reference
  kubectl create namespace cka1 kubectl run web --image=nginx:1.16.0    </description>
@@ -51,20 +51,20 @@
     
     <item>
       <title>Querying Resources</title>
-      <link>https://unixdaddy.github.io/kubernetes-workshop-source/20_pods_deployments/50_lab5.html</link>
+      <link>https://unixdaddy.github.io/kubernetes-workshop-source/20_workload/50_lab5.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://unixdaddy.github.io/kubernetes-workshop-source/20_pods_deployments/50_lab5.html</guid>
+      <guid>https://unixdaddy.github.io/kubernetes-workshop-source/20_workload/50_lab5.html</guid>
       <description>Challenge Deploy a deployment named cache using the image memcached with 3 replicas
  Expose the deployment on a port on the host (NodePort) that sends to port 11211 of the pod. Output the endpoints in json format to q3.json Tracking changes, scale the deployment to 5 replicas Output the history of this deployment to a file called q3.txt     Expand here to see the solution   Solution  doc reference</description>
     </item>
     
     <item>
       <title>Labels</title>
-      <link>https://unixdaddy.github.io/kubernetes-workshop-source/20_pods_deployments/60_lab6.html</link>
+      <link>https://unixdaddy.github.io/kubernetes-workshop-source/20_workload/60_lab6.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://unixdaddy.github.io/kubernetes-workshop-source/20_pods_deployments/60_lab6.html</guid>
+      <guid>https://unixdaddy.github.io/kubernetes-workshop-source/20_workload/60_lab6.html</guid>
       <description>Challenge Create a namespace called accounts all the following steps need to be done in this namespace
 Deploy a deployment named redis-app using the image redis with 2 replicas
  with labels tier=prod and loc=north  Deploy a deployment named redis-db using the image redis:alpine with 2 replicas
