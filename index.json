@@ -81,7 +81,7 @@
 	"title": "Workload Objects",
 	"tags": [],
 	"description": "",
-	"content": "Kubernetes Workshop Photo by Ihor Dvoretskyion UnsplashContents Example of a workload deployed in the dev namespace. We see the deployment, repliaset, 3 pods and the service "
+	"content": "Kubernetes Workshop Photo by Ihor Dvoretskyion UnsplashContents Workload objects can be a simple POD with 1 or many containers. Alternatively other workload objects can be used to manage the lifetime of the POD - deployments, replicasets (don\u0026rsquo;t use them directly), statefulset, daemonset etc\u0026hellip;\nThis image shows the workload objects - only some are required for CKA\nImage by Max BrennerIn this section we are going to focus on PODs and Deployments (and to a lesser extent Services) in order test those areas for CKA.\nIn the diagram below we see the relationship between the 3 workload objects (deployment, replicaset, 3 pods) and 1 Networking Object (the service) "
 },
 {
 	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/20_pods_deployments/30_lab3.html",
