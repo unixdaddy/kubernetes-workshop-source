@@ -1,5 +1,5 @@
 +++
-title = "Pods and Deployments"
+title = "Workload Objects"
 weight = 20
 chapter = true
 pre = "<b>2. </b>"
