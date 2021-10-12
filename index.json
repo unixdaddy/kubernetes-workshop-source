@@ -81,7 +81,7 @@
 	"title": "Workload Objects",
 	"tags": [],
 	"description": "",
-	"content": "Kubernetes Workshop Photo by Ihor Dvoretskyion UnsplashContents Add Contents here\u0026hellip;\u0026hellip;\n"
+	"content": "Kubernetes Workshop Photo by Ihor Dvoretskyion UnsplashContents Example of a workload deployed in the dev namespace. We see the deployment, repliaset, 3 pods and the service "
 },
 {
 	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/20_pods_deployments/30_lab3.html",
