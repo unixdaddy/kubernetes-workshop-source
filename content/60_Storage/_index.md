@@ -1,8 +1,8 @@
 +++
 title = "Storage Objects"
-weight = 70
+weight = 60
 chapter = true
-pre = "<b>7. </b>"
+pre = "<b>6. </b>"
 +++
 
 ### Kubernetes Workshop

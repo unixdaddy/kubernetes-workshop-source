@@ -1,8 +1,8 @@
 +++
 title = "Troubleshooting"
-weight = 80
+weight = 70
 chapter = true
-pre = "<b>8. </b>"
+pre = "<b>7. </b>"
 +++
 
 ### Kubernetes Workshop
