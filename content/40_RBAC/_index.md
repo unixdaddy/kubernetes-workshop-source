@@ -12,5 +12,5 @@ Photo by <a href="https://unsplash.com/@ihor_dvoretskyi?utm_source=unsplash&utm_
 
 
 ![RBAC](images/k8s-rbac.svg?classes=border)
-Image by <a href="https://brennerm.github.io/posts/kubernetes-overview-diagrams.html&utm_content=creditCopyText">Max Brenner</ a>
+Image by <a href="https://brennerm.github.io/posts/kubernetes-overview-diagrams.html&utm_content=creditCopyText">Max Brenner</a>
 
