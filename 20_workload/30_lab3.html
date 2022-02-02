@@ -12,22 +12,22 @@
     <title>Pods and Deployments :: kubernetes workshop</title>
 
     
-    <link href="/kubernetes-workshop-source/css/nucleus.css?1643814045" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/fontawesome-all.min.css?1643814045" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/hybrid.css?1643814045" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/featherlight.min.css?1643814045" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/perfect-scrollbar.min.css?1643814045" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/auto-complete.css?1643814045" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/atom-one-dark-reasonable.css?1643814045" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/theme.css?1643814045" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/tabs.css?1643814045" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/hugo-theme.css?1643814045" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/nucleus.css?1643817723" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/fontawesome-all.min.css?1643817723" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/hybrid.css?1643817723" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/featherlight.min.css?1643817723" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/perfect-scrollbar.min.css?1643817723" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/auto-complete.css?1643817723" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/atom-one-dark-reasonable.css?1643817723" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/theme.css?1643817723" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/tabs.css?1643817723" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/hugo-theme.css?1643817723" rel="stylesheet">
     
-    <link href="/kubernetes-workshop-source/css/theme-blue.css?1643814045" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/theme-blue.css?1643817723" rel="stylesheet">
     
     
 
-    <script src="/kubernetes-workshop-source/js/jquery-3.3.1.min.js?1643814045"></script>
+    <script src="/kubernetes-workshop-source/js/jquery-3.3.1.min.js?1643817723"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/kubernetes-workshop-source/js/lunr.min.js?1643814045"></script>
-<script type="text/javascript" src="/kubernetes-workshop-source/js/auto-complete.js?1643814045"></script>
+<script type="text/javascript" src="/kubernetes-workshop-source/js/lunr.min.js?1643817723"></script>
+<script type="text/javascript" src="/kubernetes-workshop-source/js/auto-complete.js?1643817723"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/unixdaddy.github.io\/kubernetes-workshop-source\/";
     
 </script>
-<script type="text/javascript" src="/kubernetes-workshop-source/js/search.js?1643814045"></script>
+<script type="text/javascript" src="/kubernetes-workshop-source/js/search.js?1643817723"></script>
 
     
   </div>
@@ -754,23 +754,7 @@
 <blockquote>
 <p><a href="https://kubernetes.io/docs/concepts/workloads/controllers/deployment/">doc reference</a></p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># create pod-1 pod</span>
-kubectl run pod-1 --image<span style="color:#f92672">=</span>nginx
-<span style="color:#75715e"># create redis pod</span>
-kubectl run redis --image<span style="color:#f92672">=</span>redis:1.99
-<span style="color:#75715e"># see error see error = ErrImagePull</span>
-kubectl get pod redis
-<span style="color:#75715e"># see errors in Events section = ImagePullBackOff</span>
-kubectl describe pod redis 
-<span style="color:#75715e"># fix redis pod using redis image (lastest image - bad in prodution) </span>
-kubectl set image pod redis redis<span style="color:#f92672">=</span>redis
-<span style="color:#75715e"># create deployment called busybox-1 declarative</span>
-kubectl create deployment busybox-1 --image<span style="color:#f92672">=</span>busybox --replicas<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span> --dry-run<span style="color:#f92672">=</span>client -o yaml -- sleep <span style="color:#ae81ff">3600</span> &gt; busybox-1.yaml
-kubectl apply -f busybox-1.yaml
-<span style="color:#75715e"># OR (imperative)  </span>
-kubectl create deployment busybox-1 --image<span style="color:#f92672">=</span>busybox --replicas<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span> -- sleep <span style="color:#ae81ff">3600</span>
-<span style="color:#75715e"># alter the image of deployment busybox-1</span>
-kubectl set image deployment busybox-1 busybox<span style="color:#f92672">=</span>ubuntu
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
 
 </code></pre></div>
     </div>
@@ -1156,19 +1140,19 @@ kubectl set image deployment busybox-1 busybox<span style="color:#f92672">=</spa
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/kubernetes-workshop-source/js/clipboard.min.js?1643814045"></script>
-    <script src="/kubernetes-workshop-source/js/perfect-scrollbar.min.js?1643814045"></script>
-    <script src="/kubernetes-workshop-source/js/perfect-scrollbar.jquery.min.js?1643814045"></script>
-    <script src="/kubernetes-workshop-source/js/jquery.sticky.js?1643814045"></script>
-    <script src="/kubernetes-workshop-source/js/featherlight.min.js?1643814045"></script>
-    <script src="/kubernetes-workshop-source/js/highlight.pack.js?1643814045"></script>
+    <script src="/kubernetes-workshop-source/js/clipboard.min.js?1643817723"></script>
+    <script src="/kubernetes-workshop-source/js/perfect-scrollbar.min.js?1643817723"></script>
+    <script src="/kubernetes-workshop-source/js/perfect-scrollbar.jquery.min.js?1643817723"></script>
+    <script src="/kubernetes-workshop-source/js/jquery.sticky.js?1643817723"></script>
+    <script src="/kubernetes-workshop-source/js/featherlight.min.js?1643817723"></script>
+    <script src="/kubernetes-workshop-source/js/highlight.pack.js?1643817723"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/kubernetes-workshop-source/js/modernizr.custom-3.6.0.js?1643814045"></script>
-    <script src="/kubernetes-workshop-source/js/learn.js?1643814045"></script>
-    <script src="/kubernetes-workshop-source/js/hugo-learn.js?1643814045"></script>
+    <script src="/kubernetes-workshop-source/js/modernizr.custom-3.6.0.js?1643817723"></script>
+    <script src="/kubernetes-workshop-source/js/learn.js?1643817723"></script>
+    <script src="/kubernetes-workshop-source/js/hugo-learn.js?1643817723"></script>
     
         
-            <script src="/kubernetes-workshop-source/mermaid/mermaid.js?1643814045"></script>
+            <script src="/kubernetes-workshop-source/mermaid/mermaid.js?1643817723"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
