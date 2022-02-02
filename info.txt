@@ -6,7 +6,7 @@ region=us-east-1
 END
 
    11  cd 
-   12  wget https://github.com/gohugoio/hugo/releases/download/v0.71.0/hugo_extended_0.71.0_Linux-64bit.tar.gz -O hugo_extended_0.71.0_Linux-64bit.tar.gz
+   12  wget https://github.com/gohugoio/hugo/releases/download/v0.92.1/hugo_extended_0.92.1_Linux-64bit.tar.gz -O hugo_extended_0.92.1_Linux-64bit.tar.gz
    13  HUGO_TAR="$(find . -name "*Linux-64bit.tar.gz")"
    14  tar -xzf $HUGO_TAR
    15  chmod +x hugo
