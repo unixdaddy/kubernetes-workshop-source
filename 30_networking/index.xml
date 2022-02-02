@@ -13,7 +13,7 @@
       
       <guid>https://unixdaddy.github.io/kubernetes-workshop-source/30_networking/10_lab3.html</guid>
       <description>Challenge Use kubectl to
- Create a service to expose your deployment from the previous challenge Access the service internally from the cluster Access the service externally from the cluster Describe services     Expand here to see the solution   Solution  doc reference
+ Create a deployment kubectl create deployment lab2 --image=sirfragalot/docker-demo:dcus Create a service to expose your deployment Access the service internally from the cluster Access the service externally from the cluster Describe services     Expand here to see the solution   Solution  doc reference
  kubectl expose deployment lab2 --name=lab2-svc --port=80 --target-port=8080 kubectl run -it --image=busybox bash / # wget lab2-svc kubectl expose deployment lab2 --name=lab2-np --type=NodePort --port=8080 kubectl get svc lab2-np curl ifconfig.</description>
     </item>
     

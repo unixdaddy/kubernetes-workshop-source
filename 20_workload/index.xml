@@ -46,7 +46,8 @@
       <guid>https://unixdaddy.github.io/kubernetes-workshop-source/20_workload/40_lab4.html</guid>
       <description>Challenge Deploy a pod named web in the namespace cka1 using the image nginx:1.16.0
    Expand here to see the solution   Solution  doc reference
- kubectl create namespace cka1 kubectl run web --image=nginx:1.16.0    </description>
+ kubectl create namespace cka1 kubectl run web --image=nginx:1.16.0     Challenge Deploy a pod named web in the namespace cka1 using the image nginx:1.16.0
+   Expand here to see the solution   Solution  doc reference</description>
     </item>
     
     <item>

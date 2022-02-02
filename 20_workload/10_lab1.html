@@ -12,22 +12,22 @@
     <title>Pods :: kubernetes workshop</title>
 
     
-    <link href="/kubernetes-workshop-source/css/nucleus.css?1643819148" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/fontawesome-all.min.css?1643819148" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/hybrid.css?1643819148" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/featherlight.min.css?1643819148" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/perfect-scrollbar.min.css?1643819148" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/auto-complete.css?1643819148" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/atom-one-dark-reasonable.css?1643819148" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/theme.css?1643819148" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/tabs.css?1643819148" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/hugo-theme.css?1643819148" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/nucleus.css?1643821030" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/fontawesome-all.min.css?1643821030" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/hybrid.css?1643821030" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/featherlight.min.css?1643821030" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/perfect-scrollbar.min.css?1643821030" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/auto-complete.css?1643821030" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/atom-one-dark-reasonable.css?1643821030" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/theme.css?1643821030" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/tabs.css?1643821030" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/hugo-theme.css?1643821030" rel="stylesheet">
     
-    <link href="/kubernetes-workshop-source/css/theme-blue.css?1643819148" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/theme-blue.css?1643821030" rel="stylesheet">
     
     
 
-    <script src="/kubernetes-workshop-source/js/jquery-3.3.1.min.js?1643819148"></script>
+    <script src="/kubernetes-workshop-source/js/jquery-3.3.1.min.js?1643821030"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/kubernetes-workshop-source/js/lunr.min.js?1643819148"></script>
-<script type="text/javascript" src="/kubernetes-workshop-source/js/auto-complete.js?1643819148"></script>
+<script type="text/javascript" src="/kubernetes-workshop-source/js/lunr.min.js?1643821030"></script>
+<script type="text/javascript" src="/kubernetes-workshop-source/js/auto-complete.js?1643821030"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/unixdaddy.github.io\/kubernetes-workshop-source\/";
     
 </script>
-<script type="text/javascript" src="/kubernetes-workshop-source/js/search.js?1643819148"></script>
+<script type="text/javascript" src="/kubernetes-workshop-source/js/search.js?1643821030"></script>
 
     
   </div>
@@ -683,6 +683,7 @@
     <li><a href="#challenge">Challenge</a></li>
     <li><a href="#challenge-1">Challenge</a></li>
     <li><a href="#challenge-2">Challenge</a></li>
+    <li><a href="#challenge-3">Challenge</a></li>
   </ul>
 </nav>
     </div>
@@ -831,6 +832,31 @@ kubectl get pods
     </div>
 </div>
 <hr>
+<h2 id="challenge-3">Challenge</h2>
+<p>Use <code>kubectl</code> to</p>
+<ul>
+<li>Create a pod called <code>my-nginx</code> and expose it on container port <code>8080</code>.</li>
+</ul>
+<hr>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Expand here to see the solution
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <h2 id="solution">Solution</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl run my-nginx --image<span style="color:#f92672">=</span>nginx --port<span style="color:#f92672">=</span><span style="color:#ae81ff">8080</span>
+
+kubectl describe pod my-nginx
+</code></pre></div>
+    </div>
+</div>
 
 
 <footer class="footline">
@@ -1212,19 +1238,19 @@ kubectl get pods
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/kubernetes-workshop-source/js/clipboard.min.js?1643819148"></script>
-    <script src="/kubernetes-workshop-source/js/perfect-scrollbar.min.js?1643819148"></script>
-    <script src="/kubernetes-workshop-source/js/perfect-scrollbar.jquery.min.js?1643819148"></script>
-    <script src="/kubernetes-workshop-source/js/jquery.sticky.js?1643819148"></script>
-    <script src="/kubernetes-workshop-source/js/featherlight.min.js?1643819148"></script>
-    <script src="/kubernetes-workshop-source/js/highlight.pack.js?1643819148"></script>
+    <script src="/kubernetes-workshop-source/js/clipboard.min.js?1643821030"></script>
+    <script src="/kubernetes-workshop-source/js/perfect-scrollbar.min.js?1643821030"></script>
+    <script src="/kubernetes-workshop-source/js/perfect-scrollbar.jquery.min.js?1643821030"></script>
+    <script src="/kubernetes-workshop-source/js/jquery.sticky.js?1643821030"></script>
+    <script src="/kubernetes-workshop-source/js/featherlight.min.js?1643821030"></script>
+    <script src="/kubernetes-workshop-source/js/highlight.pack.js?1643821030"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/kubernetes-workshop-source/js/modernizr.custom-3.6.0.js?1643819148"></script>
-    <script src="/kubernetes-workshop-source/js/learn.js?1643819148"></script>
-    <script src="/kubernetes-workshop-source/js/hugo-learn.js?1643819148"></script>
+    <script src="/kubernetes-workshop-source/js/modernizr.custom-3.6.0.js?1643821030"></script>
+    <script src="/kubernetes-workshop-source/js/learn.js?1643821030"></script>
+    <script src="/kubernetes-workshop-source/js/hugo-learn.js?1643821030"></script>
     
         
-            <script src="/kubernetes-workshop-source/mermaid/mermaid.js?1643819148"></script>
+            <script src="/kubernetes-workshop-source/mermaid/mermaid.js?1643821030"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
