@@ -72,7 +72,7 @@ You will be tested on (in no particular order)&amp;hellip;..
     </item>
     
     <item>
-      <title>Managing Deployments</title>
+      <title>Deployments</title>
       <link>https://unixdaddy.github.io/kubernetes-workshop-source/20_workload/20_lab2.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -114,14 +114,14 @@ You will be tested on (in no particular order)&amp;hellip;..
     </item>
     
     <item>
-      <title>Deploying to a Namespace</title>
+      <title>CronJobs and Jobs</title>
       <link>https://unixdaddy.github.io/kubernetes-workshop-source/20_workload/40_lab4.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://unixdaddy.github.io/kubernetes-workshop-source/20_workload/40_lab4.html</guid>
-      <description>Challenge Deploy a pod named web in the namespace cka1 using the image nginx:1.16.0
-   Expand here to see the solution   Solution  doc reference
- kubectl create namespace cka1 kubectl run web --image=nginx:1.16.0     Challenge Deploy a pod named web in the namespace cka1 using the image nginx:1.16.0
+      <description>CronJobs and Jobs aren&amp;rsquo;t in CKA, but are in CKAD
+ Challenge Create a job called dicey using
+ image kodekloud/throw-dice  The image generates a random number between 1 and 6 and exits. It is a success only if it is a 6 else it is a failure. Check how many times it takes the job to trigger to get a successful outcome.
    Expand here to see the solution   Solution  doc reference</description>
     </item>
     
