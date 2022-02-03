@@ -110,7 +110,7 @@ You will be tested on (in no particular order)&amp;hellip;..
       <guid>https://unixdaddy.github.io/kubernetes-workshop-source/20_workload/30_lab3.html</guid>
       <description>Challenge Use kubectl to
  Create a daemonset called dset  image quay.io/fluentd_elasticsearch/fluentd:v2.5.2       Expand here to see the solution   Solution  doc reference
- # create a deployment kubectl create deployment dset --image=quay.io/fluentd_elasticsearch/fluentd:v2.5.2 --dry-run=client -o yaml &amp;gt; dset.yaml # edit the yaml to change it from a deployment to daemonset the output below show how to change it apiVersion: apps/v1 apiVersion: apps/v1 kind: DaemonSet | kind: Deployment metadata: metadata: &amp;gt; creationTimestamp: null labels: labels: app: dset app: dset name: dset name: dset spec: spec: &amp;gt; replicas: 1 selector: selector: matchLabels: matchLabels: app: dset app: dset &amp;gt; strategy: {} template: template: metadata: metadata: creationTimestamp: null creationTimestamp: null labels: labels: app: dset app: dset spec: spec: containers: containers: - image: quay.</description>
+ # create a deployment kubectl create deployment dset --image=quay.io/fluentd_elasticsearch/fluentd:v2.5.2 --dry-run=client -o yaml &amp;gt; dset.yaml # edit the yaml to change it from a deployment to daemonset make the below changes kind: Deployment change to --&amp;gt; kind: DaemonSet remove creationTimestamp: null remove replicas: 1 remove strategy remove resources remove status # so it now looks like this apiVersion: apps/v1 kind: DaemonSet metadata: labels: app: dset name: dset spec: selector: matchLabels: app: dset template: metadata: labels: app: dset spec: containers: - image: quay.</description>
     </item>
     
     <item>

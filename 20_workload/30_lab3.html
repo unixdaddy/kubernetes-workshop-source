@@ -12,22 +12,22 @@
     <title>Daemonsets :: kubernetes workshop</title>
 
     
-    <link href="/kubernetes-workshop-source/css/nucleus.css?1643886910" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/fontawesome-all.min.css?1643886910" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/hybrid.css?1643886910" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/featherlight.min.css?1643886910" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/perfect-scrollbar.min.css?1643886910" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/auto-complete.css?1643886910" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/atom-one-dark-reasonable.css?1643886910" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/theme.css?1643886910" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/tabs.css?1643886910" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/hugo-theme.css?1643886910" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/nucleus.css?1643887590" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/fontawesome-all.min.css?1643887590" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/hybrid.css?1643887590" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/featherlight.min.css?1643887590" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/perfect-scrollbar.min.css?1643887590" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/auto-complete.css?1643887590" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/atom-one-dark-reasonable.css?1643887590" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/theme.css?1643887590" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/tabs.css?1643887590" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/hugo-theme.css?1643887590" rel="stylesheet">
     
-    <link href="/kubernetes-workshop-source/css/theme-blue.css?1643886910" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/theme-blue.css?1643887590" rel="stylesheet">
     
     
 
-    <script src="/kubernetes-workshop-source/js/jquery-3.3.1.min.js?1643886910"></script>
+    <script src="/kubernetes-workshop-source/js/jquery-3.3.1.min.js?1643887590"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/kubernetes-workshop-source/js/lunr.min.js?1643886910"></script>
-<script type="text/javascript" src="/kubernetes-workshop-source/js/auto-complete.js?1643886910"></script>
+<script type="text/javascript" src="/kubernetes-workshop-source/js/lunr.min.js?1643887590"></script>
+<script type="text/javascript" src="/kubernetes-workshop-source/js/auto-complete.js?1643887590"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/unixdaddy.github.io\/kubernetes-workshop-source\/";
     
 </script>
-<script type="text/javascript" src="/kubernetes-workshop-source/js/search.js?1643886910"></script>
+<script type="text/javascript" src="/kubernetes-workshop-source/js/search.js?1643887590"></script>
 
     
   </div>
@@ -733,32 +733,36 @@
 </blockquote>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># create a deployment</span>
 kubectl create deployment dset --image<span style="color:#f92672">=</span>quay.io/fluentd_elasticsearch/fluentd:v2.5.2 --dry-run<span style="color:#f92672">=</span>client -o yaml &gt; dset.yaml
-<span style="color:#75715e"># edit the yaml to change it from a deployment to daemonset the output below show how to change it</span>
-apiVersion: apps/v1                                             apiVersion: apps/v1
-kind: DaemonSet                                               | kind: Deployment
-metadata:                                                       metadata:
-                                                              &gt;   creationTimestamp: null
-  labels:                                                         labels:
-    app: dset                                                       app: dset
-  name: dset                                                      name: dset
-spec:                                                           spec:
-                                                              &gt;   replicas: <span style="color:#ae81ff">1</span>
-  selector:                                                       selector:
-    matchLabels:                                                    matchLabels:
-      app: dset                                                       app: dset
-                                                              &gt;   strategy: <span style="color:#f92672">{}</span>
-  template:                                                       template:
-    metadata:                                                       metadata:
-      creationTimestamp: null                                         creationTimestamp: null
-      labels:                                                         labels:
-        app: dset                                                       app: dset
-    spec:                                                           spec:
-      containers:                                                     containers:
-      - image: quay.io/fluentd_elasticsearch/fluentd:v2.5.2           - image: quay.io/fluentd_elasticsearch/fluentd:v2.5.2
-        name: fluentd                                                   name: fluentd
-                                                              &gt;         resources: <span style="color:#f92672">{}</span>
-                                                              &gt; status: <span style="color:#f92672">{}</span>
 
+<span style="color:#75715e"># edit the yaml to change it from a deployment to daemonset make the below changes</span>
+kind: Deployment 
+change to --&gt;   kind: DaemonSet
+
+ remove  creationTimestamp: null
+ remove  replicas: <span style="color:#ae81ff">1</span>
+ remove  strategy
+ remove  resources
+ remove  status
+
+<span style="color:#75715e"># so it now looks like this</span>
+apiVersion: apps/v1  
+kind: DaemonSet     
+metadata:          
+  labels:         
+    app: dset    
+  name: dset    
+spec:         
+  selector:  
+    matchLabels:
+      app: dset
+  template:   
+    metadata:
+      labels: 
+        app: dset
+    spec:       
+      containers: 
+      - image: quay.io/fluentd_elasticsearch/fluentd:v2.5.2  
+        name: fluentd             
 </code></pre></div>
     </div>
 </div>
@@ -1143,19 +1147,19 @@ spec:                                                           spec:
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/kubernetes-workshop-source/js/clipboard.min.js?1643886910"></script>
-    <script src="/kubernetes-workshop-source/js/perfect-scrollbar.min.js?1643886910"></script>
-    <script src="/kubernetes-workshop-source/js/perfect-scrollbar.jquery.min.js?1643886910"></script>
-    <script src="/kubernetes-workshop-source/js/jquery.sticky.js?1643886910"></script>
-    <script src="/kubernetes-workshop-source/js/featherlight.min.js?1643886910"></script>
-    <script src="/kubernetes-workshop-source/js/highlight.pack.js?1643886910"></script>
+    <script src="/kubernetes-workshop-source/js/clipboard.min.js?1643887590"></script>
+    <script src="/kubernetes-workshop-source/js/perfect-scrollbar.min.js?1643887590"></script>
+    <script src="/kubernetes-workshop-source/js/perfect-scrollbar.jquery.min.js?1643887590"></script>
+    <script src="/kubernetes-workshop-source/js/jquery.sticky.js?1643887590"></script>
+    <script src="/kubernetes-workshop-source/js/featherlight.min.js?1643887590"></script>
+    <script src="/kubernetes-workshop-source/js/highlight.pack.js?1643887590"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/kubernetes-workshop-source/js/modernizr.custom-3.6.0.js?1643886910"></script>
-    <script src="/kubernetes-workshop-source/js/learn.js?1643886910"></script>
-    <script src="/kubernetes-workshop-source/js/hugo-learn.js?1643886910"></script>
+    <script src="/kubernetes-workshop-source/js/modernizr.custom-3.6.0.js?1643887590"></script>
+    <script src="/kubernetes-workshop-source/js/learn.js?1643887590"></script>
+    <script src="/kubernetes-workshop-source/js/hugo-learn.js?1643887590"></script>
     
         
-            <script src="/kubernetes-workshop-source/mermaid/mermaid.js?1643886910"></script>
+            <script src="/kubernetes-workshop-source/mermaid/mermaid.js?1643887590"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
