@@ -9,25 +9,25 @@
 
     <link rel="icon" href="/kubernetes-workshop-source/images/favicon.png" type="image/png">
 
-    <title>Pods and Deployments :: kubernetes workshop</title>
+    <title>Daemonsets :: kubernetes workshop</title>
 
     
-    <link href="/kubernetes-workshop-source/css/nucleus.css?1643823000" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/fontawesome-all.min.css?1643823000" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/hybrid.css?1643823000" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/featherlight.min.css?1643823000" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/perfect-scrollbar.min.css?1643823000" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/auto-complete.css?1643823000" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/atom-one-dark-reasonable.css?1643823000" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/theme.css?1643823000" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/tabs.css?1643823000" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/hugo-theme.css?1643823000" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/nucleus.css?1643886910" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/fontawesome-all.min.css?1643886910" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/hybrid.css?1643886910" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/featherlight.min.css?1643886910" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/perfect-scrollbar.min.css?1643886910" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/auto-complete.css?1643886910" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/atom-one-dark-reasonable.css?1643886910" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/theme.css?1643886910" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/tabs.css?1643886910" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/hugo-theme.css?1643886910" rel="stylesheet">
     
-    <link href="/kubernetes-workshop-source/css/theme-blue.css?1643823000" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/theme-blue.css?1643886910" rel="stylesheet">
     
     
 
-    <script src="/kubernetes-workshop-source/js/jquery-3.3.1.min.js?1643823000"></script>
+    <script src="/kubernetes-workshop-source/js/jquery-3.3.1.min.js?1643886910"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/kubernetes-workshop-source/js/lunr.min.js?1643823000"></script>
-<script type="text/javascript" src="/kubernetes-workshop-source/js/auto-complete.js?1643823000"></script>
+<script type="text/javascript" src="/kubernetes-workshop-source/js/lunr.min.js?1643886910"></script>
+<script type="text/javascript" src="/kubernetes-workshop-source/js/auto-complete.js?1643886910"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/unixdaddy.github.io\/kubernetes-workshop-source\/";
     
 </script>
-<script type="text/javascript" src="/kubernetes-workshop-source/js/search.js?1643823000"></script>
+<script type="text/javascript" src="/kubernetes-workshop-source/js/search.js?1643886910"></script>
 
     
   </div>
@@ -229,9 +229,9 @@
  
   
     
-      <li data-nav-id="/kubernetes-workshop-source/20_workload/30_lab3.html" title="Pods and Deployments" class="dd-item active">
+      <li data-nav-id="/kubernetes-workshop-source/20_workload/30_lab3.html" title="Daemonsets" class="dd-item active">
         <a href="/kubernetes-workshop-source/20_workload/30_lab3.html">
-        <b>C. </b>Pods and Deployments
+        <b>C. </b>Daemonsets
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -665,7 +665,7 @@
             
           
           
-            <a href='/kubernetes-workshop-source/'>Kubernetes Workshop</a> > <a href='/kubernetes-workshop-source/20_workload.html'>Workload Objects</a> > Pods and Deployments
+            <a href='/kubernetes-workshop-source/'>Kubernetes Workshop</a> > <a href='/kubernetes-workshop-source/20_workload.html'>Workload Objects</a> > Daemonsets
           
         
           
@@ -698,7 +698,7 @@
           
             <h1>
               
-              Pods and Deployments
+              Daemonsets
             </h1>
           
 
@@ -708,36 +708,13 @@
 <h2 id="challenge">Challenge</h2>
 <p>Use <code>kubectl</code> to</p>
 <ul>
-<li>Create a <code>pod</code> called <code>pod-1</code>
+<li>Create a <code>daemonset</code> called <code>dset</code>
 <ul>
-<li>image &lsquo;nginx&rsquo;</li>
-</ul>
-</li>
-<li>Create a <code>pod</code> called <code>redis</code>
-<ul>
-<li>image &lsquo;redis:1.99&rsquo;</li>
-<li>identify the problem with the pod</li>
-<li>rectify the problem with the pod</li>
-</ul>
-</li>
-<li>Create a <code>deployment</code> called <code>busybox-1</code>
-<ul>
-<li>image &lsquo;busybox&rsquo;</li>
-<li>with 3 replicas</li>
-<li>and commmand <code>sleep 3600</code></li>
-</ul>
-</li>
-<li>Update the <code>deployment</code> called <code>busybox-1</code>
-<ul>
-<li>image <code>ubuntu</code></li>
+<li>image <code>quay.io/fluentd_elasticsearch/fluentd:v2.5.2</code></li>
 </ul>
 </li>
 </ul>
 <hr>
-
-<div class="notices warning" ><p>It is bad practice not to specify the image tag (as it will default to &lsquo;latest&rsquo;). It is best practice is to specify the image tag</p>
-</div>
-
 
 <div class="expand">
     <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
@@ -754,7 +731,33 @@
 <blockquote>
 <p><a href="https://kubernetes.io/docs/concepts/workloads/controllers/deployment/">doc reference</a></p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># create a deployment</span>
+kubectl create deployment dset --image<span style="color:#f92672">=</span>quay.io/fluentd_elasticsearch/fluentd:v2.5.2 --dry-run<span style="color:#f92672">=</span>client -o yaml &gt; dset.yaml
+<span style="color:#75715e"># edit the yaml to change it from a deployment to daemonset the output below show how to change it</span>
+apiVersion: apps/v1                                             apiVersion: apps/v1
+kind: DaemonSet                                               | kind: Deployment
+metadata:                                                       metadata:
+                                                              &gt;   creationTimestamp: null
+  labels:                                                         labels:
+    app: dset                                                       app: dset
+  name: dset                                                      name: dset
+spec:                                                           spec:
+                                                              &gt;   replicas: <span style="color:#ae81ff">1</span>
+  selector:                                                       selector:
+    matchLabels:                                                    matchLabels:
+      app: dset                                                       app: dset
+                                                              &gt;   strategy: <span style="color:#f92672">{}</span>
+  template:                                                       template:
+    metadata:                                                       metadata:
+      creationTimestamp: null                                         creationTimestamp: null
+      labels:                                                         labels:
+        app: dset                                                       app: dset
+    spec:                                                           spec:
+      containers:                                                     containers:
+      - image: quay.io/fluentd_elasticsearch/fluentd:v2.5.2           - image: quay.io/fluentd_elasticsearch/fluentd:v2.5.2
+        name: fluentd                                                   name: fluentd
+                                                              &gt;         resources: <span style="color:#f92672">{}</span>
+                                                              &gt; status: <span style="color:#f92672">{}</span>
 
 </code></pre></div>
     </div>
@@ -1140,19 +1143,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/kubernetes-workshop-source/js/clipboard.min.js?1643823000"></script>
-    <script src="/kubernetes-workshop-source/js/perfect-scrollbar.min.js?1643823000"></script>
-    <script src="/kubernetes-workshop-source/js/perfect-scrollbar.jquery.min.js?1643823000"></script>
-    <script src="/kubernetes-workshop-source/js/jquery.sticky.js?1643823000"></script>
-    <script src="/kubernetes-workshop-source/js/featherlight.min.js?1643823000"></script>
-    <script src="/kubernetes-workshop-source/js/highlight.pack.js?1643823000"></script>
+    <script src="/kubernetes-workshop-source/js/clipboard.min.js?1643886910"></script>
+    <script src="/kubernetes-workshop-source/js/perfect-scrollbar.min.js?1643886910"></script>
+    <script src="/kubernetes-workshop-source/js/perfect-scrollbar.jquery.min.js?1643886910"></script>
+    <script src="/kubernetes-workshop-source/js/jquery.sticky.js?1643886910"></script>
+    <script src="/kubernetes-workshop-source/js/featherlight.min.js?1643886910"></script>
+    <script src="/kubernetes-workshop-source/js/highlight.pack.js?1643886910"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/kubernetes-workshop-source/js/modernizr.custom-3.6.0.js?1643823000"></script>
-    <script src="/kubernetes-workshop-source/js/learn.js?1643823000"></script>
-    <script src="/kubernetes-workshop-source/js/hugo-learn.js?1643823000"></script>
+    <script src="/kubernetes-workshop-source/js/modernizr.custom-3.6.0.js?1643886910"></script>
+    <script src="/kubernetes-workshop-source/js/learn.js?1643886910"></script>
+    <script src="/kubernetes-workshop-source/js/hugo-learn.js?1643886910"></script>
     
         
-            <script src="/kubernetes-workshop-source/mermaid/mermaid.js?1643823000"></script>
+            <script src="/kubernetes-workshop-source/mermaid/mermaid.js?1643886910"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

@@ -77,18 +77,18 @@
 	"content": "Kubernetes Workshop Photo by Ihor Dvoretskyion UnsplashWorkload Objects Workload objects can be a simple POD with 1 or many containers. Alternatively other workload objects can be used to manage the lifetime of the POD - deployments, replicasets (don\u0026rsquo;t use them directly), statefulset, daemonset etc\u0026hellip;\nThis image shows the workload objects - only some are required for CKA\nImage by Max BrennerIn this section we are going to focus on PODs and Deployments (and to a lesser extent Services) in order test those areas for CKA.\nIn the diagram below we see the relationship between the 3 workload objects (deployment, replicaset, 3 pods) and 1 Networking Object (the service) "
 },
 {
+	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/20_workload/30_lab3.html",
+	"title": "Daemonsets",
+	"tags": [],
+	"description": "",
+	"content": "Challenge Use kubectl to\n Create a daemonset called dset  image quay.io/fluentd_elasticsearch/fluentd:v2.5.2       Expand here to see the solution   Solution  doc reference\n # create a deployment kubectl create deployment dset --image=quay.io/fluentd_elasticsearch/fluentd:v2.5.2 --dry-run=client -o yaml \u0026gt; dset.yaml # edit the yaml to change it from a deployment to daemonset the output below show how to change it apiVersion: apps/v1 apiVersion: apps/v1 kind: DaemonSet | kind: Deployment metadata: metadata: \u0026gt; creationTimestamp: null labels: labels: app: dset app: dset name: dset name: dset spec: spec: \u0026gt; replicas: 1 selector: selector: matchLabels: matchLabels: app: dset app: dset \u0026gt; strategy: {} template: template: metadata: metadata: creationTimestamp: null creationTimestamp: null labels: labels: app: dset app: dset spec: spec: containers: containers: - image: quay.io/fluentd_elasticsearch/fluentd:v2.5.2 - image: quay.io/fluentd_elasticsearch/fluentd:v2.5.2 name: fluentd name: fluentd \u0026gt; resources: {} \u0026gt; status: {}    "
+},
+{
 	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/30_networking.html",
 	"title": "Networking Objects",
 	"tags": [],
 	"description": "",
 	"content": "Kubernetes Workshop Photo by Ihor Dvoretskyion UnsplashNetworking Objects Image by Max Brenner"
-},
-{
-	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/20_workload/30_lab3.html",
-	"title": "Pods and Deployments",
-	"tags": [],
-	"description": "",
-	"content": "Challenge Use kubectl to\n Create a pod called pod-1  image \u0026lsquo;nginx\u0026rsquo;   Create a pod called redis  image \u0026lsquo;redis:1.99\u0026rsquo; identify the problem with the pod rectify the problem with the pod   Create a deployment called busybox-1  image \u0026lsquo;busybox\u0026rsquo; with 3 replicas and commmand sleep 3600   Update the deployment called busybox-1  image ubuntu     It is bad practice not to specify the image tag (as it will default to \u0026lsquo;latest\u0026rsquo;). It is best practice is to specify the image tag\n   Expand here to see the solution   Solution  doc reference\n    "
 },
 {
 	"uri": "https://unixdaddy.github.io/kubernetes-workshop-source/20_workload/40_lab4.html",
