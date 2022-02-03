@@ -12,22 +12,22 @@
     <title>Daemonsets :: kubernetes workshop</title>
 
     
-    <link href="/kubernetes-workshop-source/css/nucleus.css?1643887590" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/fontawesome-all.min.css?1643887590" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/hybrid.css?1643887590" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/featherlight.min.css?1643887590" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/perfect-scrollbar.min.css?1643887590" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/auto-complete.css?1643887590" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/atom-one-dark-reasonable.css?1643887590" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/theme.css?1643887590" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/tabs.css?1643887590" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/hugo-theme.css?1643887590" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/nucleus.css?1643888864" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/fontawesome-all.min.css?1643888864" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/hybrid.css?1643888864" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/featherlight.min.css?1643888864" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/perfect-scrollbar.min.css?1643888864" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/auto-complete.css?1643888864" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/atom-one-dark-reasonable.css?1643888864" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/theme.css?1643888864" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/tabs.css?1643888864" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/hugo-theme.css?1643888864" rel="stylesheet">
     
-    <link href="/kubernetes-workshop-source/css/theme-blue.css?1643887590" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/theme-blue.css?1643888864" rel="stylesheet">
     
     
 
-    <script src="/kubernetes-workshop-source/js/jquery-3.3.1.min.js?1643887590"></script>
+    <script src="/kubernetes-workshop-source/js/jquery-3.3.1.min.js?1643888864"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/kubernetes-workshop-source/js/lunr.min.js?1643887590"></script>
-<script type="text/javascript" src="/kubernetes-workshop-source/js/auto-complete.js?1643887590"></script>
+<script type="text/javascript" src="/kubernetes-workshop-source/js/lunr.min.js?1643888864"></script>
+<script type="text/javascript" src="/kubernetes-workshop-source/js/auto-complete.js?1643888864"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/unixdaddy.github.io\/kubernetes-workshop-source\/";
     
 </script>
-<script type="text/javascript" src="/kubernetes-workshop-source/js/search.js?1643887590"></script>
+<script type="text/javascript" src="/kubernetes-workshop-source/js/search.js?1643888864"></script>
 
     
   </div>
@@ -681,6 +681,7 @@
 <nav id="TableOfContents">
   <ul>
     <li><a href="#challenge">Challenge</a></li>
+    <li><a href="#bonus-challenge">Bonus Challenge</a></li>
   </ul>
 </nav>
     </div>
@@ -729,7 +730,7 @@
     <div class="expand-content" style="display: none;">
         <h2 id="solution">Solution</h2>
 <blockquote>
-<p><a href="https://kubernetes.io/docs/concepts/workloads/controllers/deployment/">doc reference</a></p>
+<p><a href="https://kubernetes.io/docs/concepts/workloads/controllers/daemonset">doc reference</a></p>
 </blockquote>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># create a deployment</span>
 kubectl create deployment dset --image<span style="color:#f92672">=</span>quay.io/fluentd_elasticsearch/fluentd:v2.5.2 --dry-run<span style="color:#f92672">=</span>client -o yaml &gt; dset.yaml
@@ -763,7 +764,47 @@ spec:
       containers: 
       - image: quay.io/fluentd_elasticsearch/fluentd:v2.5.2  
         name: fluentd             
+
+<span style="color:#75715e"># apply the file</span>
+kubectl apply -f dset.yaml
+
+<span style="color:#75715e"># check the results - this should show the number of pods = number of nodes and node column shows different nodes</span>
+kubectl get pods -o wide -l<span style="color:#f92672">=</span>app<span style="color:#f92672">=</span>dset
+NAME         READY   STATUS    RESTARTS   AGE   IP               NODE          NOMINATED NODE   READINESS GATES
+dset-pmrn5   1/1     Running   <span style="color:#ae81ff">0</span>          34m   192.168.106.6    k8s-worker2   &lt;none&gt;           &lt;none&gt;
+dset-tpltj   1/1     Running   <span style="color:#ae81ff">0</span>          34m   192.168.104.68   k8s-worker1   &lt;none&gt;           &lt;none&gt;
+
 </code></pre></div>
+    </div>
+</div>
+<hr>
+<h2 id="bonus-challenge">Bonus Challenge</h2>
+<p>Add a new node to your cluster</p>
+<blockquote>
+<p>what happens with the daemonset?</p>
+</blockquote>
+<hr>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Expand here to see the solution
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <h2 id="solution">Solution</h2>
+<blockquote>
+<p><a href="https://kubernetes.io/docs/concepts/workloads/controllers/daemonset">doc reference</a></p>
+</blockquote>
+<p>The daemonset will automatically deploy a pod to the new node, see the doc reference which as the following quote</p>
+<blockquote>
+<p>A DaemonSet ensures that all (or some) Nodes run a copy of a Pod. As nodes are added to the cluster, Pods are added to them. As nodes are removed from the cluster, those Pods are garbage collected. Deleting a DaemonSet will clean up the Pods it created.</p>
+</blockquote>
+
     </div>
 </div>
 
@@ -1147,19 +1188,19 @@ spec:
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/kubernetes-workshop-source/js/clipboard.min.js?1643887590"></script>
-    <script src="/kubernetes-workshop-source/js/perfect-scrollbar.min.js?1643887590"></script>
-    <script src="/kubernetes-workshop-source/js/perfect-scrollbar.jquery.min.js?1643887590"></script>
-    <script src="/kubernetes-workshop-source/js/jquery.sticky.js?1643887590"></script>
-    <script src="/kubernetes-workshop-source/js/featherlight.min.js?1643887590"></script>
-    <script src="/kubernetes-workshop-source/js/highlight.pack.js?1643887590"></script>
+    <script src="/kubernetes-workshop-source/js/clipboard.min.js?1643888864"></script>
+    <script src="/kubernetes-workshop-source/js/perfect-scrollbar.min.js?1643888864"></script>
+    <script src="/kubernetes-workshop-source/js/perfect-scrollbar.jquery.min.js?1643888864"></script>
+    <script src="/kubernetes-workshop-source/js/jquery.sticky.js?1643888864"></script>
+    <script src="/kubernetes-workshop-source/js/featherlight.min.js?1643888864"></script>
+    <script src="/kubernetes-workshop-source/js/highlight.pack.js?1643888864"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/kubernetes-workshop-source/js/modernizr.custom-3.6.0.js?1643887590"></script>
-    <script src="/kubernetes-workshop-source/js/learn.js?1643887590"></script>
-    <script src="/kubernetes-workshop-source/js/hugo-learn.js?1643887590"></script>
+    <script src="/kubernetes-workshop-source/js/modernizr.custom-3.6.0.js?1643888864"></script>
+    <script src="/kubernetes-workshop-source/js/learn.js?1643888864"></script>
+    <script src="/kubernetes-workshop-source/js/hugo-learn.js?1643888864"></script>
     
         
-            <script src="/kubernetes-workshop-source/mermaid/mermaid.js?1643887590"></script>
+            <script src="/kubernetes-workshop-source/mermaid/mermaid.js?1643888864"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
