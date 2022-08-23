@@ -13,8 +13,9 @@
       
       <guid>https://unixdaddy.github.io/kubernetes-workshop-source/20_workload/10_lab1.html</guid>
       <description>Challenge Use kubectl to
- Create a pod using image &amp;lsquo;sirfragalot/docker-demo:dcus&amp;rsquo; called lab1 Describe the pod Get pod events Access the webpage running on port 8080 in the container  using the internal IP using port forwarding   Use a filter command to show only this pod   Which node is this pod running on?
-    Expand here to see the solution   Solution  doc reference</description>
+Create a pod using image &amp;lsquo;sirfragalot/docker-demo:dcus&amp;rsquo; called lab1 Describe the pod Get pod events Access the webpage running on port 8080 in the container using the internal IP using port forwarding Use a filter command to show only this pod Which node is this pod running on?
+Expand here to see the solution Solution doc reference
+kubectl run lab1 --image=sirfragalot/docker-demo:dcus kubectl describe pod lab1 kubectl get event | grep lab1 kubectl get event --field-selector involvedObject.</description>
     </item>
     
     <item>
@@ -24,8 +25,8 @@
       
       <guid>https://unixdaddy.github.io/kubernetes-workshop-source/20_workload/20_lab2.html</guid>
       <description>Challenge Use kubectl to
- Create a deployment called lab2  image &amp;lsquo;sirfragalot/docker-demo:dcus&amp;rsquo; one pod   Scale up to 5 pods Scale back down to 1 pod Rolling update to use image nginx instead (tracking changes) View the revision history Roll back to the previous image View the deployment image     Expand here to see the solution   Solution  doc reference
- kubectl create deployment lab2 --image=sirfragalot/docker-demo:dcus \  --dry-run=client -o yaml | tee lab2.</description>
+Create a deployment called lab2 image &amp;lsquo;sirfragalot/docker-demo:dcus&amp;rsquo; one pod Scale up to 5 pods Scale back down to 1 pod Rolling update to use image nginx instead (tracking changes) View the revision history Roll back to the previous image View the deployment image Expand here to see the solution Solution doc reference
+kubectl create deployment lab2 --image=sirfragalot/docker-demo:dcus \ --dry-run=client -o yaml | tee lab2.yaml kubectl apply -f lab2.</description>
     </item>
     
     <item>
@@ -35,8 +36,8 @@
       
       <guid>https://unixdaddy.github.io/kubernetes-workshop-source/20_workload/30_lab3.html</guid>
       <description>Challenge Use kubectl to
- Create a daemonset called dset  image quay.io/fluentd_elasticsearch/fluentd:v2.5.2       Expand here to see the solution   Solution  doc reference
- # create a deployment kubectl create deployment dset --image=quay.io/fluentd_elasticsearch/fluentd:v2.5.2 --dry-run=client -o yaml &amp;gt; dset.yaml # edit the yaml to change it from a deployment to daemonset make the below changes kind: Deployment change to --&amp;gt; kind: DaemonSet remove creationTimestamp: null remove replicas: 1 remove strategy remove resources remove status # so it now looks like this apiVersion: apps/v1 kind: DaemonSet metadata: labels: app: dset name: dset spec: selector: matchLabels: app: dset template: metadata: labels: app: dset spec: containers: - image: quay.</description>
+Create a daemonset called dset image quay.io/fluentd_elasticsearch/fluentd:v2.5.2 Expand here to see the solution Solution doc reference
+# create a deployment kubectl create deployment dset --image=quay.io/fluentd_elasticsearch/fluentd:v2.5.2 --dry-run=client -o yaml &amp;gt; dset.yaml # edit the yaml to change it from a deployment to daemonset make the below changes kind: Deployment change to --&amp;gt; kind: DaemonSet remove creationTimestamp: null remove replicas: 1 remove strategy remove resources remove status # so it now looks like this apiVersion: apps/v1 kind: DaemonSet metadata: labels: app: dset name: dset spec: selector: matchLabels: app: dset template: metadata: labels: app: dset spec: containers: - image: quay.</description>
     </item>
     
     <item>
@@ -46,9 +47,9 @@
       
       <guid>https://unixdaddy.github.io/kubernetes-workshop-source/20_workload/40_lab4.html</guid>
       <description>CronJobs and Jobs aren&amp;rsquo;t in CKA, but are in CKAD
- Challenge Create a job called dicey using
- image kodekloud/throw-dice  The image generates a random number between 1 and 6 and exits. It is a success only if it is a 6 else it is a failure. Check how many times it takes the job to trigger to get a successful outcome.
-   Expand here to see the solution   Solution  doc reference</description>
+Challenge Create a job called dicey using
+image kodekloud/throw-dice The image generates a random number between 1 and 6 and exits. It is a success only if it is a 6 else it is a failure. Check how many times it takes the job to trigger to get a successful outcome.
+Expand here to see the solution Solution doc reference</description>
     </item>
     
     <item>
@@ -58,7 +59,8 @@
       
       <guid>https://unixdaddy.github.io/kubernetes-workshop-source/20_workload/50_lab5.html</guid>
       <description>Challenge Deploy a deployment named cache using the image memcached with 3 replicas
- Expose the deployment on a port on the host (NodePort) that sends to port 11211 of the pod. Output the endpoints in json format to q3.json Tracking changes, scale the deployment to 5 replicas Output the history of this deployment to a file called q3.txt     Expand here to see the solution   Solution  doc reference</description>
+Expose the deployment on a port on the host (NodePort) that sends to port 11211 of the pod. Output the endpoints in json format to q3.json Tracking changes, scale the deployment to 5 replicas Output the history of this deployment to a file called q3.txt Expand here to see the solution Solution doc reference
+# create the deployment kubectl create deployment cache --image=memcached --replicas=3 # expose the deployment using NodePort type kubectl expose deployment cache --type=NodePort --port=11211 # output the endpoints in json format kubectl get ep cache -o json &amp;gt; q3.</description>
     </item>
     
     <item>
@@ -69,9 +71,9 @@
       <guid>https://unixdaddy.github.io/kubernetes-workshop-source/20_workload/60_lab6.html</guid>
       <description>Challenge Create a namespace called accounts all the following steps need to be done in this namespace
 Deploy a deployment named redis-app using the image redis with 2 replicas
- with labels tier=prod and loc=north  Deploy a deployment named redis-db using the image redis:alpine with 2 replicas
- with labels tier=prod and loc=south Expose the redis-db deployment on a port 6379.  Use labels to query the pods
- list pod with label tier=prod list pods with label loc=south  Alter deployment redis-app</description>
+with labels tier=prod and loc=north Deploy a deployment named redis-db using the image redis:alpine with 2 replicas
+with labels tier=prod and loc=south Expose the redis-db deployment on a port 6379. Use labels to query the pods
+list pod with label tier=prod list pods with label loc=south Alter deployment redis-app</description>
     </item>
     
   </channel>

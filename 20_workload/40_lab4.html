@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.92.1" />
+    <meta name="generator" content="Hugo 0.101.0" />
     <meta name="description" content="">
 
 
@@ -12,22 +12,22 @@
     <title>CronJobs and Jobs :: kubernetes workshop</title>
 
     
-    <link href="/kubernetes-workshop-source/css/nucleus.css?1643896586" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/fontawesome-all.min.css?1643896586" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/hybrid.css?1643896586" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/featherlight.min.css?1643896586" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/perfect-scrollbar.min.css?1643896586" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/auto-complete.css?1643896586" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/atom-one-dark-reasonable.css?1643896586" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/theme.css?1643896586" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/tabs.css?1643896586" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/hugo-theme.css?1643896586" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/nucleus.css?1661251539" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/fontawesome-all.min.css?1661251539" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/hybrid.css?1661251539" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/featherlight.min.css?1661251539" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/perfect-scrollbar.min.css?1661251539" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/auto-complete.css?1661251539" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/atom-one-dark-reasonable.css?1661251539" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/theme.css?1661251539" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/tabs.css?1661251539" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/hugo-theme.css?1661251539" rel="stylesheet">
     
-    <link href="/kubernetes-workshop-source/css/theme-blue.css?1643896586" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/theme-blue.css?1661251539" rel="stylesheet">
     
     
 
-    <script src="/kubernetes-workshop-source/js/jquery-3.3.1.min.js?1643896586"></script>
+    <script src="/kubernetes-workshop-source/js/jquery-3.3.1.min.js?1661251539"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/kubernetes-workshop-source/js/lunr.min.js?1643896586"></script>
-<script type="text/javascript" src="/kubernetes-workshop-source/js/auto-complete.js?1643896586"></script>
+<script type="text/javascript" src="/kubernetes-workshop-source/js/lunr.min.js?1661251539"></script>
+<script type="text/javascript" src="/kubernetes-workshop-source/js/auto-complete.js?1661251539"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/unixdaddy.github.io\/kubernetes-workshop-source\/";
     
 </script>
-<script type="text/javascript" src="/kubernetes-workshop-source/js/search.js?1643896586"></script>
+<script type="text/javascript" src="/kubernetes-workshop-source/js/search.js?1661251539"></script>
 
     
   </div>
@@ -111,6 +111,27 @@
     
       <li data-nav-id="/kubernetes-workshop-source/10_introduction/10_introduction.html" title="Introduction" class="dd-item ">
         <a href="/kubernetes-workshop-source/10_introduction/10_introduction.html">
+        <b>A. </b>Introduction
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kubernetes-workshop-source/10_introduction/daz.html" title="Introduction" class="dd-item ">
+        <a href="/kubernetes-workshop-source/10_introduction/daz.html">
         <b>A. </b>Introduction
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -734,14 +755,13 @@
 <blockquote>
 <p><a href="https://kubernetes.io/docs/concepts/workloads/controllers/job/" title="Kubernetes Jobs">doc reference</a></p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># create the job</span>
-kubectl create job dicey --image<span style="color:#f92672">=</span>kodekloud/throw-dice
-
-<span style="color:#75715e"># check - you should see how many attempts before rolling a 6</span>
-kubectl get pods
-kubectl logs &lt;pod name&gt;
-
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># create the job</span>
+</span></span><span style="display:flex;"><span>kubectl create job dicey --image<span style="color:#f92672">=</span>kodekloud/throw-dice
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># check - you should see how many attempts before rolling a 6</span>
+</span></span><span style="display:flex;"><span>kubectl get pods
+</span></span><span style="display:flex;"><span>kubectl logs &lt;pod name&gt;
+</span></span></code></pre></div>
     </div>
 </div>
 <hr>
@@ -771,40 +791,39 @@ kubectl logs &lt;pod name&gt;
 <a href="https://kubernetes.io/docs/concepts/workloads/controllers/job/#controlling-parallelism">parallelism reference</a>
 <a href="https://kubernetes.io/docs/concepts/workloads/controllers/job/#pod-backoff-failure-policy">backofflimit reference</a></p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#create a job</span>
-
-kubectl create job dicey2 --image<span style="color:#f92672">=</span>kodekloud/throw-dice --dry-run<span style="color:#f92672">=</span>client -o yaml &gt; dicey2.yaml
-
-<span style="color:#75715e"># edit it so it looks like this</span>
-
-apiVersion: batch/v1
-kind: Job
-metadata:
-  name: dicey2
-spec:
-  completions: <span style="color:#ae81ff">8</span>
-  parallelism: <span style="color:#ae81ff">3</span>
-  backoffLimit: <span style="color:#ae81ff">15</span>
-  template:
-    metadata:
-    spec:
-      containers:
-      - image: kodekloud/throw-dice
-        name: dicey2
-      restartPolicy: Never
-
-<span style="color:#75715e"># execute the file</span>
-kubectl apply -f dicey2.yaml
-
-<span style="color:#75715e"># check the output</span>
-
-kubectl get jobs
-kubectl get pods -l job-name<span style="color:#f92672">=</span>dicey2
-
-<span style="color:#75715e"># pick a failed and a succesful job</span>
-kubectl logs &lt;pod name&gt;
-
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#create a job</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>kubectl create job dicey2 --image<span style="color:#f92672">=</span>kodekloud/throw-dice --dry-run<span style="color:#f92672">=</span>client -o yaml &gt; dicey2.yaml
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># edit it so it looks like this</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>apiVersion: batch/v1
+</span></span><span style="display:flex;"><span>kind: Job
+</span></span><span style="display:flex;"><span>metadata:
+</span></span><span style="display:flex;"><span>  name: dicey2
+</span></span><span style="display:flex;"><span>spec:
+</span></span><span style="display:flex;"><span>  completions: <span style="color:#ae81ff">8</span>
+</span></span><span style="display:flex;"><span>  parallelism: <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>  backoffLimit: <span style="color:#ae81ff">15</span>
+</span></span><span style="display:flex;"><span>  template:
+</span></span><span style="display:flex;"><span>    metadata:
+</span></span><span style="display:flex;"><span>    spec:
+</span></span><span style="display:flex;"><span>      containers:
+</span></span><span style="display:flex;"><span>      - image: kodekloud/throw-dice
+</span></span><span style="display:flex;"><span>        name: dicey2
+</span></span><span style="display:flex;"><span>      restartPolicy: Never
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># execute the file</span>
+</span></span><span style="display:flex;"><span>kubectl apply -f dicey2.yaml
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># check the output</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>kubectl get jobs
+</span></span><span style="display:flex;"><span>kubectl get pods -l job-name<span style="color:#f92672">=</span>dicey2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># pick a failed and a succesful job</span>
+</span></span><span style="display:flex;"><span>kubectl logs &lt;pod name&gt;
+</span></span></code></pre></div>
     </div>
 </div>
 <hr>
@@ -832,21 +851,20 @@ kubectl logs &lt;pod name&gt;
 <blockquote>
 <p><a href="https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/" title="Kubernetes CronJobs">doc reference</a></p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># create the job</span>
-kubectl create cronjob echo-me --image<span style="color:#f92672">=</span>busybox  --schedule<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;*/2 * * * *&#34;</span>  -- <span style="color:#e6db74">&#34;sh&#34;</span> <span style="color:#e6db74">&#34;-c&#34;</span> <span style="color:#e6db74">&#34;date ; echo hello from kubernetes cluster&#34;</span>
-
-<span style="color:#75715e"># check - you should see the output in the logs after 2 minutes, be patient</span>
-kubectl get cronjobs
-kubectl describe cronjobs echo-me
-<span style="color:#75715e"># wait 2 minutes</span>
-kubectl get jobs
-kubectl get pods  
-<span style="color:#75715e"># select a pod with echo-me.....</span>
-kubectl logs &lt;pod name&gt;
-Thu Feb  <span style="color:#ae81ff">3</span> 13:52:02 UTC <span style="color:#ae81ff">2022</span>
-hello from kubernetes cluster
-
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># create the job</span>
+</span></span><span style="display:flex;"><span>kubectl create cronjob echo-me --image<span style="color:#f92672">=</span>busybox  --schedule<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;*/2 * * * *&#34;</span>  -- <span style="color:#e6db74">&#34;sh&#34;</span> <span style="color:#e6db74">&#34;-c&#34;</span> <span style="color:#e6db74">&#34;date ; echo hello from kubernetes cluster&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># check - you should see the output in the logs after 2 minutes, be patient</span>
+</span></span><span style="display:flex;"><span>kubectl get cronjobs
+</span></span><span style="display:flex;"><span>kubectl describe cronjobs echo-me
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># wait 2 minutes</span>
+</span></span><span style="display:flex;"><span>kubectl get jobs
+</span></span><span style="display:flex;"><span>kubectl get pods  
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># select a pod with echo-me.....</span>
+</span></span><span style="display:flex;"><span>kubectl logs &lt;pod name&gt;
+</span></span><span style="display:flex;"><span>Thu Feb  <span style="color:#ae81ff">3</span> 13:52:02 UTC <span style="color:#ae81ff">2022</span>
+</span></span><span style="display:flex;"><span>hello from kubernetes cluster
+</span></span></code></pre></div>
     </div>
 </div>
 
@@ -896,6 +914,22 @@ hello from kubernetes cluster
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -1230,19 +1264,19 @@ hello from kubernetes cluster
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/kubernetes-workshop-source/js/clipboard.min.js?1643896586"></script>
-    <script src="/kubernetes-workshop-source/js/perfect-scrollbar.min.js?1643896586"></script>
-    <script src="/kubernetes-workshop-source/js/perfect-scrollbar.jquery.min.js?1643896586"></script>
-    <script src="/kubernetes-workshop-source/js/jquery.sticky.js?1643896586"></script>
-    <script src="/kubernetes-workshop-source/js/featherlight.min.js?1643896586"></script>
-    <script src="/kubernetes-workshop-source/js/highlight.pack.js?1643896586"></script>
+    <script src="/kubernetes-workshop-source/js/clipboard.min.js?1661251539"></script>
+    <script src="/kubernetes-workshop-source/js/perfect-scrollbar.min.js?1661251539"></script>
+    <script src="/kubernetes-workshop-source/js/perfect-scrollbar.jquery.min.js?1661251539"></script>
+    <script src="/kubernetes-workshop-source/js/jquery.sticky.js?1661251539"></script>
+    <script src="/kubernetes-workshop-source/js/featherlight.min.js?1661251539"></script>
+    <script src="/kubernetes-workshop-source/js/highlight.pack.js?1661251539"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/kubernetes-workshop-source/js/modernizr.custom-3.6.0.js?1643896586"></script>
-    <script src="/kubernetes-workshop-source/js/learn.js?1643896586"></script>
-    <script src="/kubernetes-workshop-source/js/hugo-learn.js?1643896586"></script>
+    <script src="/kubernetes-workshop-source/js/modernizr.custom-3.6.0.js?1661251539"></script>
+    <script src="/kubernetes-workshop-source/js/learn.js?1661251539"></script>
+    <script src="/kubernetes-workshop-source/js/hugo-learn.js?1661251539"></script>
     
         
-            <script src="/kubernetes-workshop-source/mermaid/mermaid.js?1643896586"></script>
+            <script src="/kubernetes-workshop-source/mermaid/mermaid.js?1661251539"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

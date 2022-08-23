@@ -16,7 +16,20 @@
 The CKA exam will test your knowledge of how you interact with these components via API server in order deploy/manage containers - it is hands-on
 It is all about being fast and accurate
 You will be tested on (in no particular order)&amp;hellip;..
- Nodes Pods Containers RBAC Services (Networking) Persistent volumes and claims Cluster Management Troubleshooting etc&amp;hellip;.</description>
+Nodes Pods Containers RBAC Services (Networking) Persistent volumes and claims Cluster Management Troubleshooting etc&amp;hellip;.</description>
+    </item>
+    
+    <item>
+      <title>Introduction</title>
+      <link>https://unixdaddy.github.io/kubernetes-workshop-source/10_introduction/daz.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://unixdaddy.github.io/kubernetes-workshop-source/10_introduction/daz.html</guid>
+      <description>What you need to know Some of the components that you will be working on are shown in this diagram
+The CKA exam will test your knowledge of how you interact with these components via API server in order deploy/manage containers - it is hands-on
+It is all about being fast and accurate
+You will be tested on (in no particular order)&amp;hellip;..
+Nodes Pods Containers RBAC Services (Networking) Persistent volumes and claims Cluster Management Troubleshooting etc&amp;hellip;.</description>
     </item>
     
     <item>
@@ -26,8 +39,9 @@ You will be tested on (in no particular order)&amp;hellip;..
       
       <guid>https://unixdaddy.github.io/kubernetes-workshop-source/20_workload/10_lab1.html</guid>
       <description>Challenge Use kubectl to
- Create a pod using image &amp;lsquo;sirfragalot/docker-demo:dcus&amp;rsquo; called lab1 Describe the pod Get pod events Access the webpage running on port 8080 in the container  using the internal IP using port forwarding   Use a filter command to show only this pod   Which node is this pod running on?
-    Expand here to see the solution   Solution  doc reference</description>
+Create a pod using image &amp;lsquo;sirfragalot/docker-demo:dcus&amp;rsquo; called lab1 Describe the pod Get pod events Access the webpage running on port 8080 in the container using the internal IP using port forwarding Use a filter command to show only this pod Which node is this pod running on?
+Expand here to see the solution Solution doc reference
+kubectl run lab1 --image=sirfragalot/docker-demo:dcus kubectl describe pod lab1 kubectl get event | grep lab1 kubectl get event --field-selector involvedObject.</description>
     </item>
     
     <item>
@@ -36,8 +50,8 @@ You will be tested on (in no particular order)&amp;hellip;..
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://unixdaddy.github.io/kubernetes-workshop-source/50_cluster/10_lab7.html</guid>
-      <description>Challenge TBC   Expand here to see the solution   Solution  doc reference
- TBC    </description>
+      <description>Challenge TBC Expand here to see the solution Solution doc reference
+TBC </description>
     </item>
     
     <item>
@@ -46,8 +60,8 @@ You will be tested on (in no particular order)&amp;hellip;..
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://unixdaddy.github.io/kubernetes-workshop-source/60_storage/10_lab11.html</guid>
-      <description>Challenge TBC   Expand here to see the solution   Solution  doc reference
- TBC    </description>
+      <description>Challenge TBC Expand here to see the solution Solution doc reference
+TBC </description>
     </item>
     
     <item>
@@ -56,8 +70,8 @@ You will be tested on (in no particular order)&amp;hellip;..
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://unixdaddy.github.io/kubernetes-workshop-source/70_trouble/10_lab11.html</guid>
-      <description>Challenge TBC   Expand here to see the solution   Solution  doc reference
- TBC    </description>
+      <description>Challenge TBC Expand here to see the solution Solution doc reference
+TBC </description>
     </item>
     
     <item>
@@ -67,8 +81,8 @@ You will be tested on (in no particular order)&amp;hellip;..
       
       <guid>https://unixdaddy.github.io/kubernetes-workshop-source/30_networking/10_lab3.html</guid>
       <description>Challenge Use kubectl to
- Create a deployment kubectl create deployment lab2 --image=sirfragalot/docker-demo:dcus Create a service to expose your deployment Access the service internally from the cluster Access the service externally from the cluster Describe services     Expand here to see the solution   Solution  doc reference
- kubectl expose deployment lab2 --name=lab2-svc --port=80 --target-port=8080 kubectl run -it --image=busybox bash / # wget lab2-svc kubectl expose deployment lab2 --name=lab2-np --type=NodePort --port=8080 kubectl get svc lab2-np curl ifconfig.</description>
+Create a deployment kubectl create deployment lab2 --image=sirfragalot/docker-demo:dcus Create a service to expose your deployment Access the service internally from the cluster Access the service externally from the cluster Describe services Expand here to see the solution Solution doc reference
+kubectl expose deployment lab2 --name=lab2-svc --port=80 --target-port=8080 kubectl run -it --image=busybox bash / # wget lab2-svc kubectl expose deployment lab2 --name=lab2-np --type=NodePort --port=8080 kubectl get svc lab2-np curl ifconfig.</description>
     </item>
     
     <item>
@@ -78,8 +92,8 @@ You will be tested on (in no particular order)&amp;hellip;..
       
       <guid>https://unixdaddy.github.io/kubernetes-workshop-source/20_workload/20_lab2.html</guid>
       <description>Challenge Use kubectl to
- Create a deployment called lab2  image &amp;lsquo;sirfragalot/docker-demo:dcus&amp;rsquo; one pod   Scale up to 5 pods Scale back down to 1 pod Rolling update to use image nginx instead (tracking changes) View the revision history Roll back to the previous image View the deployment image     Expand here to see the solution   Solution  doc reference
- kubectl create deployment lab2 --image=sirfragalot/docker-demo:dcus \  --dry-run=client -o yaml | tee lab2.</description>
+Create a deployment called lab2 image &amp;lsquo;sirfragalot/docker-demo:dcus&amp;rsquo; one pod Scale up to 5 pods Scale back down to 1 pod Rolling update to use image nginx instead (tracking changes) View the revision history Roll back to the previous image View the deployment image Expand here to see the solution Solution doc reference
+kubectl create deployment lab2 --image=sirfragalot/docker-demo:dcus \ --dry-run=client -o yaml | tee lab2.yaml kubectl apply -f lab2.</description>
     </item>
     
     <item>
@@ -89,8 +103,8 @@ You will be tested on (in no particular order)&amp;hellip;..
       
       <guid>https://unixdaddy.github.io/kubernetes-workshop-source/30_networking/20_lab4.html</guid>
       <description>Challenge Use kubectl to create a namespace {yourname} and deploy the below into that namespace:
- Deployment  Image = sirfragalot/docker-demo:dcus (listens on port 8080) Replicas = 3 Service Type = NodePort       Expand here to see the solution   Solution  doc reference
- kubectl create namespace yourname kubectl -n yourname create deployment lab4 --image=sirfragalot/docker-demo:dcus --replicas=3 --port=8080 kubectl -n yourname expose deployment lab4 --type=NodePort kubectl -n yourname get svc curl localhost:31xxx  when you specify the &amp;lsquo;&amp;ndash;port&amp;rsquo; in create deployment this is only metadata - a hint that is used for the service to understand which target port to map to.</description>
+Deployment Image = sirfragalot/docker-demo:dcus (listens on port 8080) Replicas = 3 Service Type = NodePort Expand here to see the solution Solution doc reference
+kubectl create namespace yourname kubectl -n yourname create deployment lab4 --image=sirfragalot/docker-demo:dcus --replicas=3 --port=8080 kubectl -n yourname expose deployment lab4 --type=NodePort kubectl -n yourname get svc curl localhost:31xxx when you specify the &amp;lsquo;&amp;ndash;port&amp;rsquo; in create deployment this is only metadata - a hint that is used for the service to understand which target port to map to.</description>
     </item>
     
     <item>
@@ -109,8 +123,8 @@ You will be tested on (in no particular order)&amp;hellip;..
       
       <guid>https://unixdaddy.github.io/kubernetes-workshop-source/20_workload/30_lab3.html</guid>
       <description>Challenge Use kubectl to
- Create a daemonset called dset  image quay.io/fluentd_elasticsearch/fluentd:v2.5.2       Expand here to see the solution   Solution  doc reference
- # create a deployment kubectl create deployment dset --image=quay.io/fluentd_elasticsearch/fluentd:v2.5.2 --dry-run=client -o yaml &amp;gt; dset.yaml # edit the yaml to change it from a deployment to daemonset make the below changes kind: Deployment change to --&amp;gt; kind: DaemonSet remove creationTimestamp: null remove replicas: 1 remove strategy remove resources remove status # so it now looks like this apiVersion: apps/v1 kind: DaemonSet metadata: labels: app: dset name: dset spec: selector: matchLabels: app: dset template: metadata: labels: app: dset spec: containers: - image: quay.</description>
+Create a daemonset called dset image quay.io/fluentd_elasticsearch/fluentd:v2.5.2 Expand here to see the solution Solution doc reference
+# create a deployment kubectl create deployment dset --image=quay.io/fluentd_elasticsearch/fluentd:v2.5.2 --dry-run=client -o yaml &amp;gt; dset.yaml # edit the yaml to change it from a deployment to daemonset make the below changes kind: Deployment change to --&amp;gt; kind: DaemonSet remove creationTimestamp: null remove replicas: 1 remove strategy remove resources remove status # so it now looks like this apiVersion: apps/v1 kind: DaemonSet metadata: labels: app: dset name: dset spec: selector: matchLabels: app: dset template: metadata: labels: app: dset spec: containers: - image: quay.</description>
     </item>
     
     <item>
@@ -120,9 +134,9 @@ You will be tested on (in no particular order)&amp;hellip;..
       
       <guid>https://unixdaddy.github.io/kubernetes-workshop-source/20_workload/40_lab4.html</guid>
       <description>CronJobs and Jobs aren&amp;rsquo;t in CKA, but are in CKAD
- Challenge Create a job called dicey using
- image kodekloud/throw-dice  The image generates a random number between 1 and 6 and exits. It is a success only if it is a 6 else it is a failure. Check how many times it takes the job to trigger to get a successful outcome.
-   Expand here to see the solution   Solution  doc reference</description>
+Challenge Create a job called dicey using
+image kodekloud/throw-dice The image generates a random number between 1 and 6 and exits. It is a success only if it is a 6 else it is a failure. Check how many times it takes the job to trigger to get a successful outcome.
+Expand here to see the solution Solution doc reference</description>
     </item>
     
     <item>
@@ -132,7 +146,8 @@ You will be tested on (in no particular order)&amp;hellip;..
       
       <guid>https://unixdaddy.github.io/kubernetes-workshop-source/20_workload/50_lab5.html</guid>
       <description>Challenge Deploy a deployment named cache using the image memcached with 3 replicas
- Expose the deployment on a port on the host (NodePort) that sends to port 11211 of the pod. Output the endpoints in json format to q3.json Tracking changes, scale the deployment to 5 replicas Output the history of this deployment to a file called q3.txt     Expand here to see the solution   Solution  doc reference</description>
+Expose the deployment on a port on the host (NodePort) that sends to port 11211 of the pod. Output the endpoints in json format to q3.json Tracking changes, scale the deployment to 5 replicas Output the history of this deployment to a file called q3.txt Expand here to see the solution Solution doc reference
+# create the deployment kubectl create deployment cache --image=memcached --replicas=3 # expose the deployment using NodePort type kubectl expose deployment cache --type=NodePort --port=11211 # output the endpoints in json format kubectl get ep cache -o json &amp;gt; q3.</description>
     </item>
     
     <item>
@@ -143,9 +158,9 @@ You will be tested on (in no particular order)&amp;hellip;..
       <guid>https://unixdaddy.github.io/kubernetes-workshop-source/20_workload/60_lab6.html</guid>
       <description>Challenge Create a namespace called accounts all the following steps need to be done in this namespace
 Deploy a deployment named redis-app using the image redis with 2 replicas
- with labels tier=prod and loc=north  Deploy a deployment named redis-db using the image redis:alpine with 2 replicas
- with labels tier=prod and loc=south Expose the redis-db deployment on a port 6379.  Use labels to query the pods
- list pod with label tier=prod list pods with label loc=south  Alter deployment redis-app</description>
+with labels tier=prod and loc=north Deploy a deployment named redis-db using the image redis:alpine with 2 replicas
+with labels tier=prod and loc=south Expose the redis-db deployment on a port 6379. Use labels to query the pods
+list pod with label tier=prod list pods with label loc=south Alter deployment redis-app</description>
     </item>
     
   </channel>

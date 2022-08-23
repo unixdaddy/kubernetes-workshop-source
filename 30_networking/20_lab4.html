@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.92.1" />
+    <meta name="generator" content="Hugo 0.101.0" />
     <meta name="description" content="">
 
 
@@ -12,22 +12,22 @@
     <title>NodePort Service :: kubernetes workshop</title>
 
     
-    <link href="/kubernetes-workshop-source/css/nucleus.css?1643896586" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/fontawesome-all.min.css?1643896586" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/hybrid.css?1643896586" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/featherlight.min.css?1643896586" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/perfect-scrollbar.min.css?1643896586" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/auto-complete.css?1643896586" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/atom-one-dark-reasonable.css?1643896586" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/theme.css?1643896586" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/tabs.css?1643896586" rel="stylesheet">
-    <link href="/kubernetes-workshop-source/css/hugo-theme.css?1643896586" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/nucleus.css?1661251539" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/fontawesome-all.min.css?1661251539" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/hybrid.css?1661251539" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/featherlight.min.css?1661251539" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/perfect-scrollbar.min.css?1661251539" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/auto-complete.css?1661251539" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/atom-one-dark-reasonable.css?1661251539" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/theme.css?1661251539" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/tabs.css?1661251539" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/hugo-theme.css?1661251539" rel="stylesheet">
     
-    <link href="/kubernetes-workshop-source/css/theme-blue.css?1643896586" rel="stylesheet">
+    <link href="/kubernetes-workshop-source/css/theme-blue.css?1661251539" rel="stylesheet">
     
     
 
-    <script src="/kubernetes-workshop-source/js/jquery-3.3.1.min.js?1643896586"></script>
+    <script src="/kubernetes-workshop-source/js/jquery-3.3.1.min.js?1661251539"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/kubernetes-workshop-source/js/lunr.min.js?1643896586"></script>
-<script type="text/javascript" src="/kubernetes-workshop-source/js/auto-complete.js?1643896586"></script>
+<script type="text/javascript" src="/kubernetes-workshop-source/js/lunr.min.js?1661251539"></script>
+<script type="text/javascript" src="/kubernetes-workshop-source/js/auto-complete.js?1661251539"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/unixdaddy.github.io\/kubernetes-workshop-source\/";
     
 </script>
-<script type="text/javascript" src="/kubernetes-workshop-source/js/search.js?1643896586"></script>
+<script type="text/javascript" src="/kubernetes-workshop-source/js/search.js?1661251539"></script>
 
     
   </div>
@@ -111,6 +111,27 @@
     
       <li data-nav-id="/kubernetes-workshop-source/10_introduction/10_introduction.html" title="Introduction" class="dd-item ">
         <a href="/kubernetes-workshop-source/10_introduction/10_introduction.html">
+        <b>A. </b>Introduction
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kubernetes-workshop-source/10_introduction/daz.html" title="Introduction" class="dd-item ">
+        <a href="/kubernetes-workshop-source/10_introduction/daz.html">
         <b>A. </b>Introduction
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -733,12 +754,12 @@
 <blockquote>
 <p><a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/">doc reference</a></p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl create namespace yourname
-kubectl -n yourname create deployment lab4 --image<span style="color:#f92672">=</span>sirfragalot/docker-demo:dcus --replicas<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span> --port<span style="color:#f92672">=</span><span style="color:#ae81ff">8080</span>
-kubectl -n yourname expose deployment lab4 --type<span style="color:#f92672">=</span>NodePort
-kubectl -n yourname get svc
-curl localhost:31xxx
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl create namespace yourname
+</span></span><span style="display:flex;"><span>kubectl -n yourname create deployment lab4 --image<span style="color:#f92672">=</span>sirfragalot/docker-demo:dcus --replicas<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span> --port<span style="color:#f92672">=</span><span style="color:#ae81ff">8080</span>
+</span></span><span style="display:flex;"><span>kubectl -n yourname expose deployment lab4 --type<span style="color:#f92672">=</span>NodePort
+</span></span><span style="display:flex;"><span>kubectl -n yourname get svc
+</span></span><span style="display:flex;"><span>curl localhost:31xxx
+</span></span></code></pre></div><blockquote>
 <p>when you specify the &lsquo;&ndash;port&rsquo; in <em>create deployment</em> this is only metadata - a hint that is used for the service to understand which target port to map to.</p>
 </blockquote>
 
@@ -791,6 +812,22 @@ curl localhost:31xxx
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -1125,19 +1162,19 @@ curl localhost:31xxx
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/kubernetes-workshop-source/js/clipboard.min.js?1643896586"></script>
-    <script src="/kubernetes-workshop-source/js/perfect-scrollbar.min.js?1643896586"></script>
-    <script src="/kubernetes-workshop-source/js/perfect-scrollbar.jquery.min.js?1643896586"></script>
-    <script src="/kubernetes-workshop-source/js/jquery.sticky.js?1643896586"></script>
-    <script src="/kubernetes-workshop-source/js/featherlight.min.js?1643896586"></script>
-    <script src="/kubernetes-workshop-source/js/highlight.pack.js?1643896586"></script>
+    <script src="/kubernetes-workshop-source/js/clipboard.min.js?1661251539"></script>
+    <script src="/kubernetes-workshop-source/js/perfect-scrollbar.min.js?1661251539"></script>
+    <script src="/kubernetes-workshop-source/js/perfect-scrollbar.jquery.min.js?1661251539"></script>
+    <script src="/kubernetes-workshop-source/js/jquery.sticky.js?1661251539"></script>
+    <script src="/kubernetes-workshop-source/js/featherlight.min.js?1661251539"></script>
+    <script src="/kubernetes-workshop-source/js/highlight.pack.js?1661251539"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/kubernetes-workshop-source/js/modernizr.custom-3.6.0.js?1643896586"></script>
-    <script src="/kubernetes-workshop-source/js/learn.js?1643896586"></script>
-    <script src="/kubernetes-workshop-source/js/hugo-learn.js?1643896586"></script>
+    <script src="/kubernetes-workshop-source/js/modernizr.custom-3.6.0.js?1661251539"></script>
+    <script src="/kubernetes-workshop-source/js/learn.js?1661251539"></script>
+    <script src="/kubernetes-workshop-source/js/hugo-learn.js?1661251539"></script>
     
         
-            <script src="/kubernetes-workshop-source/mermaid/mermaid.js?1643896586"></script>
+            <script src="/kubernetes-workshop-source/mermaid/mermaid.js?1661251539"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
